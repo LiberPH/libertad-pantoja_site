@@ -3,7 +3,7 @@
 # Para GitHub Pages en un repositorio de proyecto, cambia baseurl a "/nombre-del-repo".
 title: "Libertad Pantoja"
 description: "Escritura, pintura, fotografía e imagen intervenida alrededor del sueño, el mito y el inframundo."
-url: ""
+url: "https://LiberPH.github.io"
 baseurl: "/libertad-pantoja-site"
 lang: "es-MX"
 timezone: "America/Mexico_City"
