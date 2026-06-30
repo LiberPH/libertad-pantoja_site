@@ -1301,3 +1301,269 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* =========================================================
+   Páginas internas · sistema editorial
+   Mantiene el index intacto y mejora obra, publicaciones,
+   club, talleres, bio y contacto.
+   ========================================================= */
+
+.page-hero.compact {
+  width: auto;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 56px;
+  padding: clamp(64px, 8vw, 110px) max(32px, calc((100vw - var(--max-width)) / 2)) clamp(48px, 6vw, 76px);
+  background:
+    radial-gradient(circle at 78% 32%, rgba(246, 161, 58, 0.22), transparent 24%),
+    radial-gradient(circle at 90% 54%, rgba(156, 59, 50, 0.22), transparent 32%),
+    linear-gradient(115deg, #090A12 0%, #16091E 36%, #2B1133 62%, #5A1F3A 84%, #9C3B32 100%);
+  color: var(--tinta-clara);
+  border-bottom: 1px solid rgba(244, 227, 200, 0.16);
+}
+
+.page-hero.compact .eyebrow {
+  color: var(--horizonte);
+}
+
+.page-hero.compact h1 {
+  max-width: 980px;
+  color: var(--tinta-clara);
+  font-family: 'Cormorant', serif;
+  font-size: clamp(3.4rem, 7vw, 6.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+}
+
+.page-hero.compact h1::after {
+  content: "";
+  display: block;
+  width: 74px;
+  height: 1px;
+  margin: 24px 0 0;
+  background: var(--horizonte);
+}
+
+.page-hero.compact .hero-lede {
+  max-width: 760px;
+  margin-top: 22px;
+  color: var(--tinta-clara);
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.12rem, 2vw, 1.55rem);
+  line-height: 1.42;
+}
+
+/* Cuerpo editorial claro */
+
+main {
+  position: relative;
+}
+
+.text-block.wide,
+.two-column-panel,
+.contact-panel,
+.timeline-panel,
+.publication-section,
+.collection-section {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-block,
+.intro-panel,
+.contact-panel,
+.timeline-panel {
+  background: rgba(255, 248, 236, 0.92);
+  border: 1px solid rgba(43, 17, 51, 0.14);
+  color: var(--tinta-cafe);
+  box-shadow: 0 18px 42px rgba(43, 17, 51, 0.08);
+}
+
+.text-block {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+  line-height: 1.58;
+}
+
+.text-block p,
+.contact-panel p,
+.timeline-panel p,
+.two-column-panel p,
+.soft-list,
+.timeline-list {
+  color: var(--tinta-media);
+}
+
+.two-column-panel {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  background: transparent;
+  border-top: 1px solid rgba(43, 17, 51, 0.18);
+  border-bottom: 1px solid rgba(43, 17, 51, 0.18);
+}
+
+.two-column-panel > div {
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.two-column-panel > div + div {
+  border-left: 1px solid rgba(43, 17, 51, 0.18);
+}
+
+.two-column-panel h2,
+.contact-panel h2,
+.timeline-panel h2,
+.section-heading h2 {
+  color: var(--tinta-profunda);
+  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+}
+
+/* Obra más galería, menos tarjeta pesada */
+
+.category-nav {
+  background: rgba(255, 248, 236, 0.76);
+  border-color: rgba(43, 17, 51, 0.14);
+}
+
+.category-nav a {
+  color: var(--tinta-profunda);
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(43, 17, 51, 0.12);
+}
+
+.category-nav a:hover {
+  color: var(--tinta-clara);
+  background: var(--tinta-profunda);
+  border-color: var(--tinta-profunda);
+}
+
+.collection-section.tinted,
+.publication-section.tinted,
+.publication-section.quiet {
+  background: rgba(242, 222, 193, 0.36);
+  border-color: rgba(43, 17, 51, 0.12);
+}
+
+.art-card {
+  background: rgba(255, 248, 236, 0.9);
+  border-color: rgba(43, 17, 51, 0.14);
+  color: var(--tinta-cafe);
+  box-shadow: 0 16px 36px rgba(43, 17, 51, 0.08);
+}
+
+.art-card img {
+  background: rgba(242, 222, 193, 0.42);
+}
+
+.art-card h3 {
+  color: var(--tinta-profunda);
+  font-size: clamp(1rem, 1.45vw, 1.16rem);
+}
+
+.art-card-body p,
+.metadata-list dd {
+  color: var(--tinta-media);
+}
+
+.metadata-list div {
+  border-bottom-color: rgba(43, 17, 51, 0.12);
+}
+
+.metadata-list dt {
+  color: var(--tinta-media);
+}
+
+/* Publicaciones más sobrias */
+
+.publication-card {
+  background: rgba(255, 248, 236, 0.82);
+  border-color: rgba(43, 17, 51, 0.12);
+  box-shadow: none;
+}
+
+.publication-card h3 {
+  color: var(--tinta-profunda);
+  font-size: clamp(1rem, 1.35vw, 1.13rem);
+  line-height: 1.22;
+}
+
+.publication-card p,
+.publication-card .muted {
+  color: var(--tinta-media);
+}
+
+.publication-list {
+  gap: 10px;
+}
+
+/* CTA interno */
+
+.cta-band {
+  background:
+    radial-gradient(circle at 18% 36%, rgba(246, 161, 58, 0.16), transparent 28%),
+    linear-gradient(115deg, var(--noche), var(--umbral), var(--vino));
+  color: var(--tinta-clara);
+}
+
+.cta-band h2 {
+  color: var(--tinta-clara);
+}
+
+.cta-band p {
+  color: var(--tinta-suave);
+}
+
+/* Contacto */
+
+.contact-card {
+  background: rgba(255, 248, 236, 0.86);
+  border-color: rgba(43, 17, 51, 0.14);
+  color: var(--tinta-cafe);
+}
+
+.contact-card h2 {
+  color: var(--tinta-profunda);
+  font-size: clamp(1.1rem, 2.4vw, 1.65rem);
+}
+
+/* Bio */
+
+.bio-portrait img {
+  border-color: rgba(43, 17, 51, 0.16);
+  background: rgba(242, 222, 193, 0.42);
+}
+
+.bio-copy {
+  color: var(--tinta-media);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .two-column-panel > div + div {
+    border-left: none;
+    border-top: 1px solid rgba(43, 17, 51, 0.18);
+  }
+}
+
+@media (max-width: 580px) {
+  .page-hero.compact {
+    padding-top: 52px;
+    margin-bottom: 36px;
+  }
+
+  .page-hero.compact h1 {
+    font-size: clamp(2.8rem, 15vw, 4.4rem);
+  }
+
+  .text-block,
+  .two-column-panel > div,
+  .contact-panel,
+  .timeline-panel {
+    padding: 22px;
+  }
+}
