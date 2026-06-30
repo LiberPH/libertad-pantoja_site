@@ -7,10 +7,10 @@
   subtitle: "Pieza única disponible"
   year: "2012"
   technique: "Tinta china"
-  dimensions: "XX × XX cm"
+  dimensions: "26 × 22 cm"
   edition: "Pieza única"
   status: "disponible"
-  price: "Consultar adquisición"
+  price: "250 USD"
   image: "/assets/img/obra/Planta_carnivora.jpeg"
   featured: true
   description: >-
@@ -23,10 +23,10 @@
   subtitle: "Impresión de alta calidad a partir de obra pictórica original"
   year: "2026"
   technique: "Impresión fine art / papel fotográfico de alta calidad"
-  dimensions: "XX × XX cm"
+  dimensions: "25.5 × 36.5 cm"
   edition: "Edición limitada de 20 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Consultar disponibilidad"
+  price: "80 USD sin enmarcar, 180 USD enmarcada"
   image: "/assets/img/obra/La_luz_de_los_insectos.jpeg"
   featured: true
   description: "La obra original no está disponible para venta; se ofrece una edición limitada de 20 impresiones."
