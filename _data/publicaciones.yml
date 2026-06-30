@@ -2,7 +2,7 @@
 # La divulgación queda como archivo secundario.
 
 - title: "Tú, enfermo no estás"
-  category: "libros"
+  category: "libro"
   publisher: "Malabar Editorial"
   year: "2021"
   image: "/assets/img/publicaciones/tu-enfermo-no-estas.jpg"
@@ -11,12 +11,16 @@
 - title: "Fosca, antología siniestra"
   category: "antologia"
   type: "Cuento: Con papas y cebollitas"
-  publisher: "Malabar Editorial / +Cáspita
+  publisher: "Malabar Editorial / +Cáspita"
   year: "2021"
   url: "https://malabar-ed.com/fosca-antologia-siniestra/"
   image: "/assets/img/publicaciones/Lo_fantastico.jpg"
-  description: "El terror expande el alma y alerta los sentidos; el horror, en cambio paraliza, contrae el alma y congela el impulso vital. Estas emociones extremas han sido plasmadas en diferentes manifestaciones artísticas a lo largo del tiempo. Lo siniestro, el tema que convocó esta antología, es un ente más sutil, menos definitivo, incluso mutante que, aunque mantiene cierto parentesco con el terror y el horror; se encamina por lugares oscuros y velados, tan propios que son ajenos.."
-  featured: true	
+  description: >-
+    El terror expande el alma y alerta los sentidos; el horror, en cambio,
+    paraliza, contrae el alma y congela el impulso vital. Lo siniestro, el tema
+    que convocó esta antología, es un ente más sutil, menos definitivo, incluso
+    mutante.
+  featured: true
 
 - title: "Historias de las historias"
   category: "antologia"

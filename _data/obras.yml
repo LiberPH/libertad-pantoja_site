@@ -2,7 +2,7 @@
 # Estados sugeridos: disponible, reservada, vendida, agotada, archivo, proximamente.
 # Categorías sugeridas: original, edicion-limitada, fotografia, fotografia-intervenida, archivo-visual.
 
-- title: "Las serpientes"
+- title: "Planta carnívora"
   category: "original"
   subtitle: "Pieza única disponible"
   year: "2012"
@@ -13,7 +13,10 @@
   price: "Consultar adquisición"
   image: "/assets/img/obra/planta_carnivora.jpeg"
   featured: true
-  description: "Tuve una temporada de fijación con las serpientes y los animales híbridos. Me pareció muy interesante pensar en una planta-animal, flor-serpiente capaz de comer animales más pequeños que ella."
+  description: >-
+    Tuve una temporada de fijación con las serpientes y los animales híbridos.
+    Me pareció muy interesante pensar en una planta-animal, flor-serpiente
+    capaz de comer animales más pequeños que ella.
 
 - title: "La luz de los insectos"
   category: "edicion-limitada"
