@@ -2,11 +2,11 @@
 # Estados sugeridos: disponible, reservada, vendida, agotada, archivo, proximamente.
 # Categorías sugeridas: original, edicion-limitada, fotografia, fotografia-intervenida, archivo-visual.
 
-- title: "Obra original 1"
+- title: "Las serpientes"
   category: "original"
   subtitle: "Pieza única disponible"
-  year: "2026"
-  technique: "Óleo / pastel / técnica por confirmar"
+  year: "2012"
+  technique: "Tinta china"
   size: "XX × XX cm"
   edition: "Pieza única"
   status: "disponible"
@@ -14,7 +14,7 @@
   image: "/assets/img/obra/placeholder-obra.svg"
   description: "Reemplaza esta ficha con una de tus piezas originales disponibles."
 
-- title: "Cuadro reservado · edición limitada 1"
+- title: "La luz de los insectos"
   category: "edicion-limitada"
   subtitle: "Impresión de alta calidad a partir de obra pictórica original"
   year: "2026"
