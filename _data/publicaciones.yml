@@ -14,7 +14,7 @@
   publisher: "Malabar Editorial / +Cáspita"
   year: "2021"
   url: "https://malabar-ed.com/fosca-antologia-siniestra/"
-  image: "/assets/img/publicaciones/Lo_fantastico.jpg"
+  image: "/assets/img/publicaciones/FOSCA.jpg"
   description: >-
     El terror expande el alma y alerta los sentidos; el horror, en cambio,
     paraliza, contrae el alma y congela el impulso vital. Lo siniestro, el tema
@@ -40,6 +40,7 @@
   url: "https://tienda.librosampleados.mx/producto/ep-literaria-lo-fantastico-no-existe/"
   image: "/assets/img/publicaciones/Lo_fantastico.jpg"
   description: "Colección de cuentos publicada por Ediciones Periféricas y Literaria Centro Mexicano de Escritores."
+  featured: true
 
 - title: "Penumbria pandémica"
   category: "antologia"
