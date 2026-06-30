@@ -5,6 +5,7 @@
   category: "libro"
   publisher: "Malabar Editorial"
   year: "2021"
+  url: "https://malabar-ed.com/tu-enfermo-no-estas-libertad-pantoja/"
   image: "/assets/img/publicaciones/tu-enfermo-no-estas.jpg"
   featured: true
 
@@ -12,7 +13,7 @@
   category: "antologia"
   type: "Cuento: Con papas y cebollitas"
   publisher: "Malabar Editorial / +Cáspita"
-  year: "2021"
+  year: "2026"
   url: "https://malabar-ed.com/fosca-antologia-siniestra/"
   image: "/assets/img/publicaciones/FOSCA.jpg"
   description: >-
@@ -36,8 +37,7 @@
   category: "antologia"
   type: "Cuento: La carta de Snellen"
   publisher: "Ediciones Periféricas / Literaria"
-  year: "2021"
-  url: "https://tienda.librosampleados.mx/producto/ep-literaria-lo-fantastico-no-existe/"
+  year: "2018"
   image: "/assets/img/publicaciones/Lo_fantastico.jpg"
   description: "Colección de cuentos publicada por Ediciones Periféricas y Literaria Centro Mexicano de Escritores."
   featured: true
@@ -55,7 +55,6 @@
   type: "Cuento: De cadáveres"
   publisher: "FONCA / Jóvenes Creadores"
   year: "2019"
-  url: "https://fonca.cultura.gob.mx/jovenes-creadores/wp-content/uploads/2019/11/antologia_sp_2019.pdf"
   description: "Antología del segundo periodo 2018/2019 del programa Jóvenes Creadores."
 
 - title: "Sushi y esgrima"
