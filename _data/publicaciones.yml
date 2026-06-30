@@ -2,12 +2,10 @@
 # La divulgación queda como archivo secundario.
 
 - title: "Tú, enfermo no estás"
-  category: "libro"
-  type: "Libro de cuentos"
+  category: "libros"
   publisher: "Malabar Editorial"
   year: "2021"
-  url: "https://malabar-ed.com/tu-enfermo-no-estas-libertad-pantoja/"
-  description: "Libro de cuentos publicado por Malabar Editorial."
+  image: "/assets/img/publicaciones/tu-enfermo-no-estas.jpg"
   featured: true
 
 - title: "Historias de las historias"
@@ -17,6 +15,7 @@
   year: "2011"
   url: "https://www.edicionesdelermitano.com/libro/historia-de-las-historias_7253/"
   description: "Antología de minificción derivada del sitio Las Historias."
+  featured: true
 
 - title: "Lo fantástico no existe"
   category: "antologia"
