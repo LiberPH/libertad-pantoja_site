@@ -1,6 +1,4 @@
 # Configuración base del sitio
-# Para Netlify o un dominio propio, deja baseurl vacío.
-# Para GitHub Pages en un repositorio de proyecto, cambia baseurl a "/nombre-del-repo".
 title: "Libertad Pantoja"
 description: "Escritura, pintura, fotografía e imagen intervenida alrededor del sueño, el mito y el inframundo."
 url: "https://LiberPH.github.io"
