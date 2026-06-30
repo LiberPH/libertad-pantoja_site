@@ -8,12 +8,23 @@
   image: "/assets/img/publicaciones/tu-enfermo-no-estas.jpg"
   featured: true
 
+- title: "Fosca, antología siniestra"
+  category: "antologia"
+  type: "Cuento: Con papas y cebollitas"
+  publisher: "Malabar Editorial / +Cáspita
+  year: "2021"
+  url: "https://malabar-ed.com/fosca-antologia-siniestra/"
+  image: "/assets/img/publicaciones/Lo_fantastico.jpg"
+  description: "El terror expande el alma y alerta los sentidos; el horror, en cambio paraliza, contrae el alma y congela el impulso vital. Estas emociones extremas han sido plasmadas en diferentes manifestaciones artísticas a lo largo del tiempo. Lo siniestro, el tema que convocó esta antología, es un ente más sutil, menos definitivo, incluso mutante que, aunque mantiene cierto parentesco con el terror y el horror; se encamina por lugares oscuros y velados, tan propios que son ajenos.."
+  featured: true	
+
 - title: "Historias de las historias"
   category: "antologia"
   type: "Cuento: Hilos"
   publisher: "Ediciones del Ermitaño"
   year: "2011"
   url: "https://www.edicionesdelermitano.com/libro/historia-de-las-historias_7253/"
+  image: "/assets/img/publicaciones/historias_de_las_historias.jpg"
   description: "Antología de minificción derivada del sitio Las Historias."
   featured: true
 
@@ -23,6 +34,7 @@
   publisher: "Ediciones Periféricas / Literaria"
   year: "2021"
   url: "https://tienda.librosampleados.mx/producto/ep-literaria-lo-fantastico-no-existe/"
+  image: "/assets/img/publicaciones/Lo_fantastico.jpg"
   description: "Colección de cuentos publicada por Ediciones Periféricas y Literaria Centro Mexicano de Escritores."
 
 - title: "Penumbria pandémica"
