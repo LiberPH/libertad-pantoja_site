@@ -581,3 +581,245 @@ figcaption {
   .category-nav { border-radius: 22px; justify-content: flex-start; }
   .metadata-list div { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* Ajuste editorial: cabecera oscura + cuerpo crema */
+
+:root {
+  --crema-fondo: #F7E9D2;
+  --crema-panel: #FFF6E8;
+  --crema-panel-suave: #F2DEC1;
+  --tinta-oscura: #2B1133;
+  --tinta-profunda: #16091E;
+  --tinta-cafe: #4A302F;
+  --tinta-media: #765A4C;
+  --borde-crema: rgba(43, 17, 51, 0.16);
+  --sombra-crema: rgba(43, 17, 51, 0.10);
+}
+
+body {
+  background:
+    linear-gradient(
+      180deg,
+      var(--noche) 0,
+      var(--umbral) 360px,
+      var(--crema-fondo) 360px,
+      var(--crema-fondo) 100%
+    );
+  background-attachment: scroll;
+  color: var(--tinta-cafe);
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 80% 8%, rgba(246, 161, 58, 0.18), transparent 26%),
+    radial-gradient(circle at 14% 20%, rgba(214, 95, 39, 0.12), transparent 24%);
+}
+
+/* La parte superior permanece nocturna */
+
+.site-header,
+.hero,
+.page-hero {
+  color: var(--tinta-clara);
+}
+
+.site-brand,
+.site-header a,
+.page-hero h1,
+.page-hero .hero-lede,
+.hero h1,
+.hero .hero-lede {
+  color: var(--tinta-clara);
+}
+
+.page-hero .eyebrow,
+.hero .eyebrow {
+  color: var(--horizonte);
+}
+
+/* Escala tipográfica más contenida */
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  line-height: 1.12;
+}
+
+h3 {
+  font-size: clamp(1.05rem, 1.8vw, 1.24rem);
+  line-height: 1.18;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Títulos dentro de tarjetas */
+
+.feature-card h3,
+.publication-card h3,
+.art-card h3 {
+  font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Bloques sobre fondo crema */
+
+.intro-panel,
+.text-block,
+.cta-band,
+.two-column-panel,
+.contact-panel,
+.timeline-panel,
+.feature-card,
+.publication-card,
+.art-card,
+.contact-card {
+  background: rgba(255, 246, 232, 0.88);
+  border-color: var(--borde-crema);
+  color: var(--tinta-cafe);
+  box-shadow: 0 16px 38px var(--sombra-crema);
+}
+
+.text-block,
+.intro-panel {
+  color: var(--tinta-cafe);
+}
+
+.text-block p,
+.intro-panel p,
+.feature-card p,
+.publication-card p,
+.art-card p,
+.art-card-body p,
+.cta-band p,
+.section-heading p,
+.bio-copy,
+.soft-list,
+.timeline-list {
+  color: var(--tinta-media);
+}
+
+.feature-card h2,
+.feature-card h3,
+.publication-card h2,
+.publication-card h3,
+.art-card h2,
+.art-card h3,
+.contact-card h2,
+.text-block h2,
+.intro-panel h2,
+.section-heading h2 {
+  color: var(--tinta-oscura);
+}
+
+.card-label,
+.eyebrow {
+  color: var(--brasa);
+}
+
+/* Secciones alternadas: crema, no franjas oscuras */
+
+.collection-section.tinted,
+.publication-section.tinted,
+.publication-section.quiet {
+  background: rgba(242, 222, 193, 0.42);
+  border-top: 1px solid var(--borde-crema);
+  border-bottom: 1px solid var(--borde-crema);
+}
+
+/* Tarjetas de publicaciones más compactas */
+
+.publication-card {
+  padding: 18px 20px;
+  gap: 16px;
+}
+
+.publication-card .card-label {
+  margin-bottom: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.publication-card p {
+  margin-bottom: 0.45rem;
+}
+
+.publication-card .muted {
+  color: var(--tinta-media);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.compact-list .publication-card {
+  opacity: 1;
+  background: rgba(255, 246, 232, 0.72);
+}
+
+/* Links en fondo crema */
+
+.text-link {
+  color: var(--tinta-oscura);
+  border-bottom-color: rgba(156, 59, 50, 0.45);
+}
+
+.text-link:hover {
+  color: var(--brasa);
+  border-bottom-color: var(--brasa);
+}
+
+.button.secondary {
+  color: var(--tinta-oscura);
+  background: rgba(255, 246, 232, 0.78);
+  border-color: var(--borde-crema);
+}
+
+.button.secondary:hover {
+  background: var(--tinta-oscura);
+  color: var(--tinta-clara);
+}
+
+/* Footer sobre crema */
+
+.site-footer {
+  border-top-color: var(--borde-crema);
+  color: var(--tinta-media);
+}
+
+.footer-title {
+  color: var(--tinta-oscura);
+}
+
+/* En móvil, todavía más compacto */
+
+@media (max-width: 580px) {
+  body {
+    background:
+      linear-gradient(
+        180deg,
+        var(--noche) 0,
+        var(--umbral) 300px,
+        var(--crema-fondo) 300px,
+        var(--crema-fondo) 100%
+      );
+  }
+
+  h1 {
+    font-size: clamp(2.45rem, 13vw, 3.6rem);
+  }
+
+  h2 {
+    font-size: 1.55rem;
+  }
+
+  .publication-card {
+    padding: 17px;
+  }
+
+  .publication-card h3 {
+    font-size: 1.05rem;
+  }
+}
