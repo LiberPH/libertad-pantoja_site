@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Placeholder edición limitada">
+  <rect width="1200" height="900" fill="#2B1133"/>
+  <rect x="180" y="120" width="840" height="620" rx="12" fill="#F4E3C8" opacity="0.08" stroke="#F4E3C8" stroke-width="6"/>
+  <circle cx="600" cy="430" r="180" fill="#D65F27" opacity="0.70"/>
+  <line x1="360" y1="520" x2="840" y2="520" stroke="#F6A13A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M470 520 A130 130 0 0 1 730 520" fill="none" stroke="#F4E3C8" stroke-width="12" stroke-linecap="round"/>
+  <text x="80" y="110" fill="#F4E3C8" font-family="serif" font-size="54">Edición limitada</text>
+  <text x="80" y="170" fill="#D8C3A8" font-family="sans-serif" font-size="28">20 impresiones · firmadas y numeradas</text>
+</svg>

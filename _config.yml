@@ -1,0 +1,27 @@
+# Configuración base del sitio
+# Para Netlify o un dominio propio, deja baseurl vacío.
+# Para GitHub Pages en un repositorio de proyecto, cambia baseurl a "/nombre-del-repo".
+title: "Libertad Pantoja"
+description: "Escritura, pintura, fotografía e imagen intervenida alrededor del sueño, el mito y el inframundo."
+url: ""
+baseurl: ""
+lang: "es-MX"
+timezone: "America/Mexico_City"
+
+# Datos de contacto y redes
+email: "jugueterabioso2020@gmail.com"
+instagram: "https://www.instagram.com/libertadpantoja/"
+substack: "https://flyingfugu.substack.com/"
+bluesky: "https://bsky.app/profile/libertad.bsky.social"
+old_site: "https://liberph.github.io/airspace-jekyll/"
+
+# Jekyll
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

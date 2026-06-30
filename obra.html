@@ -1,0 +1,100 @@
+---
+layout: page
+title: Obra
+eyebrow: Imagen · materia · aparición
+intro: Trabajo con pintura, dibujo, fotografía e imagen intervenida para explorar el territorio interior: sueño, mito, cuerpo, aparición e inframundo.
+permalink: /obra/
+---
+
+<section class="text-block wide">
+  <p>
+    En esta sección encontrarás piezas originales, ediciones limitadas de obra pictórica,
+    fotografía impresa en papel de alta calidad y fotografías intervenidas a mano. Algunas obras son únicas;
+    otras pertenecen a tirajes pequeños, firmados y numerados.
+  </p>
+</section>
+
+<section class="category-nav" aria-label="Categorías de obra">
+  <a href="#original">Obra original</a>
+  <a href="#ediciones">Ediciones limitadas</a>
+  <a href="#fotografia">Fotografía</a>
+  <a href="#intervenida">Fotografía intervenida</a>
+  <a href="#archivo-visual">Archivo visual</a>
+</section>
+
+<section id="original" class="collection-section">
+  <div class="section-heading">
+    <p class="eyebrow">Piezas únicas</p>
+    <h2>Obra original</h2>
+    <p>Óleo, pastel, lápiz, tinta y piezas sobre papel. Originales disponibles o en archivo.</p>
+  </div>
+
+  <div class="art-grid">
+    {% for obra in site.data.obras %}
+      {% if obra.category == 'original' %}
+        {% include obra-card.html obra=obra %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="ediciones" class="collection-section tinted">
+  <div class="section-heading">
+    <p class="eyebrow">Tirajes pequeños</p>
+    <h2>Ediciones limitadas de obra pictórica</h2>
+    <p>
+      Algunas pinturas no están disponibles como obra original, pero existen en ediciones limitadas
+      de 20 impresiones de alta calidad, firmadas y numeradas.
+    </p>
+  </div>
+
+  <div class="art-grid">
+    {% for obra in site.data.obras %}
+      {% if obra.category == 'edicion-limitada' %}
+        {% include obra-card.html obra=obra %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="fotografia" class="collection-section">
+  <div class="section-heading">
+    <p class="eyebrow">Obra sobre papel</p>
+    <h2>Fotografía impresa</h2>
+    <p>Impresiones fotográficas en papel de alta calidad. Esta línea puede funcionar como entrada accesible a tu universo visual.</p>
+  </div>
+
+  <div class="art-grid">
+    {% for obra in site.data.obras %}
+      {% if obra.category == 'fotografia' %}
+        {% include obra-card.html obra=obra %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="intervenida" class="collection-section tinted">
+  <div class="section-heading">
+    <p class="eyebrow">Piezas híbridas</p>
+    <h2>Fotografía intervenida</h2>
+    <p>
+      Impresiones fotográficas intervenidas a mano con lápiz, pastel u otros materiales.
+      Cada intervención transforma la imagen en una pieza única o en una variación irrepetible.
+    </p>
+  </div>
+
+  <div class="art-grid">
+    {% for obra in site.data.obras %}
+      {% if obra.category == 'fotografia-intervenida' %}
+        {% include obra-card.html obra=obra %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="archivo-visual" class="cta-band small">
+  <p class="eyebrow">Archivo</p>
+  <h2>Mundos pequeños</h2>
+  <p>El archivo fotográfico conserva la mirada sobre insectos, jardines, cuerpos mínimos y apariciones de lo vivo.</p>
+  <a class="button secondary" href="{{ '/archivo-visual/' | relative_url }}">Ver archivo visual</a>
+</section>

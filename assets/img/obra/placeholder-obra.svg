@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Placeholder obra original">
+  <rect width="1200" height="900" fill="#16091E"/>
+  <circle cx="780" cy="300" r="190" fill="#5A1F3A" opacity="0.85"/>
+  <path d="M240 700 C360 460 520 380 700 420 C850 455 900 610 1040 660" fill="none" stroke="#F6A13A" stroke-width="16" stroke-linecap="round"/>
+  <path d="M270 705 C410 625 600 610 820 670" fill="none" stroke="#F4E3C8" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+  <text x="80" y="110" fill="#F4E3C8" font-family="serif" font-size="54">Obra original</text>
+  <text x="80" y="170" fill="#D8C3A8" font-family="sans-serif" font-size="28">Reemplazar imagen</text>
+</svg>

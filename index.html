@@ -1,0 +1,67 @@
+---
+layout: default
+title: Inicio
+body_class: home
+---
+
+<section class="hero split-hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Escritura · pintura · imagen</p>
+    <h1>Libertad Pantoja</h1>
+    <p class="hero-lede">Escribo y pinto el territorio interior: sueño, mito e inframundo.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="{{ '/obra/' | relative_url }}">Ver obra</a>
+      <a class="button secondary" href="{{ site.substack }}" target="_blank" rel="noopener noreferrer">Entrar a El umbral</a>
+    </div>
+  </div>
+
+  <figure class="hero-image">
+    <img src="{{ '/assets/img/perfil/placeholder-perfil.svg' | relative_url }}" alt="Libertad Pantoja">
+    <figcaption>Reemplazar por retrato o imagen de obra.</figcaption>
+  </figure>
+</section>
+
+<section class="intro-panel">
+  <p>
+    Mi trabajo cruza escritura, pintura, dibujo, fotografía e imagen intervenida.
+    Esta página reúne mi obra visual, libros, publicaciones, talleres y proyectos alrededor del sueño,
+    el mito, la sombra y la imaginación profunda.
+  </p>
+</section>
+
+<section class="card-grid feature-grid" aria-label="Secciones principales">
+  <article class="feature-card">
+    <p class="card-label">Obra</p>
+    <h2>Pintura, fotografía y piezas intervenidas</h2>
+    <p>Obra original, ediciones limitadas de obra pictórica, fotografía impresa y fotografía intervenida a mano.</p>
+    <a href="{{ '/obra/' | relative_url }}">Ver obra</a>
+  </article>
+
+  <article class="feature-card">
+    <p class="card-label">Libros</p>
+    <h2>Libros y publicaciones</h2>
+    <p>Una selección de libros, antologías, cuentos en revistas y archivo de divulgación.</p>
+    <a href="{{ '/publicaciones/' | relative_url }}">Ver publicaciones</a>
+  </article>
+
+  <article class="feature-card">
+    <p class="card-label">Comunidad</p>
+    <h2>Los sueños y el inframundo</h2>
+    <p>Un círculo de lectura sobre sueño, mito y psicología de las profundidades.</p>
+    <a href="{{ '/club/' | relative_url }}">Conocer el club</a>
+  </article>
+
+  <article class="feature-card">
+    <p class="card-label">Cursos</p>
+    <h2>Talleres y cursos</h2>
+    <p>Espacios de escritura, imagen y narrativa para mirar desde la aparición, el símbolo y la escena.</p>
+    <a href="{{ '/talleres/' | relative_url }}">Ver talleres</a>
+  </article>
+</section>
+
+<section class="cta-band">
+  <p class="eyebrow">Empieza aquí</p>
+  <h2>El umbral</h2>
+  <p>Notas, lecturas, sueños, campañas del club y noticias sobre obra disponible.</p>
+  <a class="button primary" href="{{ site.substack }}" target="_blank" rel="noopener noreferrer">Ir al Substack</a>
+</section>

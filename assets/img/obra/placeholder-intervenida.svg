@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Placeholder fotografía intervenida">
+  <rect width="1200" height="900" fill="#16091E"/>
+  <rect x="160" y="110" width="880" height="650" rx="18" fill="#2B1133" stroke="#F4E3C8" stroke-width="5" opacity="0.95"/>
+  <circle cx="520" cy="420" r="180" fill="#9C3B32" opacity="0.55"/>
+  <path d="M250 650 C410 300 700 260 900 610" fill="none" stroke="#F6A13A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M310 590 C430 540 560 590 690 500 C780 440 880 470 960 410" fill="none" stroke="#F4E3C8" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 16"/>
+  <text x="80" y="90" fill="#F4E3C8" font-family="serif" font-size="54">Fotografía intervenida</text>
+  <text x="80" y="840" fill="#D8C3A8" font-family="sans-serif" font-size="28">Impresión + intervención manual</text>
+</svg>

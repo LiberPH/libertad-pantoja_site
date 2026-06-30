@@ -1,0 +1,79 @@
+---
+layout: page
+title: Libros y publicaciones
+eyebrow: Archivo literario
+intro: Una selección de libros, cuentos, antologías, revistas y textos publicados.
+permalink: /publicaciones/
+---
+
+<section class="text-block wide">
+  <p>
+    Soy autora de <em>Tú, enfermo no estás</em>, libro de cuentos publicado por Malabar Editorial.
+    Mis textos han aparecido en antologías, revistas literarias y proyectos de divulgación.
+    Esta página reúne una selección de mi archivo publicado.
+  </p>
+</section>
+
+<section class="publication-section">
+  <div class="section-heading">
+    <p class="eyebrow">Libro</p>
+    <h2>Libros</h2>
+  </div>
+
+  <div class="publication-list featured-list">
+    {% for item in site.data.publicaciones %}
+      {% if item.category == 'libro' %}
+        {% include publication-card.html item=item %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="publication-section tinted">
+  <div class="section-heading">
+    <p class="eyebrow">Trayectoria</p>
+    <h2>Antologías</h2>
+  </div>
+
+  <div class="publication-list">
+    {% for item in site.data.publicaciones %}
+      {% if item.category == 'antologia' %}
+        {% include publication-card.html item=item %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="publication-section">
+  <div class="section-heading">
+    <p class="eyebrow">Cuentos en línea</p>
+    <h2>Revistas y sitios literarios</h2>
+  </div>
+
+  <div class="publication-list">
+    {% for item in site.data.publicaciones %}
+      {% if item.category == 'revista' %}
+        {% include publication-card.html item=item %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="publication-section quiet">
+  <div class="section-heading">
+    <p class="eyebrow">Archivo secundario</p>
+    <h2>Archivo de divulgación</h2>
+    <p>
+      Antes y alrededor de mi trabajo literario y visual, escribí textos de divulgación científica
+      sobre insectos, cuerpo, enfermedad, evolución y mundo natural. Los conservo aquí como parte de mi archivo de observación.
+    </p>
+  </div>
+
+  <div class="publication-list compact-list">
+    {% for item in site.data.publicaciones %}
+      {% if item.category == 'divulgacion' %}
+        {% include publication-card.html item=item %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

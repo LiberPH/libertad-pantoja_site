@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'es-MX' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,0,600;9..144,1,400&family=Cormorant:wght@500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+  {% include header.html %}
+
+  <main id="contenido">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
