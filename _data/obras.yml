@@ -11,8 +11,8 @@
   edition: "Pieza única"
   status: "disponible"
   price: "Consultar adquisición"
-  image: "/assets/img/obra/placeholder-obra.svg"
-  description: "Reemplaza esta ficha con una de tus piezas originales disponibles."
+  image: "/assets/img/obra/planta_carnivora.jpeg"
+  description: "tuve una temporarda de fijación con las serpientes y los animales híbridos. Me pareció muy interesante pensar en una planta-animal, flore-serpiente capaz de comer animales más pequeños que ella."
 
 - title: "La luz de los insectos"
   category: "edicion-limitada"
