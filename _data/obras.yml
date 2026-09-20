@@ -5,53 +5,185 @@
   category: "original"
   subtitle: "Pieza única disponible"
   year: "2012"
-  technique: "Tinta china"
+  technique: "Tinta china sobre papel"
   dimensions: "26 × 22 cm"
   edition: "Pieza única"
   status: "disponible"
-  price: "250 USD"
+  price: "$7,500 MXN · 375 USD"
   image: "/assets/img/obra/Planta_carnivora.jpeg"
   featured: true
   description: >-
     Tuve una temporada de fijación con las serpientes y los animales híbridos.
-    Me pareció muy interesante pensar en una planta-animal, flor-serpiente
-    capaz de comer animales más pequeños que ella.
+    Me pareció interesante pensar en una planta-animal, flor-serpiente, capaz
+    de comer animales más pequeños que ella. La realicé poco después de tomar
+    un curso de dibujo en tinta china. Mi primer dibujo fue un rostro copiado
+    de una fotografía, pero quería lograr algo más mío, acorde con mis
+    obsesiones biológicas.
+
+- title: "Lo que dejé secar sobre la alfombra"
+  category: "original"
+  subtitle: "Pieza única"
+  year: "2026"
+  technique: "Óleo sobre tela"
+  dimensions: "35 × 45 cm"
+  edition: "Pieza única"
+  status: "disponible"
+  price: "$14,000 MXN · 700 USD"
+  image: "/assets/img/obra/lo-que-deje-secar.jpg"
+  featured: true
+  description: >-
+    Soñé que visitaba a mi abuela. Al entrar en la casa de mi infancia
+    encontraba a un hombre desnudo en una tina al que yo debía lavarle los pies.
+    Cuando me negué, el lugar se llenó de cucarachas y los camarones del suelo
+    fueron invadidos por ellas: era claro que, de no lavárselos, nos
+    infestaríamos. El sueño sigue. De él salió también un cuento. Fue esta
+    imagen la que me invitó a pintarla, quizá por la rareza de sus elementos.
+    Coloqué camarones secos sobre la alfombra de mi casa, conseguí una cucaracha
+    de plástico y me fotografié los pies. Usé esa foto como referencia para la
+    pintura. Aún no acabo de descifrarla. De momento pienso que los camarones
+    son las ideas que uno deja secar sobre la alfombra, y las cucarachas, lo que
+    ocurre cuando se abandonan. Pintada en el taller de proyectos pictóricos de
+    Darío Salzman.
+
+- title: "El rescate del gato blanco"
+  category: "original"
+  subtitle: "Pieza única"
+  year: "2026"
+  technique: "Gis pastel sobre papel negro"
+  dimensions: "20.3 × 28 cm"
+  edition: "Pieza única"
+  status: "disponible"
+  price: "$9,000 MXN · 450 USD"
+  image: "/assets/img/obra/el-rescate-del-gato-blanco.jpg"
+  featured: true
+  description: >-
+    Una noche soñé que iba por la calle en Cuernavaca con mi pareja. Él
+    rescataba un gato blanco del ataque de unos perros. El gato hablaba,
+    agradecía en la lengua de los humanos antes de ser depositado en los brazos
+    de una muchacha que andaba por el terreno baldío donde lo hallamos. Había
+    también una navaja que refulgía con la luz anaranjada de una brasa y
+    autopistas como hoyos de gusano. Decidí dibujar esta escena por la ternura
+    que me evocaba y por ese recuerdo transfigurado de un lugar donde viví más
+    de cinco años: el sueño me devolvió Cuernavaca deformada. Quise redescubrir
+    el uso del gis pastel, una herramienta cálida y expresiva, dibujando una de
+    las imágenes de este sueño. No sé si el mundo onírico es una puerta al
+    inframundo o la entrada a nosotros mismos.
+
+- title: "El fruto de la hojarasca"
+  category: "original"
+  subtitle: "Pieza única"
+  year: "2026"
+  technique: "Lápiz de color sobre papel Strathmore Toned Tan"
+  dimensions: "19.5 × 20 cm"
+  edition: "Pieza única"
+  status: "disponible"
+  price: "$8,500 MXN · 425 USD"
+  image: "/assets/img/obra/el-fruto-de-la-hojarasca.jpg"
+  featured: true
+  description: >-
+    Al caminar por un parque, las cerezas de Jerusalén deslumbran como un fruto
+    de la hojarasca. El contraste con sus hojas, de un verde cada vez más
+    luminoso, nos hace sentir en un sueño. Vamos por un bosque frondoso donde en
+    cualquier momento saldrán lobos y venados a nuestro encuentro. Podríamos
+    pensar que la cereza es un jitomate o una ciruela, pero es un fruto
+    venenoso. Nos lo demuestra su postura, turgente, presta a atacar. Es una
+    criatura esperando propagarse, que la llevemos con nosotros a terrenos
+    insospechados. Quise transmitir esa energía a través del color, invitar al
+    espectador a ese bosque de ensueño que bien puede brindarle una tarde
+    apacible o un escenario de pesadilla.
+
 - title: "La luz de los insectos"
   category: "edicion-limitada"
-  subtitle: "Impresión de alta calidad a partir de obra pictórica original"
-  year: "2026"
-  technique: "Impresión fine art / papel fotográfico de alta calidad"
+  subtitle: "Original no disponible · edición limitada de impresiones"
+  year: "2012–2026"
+  technique: "Grafito sobre papel ilustración"
   dimensions: "25.5 × 36.5 cm"
-  edition: "Edición limitada de 20 ejemplares, firmada y numerada"
+  edition: "Edición limitada de 15 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "80 USD sin enmarcar, 180 USD enmarcada"
+  price: "$3,500 MXN · 175 USD (impresión sin enmarcar)"
   image: "/assets/img/obra/La_luz_de_los_insectos.jpeg"
   featured: true
-  description: "La obra original no está disponible para venta; se ofrece una edición limitada de 20 impresiones."
-# - title: "Cuadro reservado · edición limitada 2"
-#   category: "edicion-limitada"
-#   subtitle: "Impresión de alta calidad a partir de obra pictórica original"
-#   year: "2026"
-#   technique: "Impresión fine art / papel fotográfico de alta calidad"
-#   dimensions: "XX × XX cm"
-#   edition: "Edición limitada de 20 ejemplares, firmada y numerada"
-#   status: "disponible"
-#   price: "Consultar disponibilidad"
-#   image: "/assets/img/obra/placeholder-edicion.svg"
-#   featured: false
-#   description: "La obra original no está disponible para venta; se ofrece una edición limitada de 20 impresiones."
-# - title: "Fotografía impresa 1"
-#   category: "fotografia"
-#   subtitle: "Obra fotográfica en papel de alta calidad"
-#   year: "2026"
-#   technique: "Impresión fotográfica"
-#   dimensions: "XX × XX cm"
-#   edition: "Tiraje por definir"
-#   status: "proximamente"
-#   price: "Consultar"
-#   image: "/assets/img/obra/placeholder-foto.svg"
-#   featured: false
-#   description: "Para impresiones fotográficas de alta calidad, firmadas y numeradas si decides manejar tiraje limitado."
+  description: >-
+    El daimon de este dibujo está inspirado en un personaje de una novela que
+    estoy escribiendo: una suerte de espíritu guía de una chica que camina por
+    la Ciudad de México buscando su destino. Las dos niñas que lo acompañan no
+    pertenecen a la novela; surgieron de un juego aparte, al imaginar a los tres
+    como una representación del tiempo: lo racional, lo espiritual y lo
+    instintivo. Los he dibujado durante años en bocetos y servilletas. Esta hoja
+    la empecé en 2012 y la concluí catorce años después. La obra original no
+    está en venta; se ofrece una edición limitada de quince impresiones,
+    firmadas y numeradas.
+
+- title: "El reino del sol"
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2026"
+  technique: "Fotografía digital"
+  dimensions: "22.2 × 15.7 cm (imagen) · impresión de pigmento sobre papel de algodón"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "$4,500 MXN · 225 USD (impresión sin enmarcar)"
+  image: "/assets/img/obra/el-reino-del-sol.jpg"
+  featured: true
+  description: >-
+    Descubrí esta imagen caminando por el parque Tezozómoc, en Azcapotzalco.
+    Iba con la intención de capturar imágenes para la serie «Hadas urbanas» y la
+    calidez de los colores otoñales me invitó a tomar la fotografía: en el resto
+    de las tomas de ese día dominan los verdes. La larva de color claro en el
+    centro de la flor me hizo sentir una cierta dulzura atalcada, principesca.
+
+- title: "La ciudad de los insectos"
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2024"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $4,500 MXN · 225 USD (impresión sin enmarcar)"
+  image: "/assets/img/obra/ciudad-de-los-insectos.jpg"
+  featured: false
+  description: >-
+    Tomada en el Jardín Botánico de la UNAM, cuando todavía se permitía entrar
+    con cámara. La avispa parece posada en un rincón citadino; en realidad es
+    una fuente construida para que los insectos beban. El ambiente que parece
+    lóbrego es el que les da el agua que requieren para la vida.
+
+- title: "El fuego"
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2024"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $4,500 MXN · 225 USD (impresión sin enmarcar)"
+  image: "/assets/img/obra/el-fuego.jpg"
+  featured: false
+  description: >-
+    Tomada en el Jardín Botánico de la UNAM. Me atrajo el contraste entre la
+    flor roja y la piedra volcánica del fondo, y la luz que ilumina a las flores
+    que la rodean: parecen tener brillo propio, casi ultraterreno, como si
+    fueran la flor roja tan buscada en El libro de la selva.
+
+- title: "Sin título (Piedmont Park)"
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2026"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $4,500 MXN · 225 USD (impresión sin enmarcar)"
+  image: "/assets/img/obra/flor-amarilla-atlanta.jpg"
+  featured: false
+  description: >-
+    Tomada en Piedmont Park, Atlanta. Es una de las dos fotografías de la serie
+    que no ocurren en la Ciudad de México. Fotografiaba los rascacielos y la
+    tarde en el parque cuando me encontré con unas flores diminutas que de
+    inmediato me parecieron pertenecer a «Hadas urbanas». En esta amarilla me
+    gusta el brillo ligero que remite a los polvos de hadas.
+
 # - title: "Fotografía intervenida 1"
 #   category: "fotografia-intervenida"
 #   subtitle: "Impresión intervenida a mano"
@@ -63,4 +195,4 @@
 #   price: "Consultar"
 #   image: "/assets/img/obra/placeholder-intervenida.svg"
 #   featured: false
-#   description: "Para piezas híbridas: impresión fotográfica más intervención manual."
+#   description: "Impresión fotográfica más intervención manual."
