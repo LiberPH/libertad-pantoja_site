@@ -1567,3 +1567,11 @@ main {
     padding: 22px;
   }
 }
+
+/* Precios en dos modalidades (impresiones de edición) */
+.price-list {
+  margin-top: 0.75rem;
+}
+.price-list dt {
+  font-weight: 600;
+}
