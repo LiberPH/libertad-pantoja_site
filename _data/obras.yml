@@ -100,7 +100,8 @@
   dimensions: "25.5 × 36.5 cm"
   edition: "Edición limitada de 15 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "$3,500 MXN · 175 USD (impresión sin enmarcar)"
+  price: "$3,000 MXN · 150 USD"
+  price_framed: "$4,500 MXN · 225 USD"
   image: "/assets/img/obra/La_luz_de_los_insectos.jpeg"
   featured: true
   description: >-
@@ -122,7 +123,8 @@
   dimensions: "22.2 × 15.7 cm (imagen) · impresión de pigmento sobre papel de algodón"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "$4,500 MXN · 225 USD (impresión sin enmarcar)"
+  price: "$3,000 MXN · 150 USD"
+  price_framed: "$4,500 MXN · 225 USD"
   image: "/assets/img/obra/el-reino-del-sol.jpg"
   featured: true
   description: >-
@@ -140,7 +142,8 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $4,500 MXN · 225 USD (impresión sin enmarcar)"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/ciudad-de-los-insectos.jpg"
   featured: false
   description: >-
@@ -157,7 +160,8 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $4,500 MXN · 225 USD (impresión sin enmarcar)"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/el-fuego.jpg"
   featured: false
   description: >-
@@ -174,7 +178,8 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $4,500 MXN · 225 USD (impresión sin enmarcar)"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/flor-amarilla-atlanta.jpg"
   featured: false
   description: >-
