@@ -17,6 +17,9 @@
         <div><dt>Sin marco</dt><dd>{{ include.obra.price }}</dd></div>
         <div><dt>Enmarcada</dt><dd>{{ include.obra.price_framed }}</dd></div>
       </dl>
+      {% if include.obra.price contains "Desde" %}
+        <p class="price-note">El precio varía según el tamaño de impresión. Escríbeme para cotizar el que buscas.</p>
+      {% endif %}
       <a class="text-link" href="mailto:{{ site.email }}?subject=Consulta%20sobre%20{{ include.obra.title | uri_escape }}">Consultar disponibilidad</a>
     {% else %}
       <a class="text-link" href="mailto:{{ site.email }}?subject=Consulta%20sobre%20{{ include.obra.title | uri_escape }}">{{ include.obra.price }}</a>
