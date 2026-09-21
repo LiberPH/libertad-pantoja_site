@@ -1575,3 +1575,11 @@ main {
 .price-list dt {
   font-weight: 600;
 }
+
+/* Nota aclaratoria de precios variables */
+.price-note {
+  font-size: 0.82rem;
+  color: #6b6b6b;
+  font-style: italic;
+  margin: 0.4rem 0 0.2rem;
+}
