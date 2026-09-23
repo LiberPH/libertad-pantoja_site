@@ -1,0 +1,52 @@
+# Textos de interfaz. Separados de las plantillas para poder traducirlos
+# cuando exista la versión en inglés.
+
+obra:
+  facts:
+    year: "Año"
+    technique: "Técnica"
+    dimensions: "Medidas"
+    edition: "Edición"
+
+  # Cada estado define su etiqueta, si se muestra el precio y la acción.
+  # cta vacío = sin botón de compra.
+  status:
+    disponible:
+      label: "Disponible"
+      show_price: true
+      cta: "Escribir para adquirir"
+    reservada:
+      label: "Reservada"
+      show_price: true
+      cta: "Preguntar por esta pieza"
+    vendida:
+      label: "Vendida"
+      show_price: false
+      cta: ""
+    agotada:
+      label: "Edición agotada"
+      show_price: false
+      cta: ""
+    archivo:
+      label: "En archivo"
+      show_price: false
+      cta: ""
+    proximamente:
+      label: "Próximamente"
+      show_price: false
+      cta: "Pedir aviso"
+
+  price_unframed: "Sin marco"
+  price_framed: "Enmarcada"
+  price_varies_note: "El precio varía según el tamaño de impresión. Escríbeme para cotizar el que buscas."
+
+  story_more: "Seguir leyendo"
+  story_less: "Cerrar"
+
+  email_prefix: "o escribe a"
+  process_note: "Te respondo personalmente con disponibilidad, forma de pago y costo de envío."
+
+  mail_subject: "Consulta sobre"
+  mail_greeting: "Hola, Libertad:"
+  mail_interest: "Me interesa"
+  mail_framed_question: "¿La quiero sin marco o enmarcada?:"
