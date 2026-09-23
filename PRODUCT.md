@@ -56,7 +56,7 @@ Una sola autora cuya escritura y obra visual salen de las mismas obsesiones: sue
 - Credenciales confirmadas en `bio.html`: Beca Jóvenes Creadores FONCA/SACPC 2018 (cuento) y 2021 (novela); tres participaciones en Under the Volcano.
 - Archivo de divulgación científica, tratado como archivo secundario.
 - Exposición colectiva *Manifestación* (2026), taller de proyectos pictóricos de Darío Salzman. Formación en ciencias genómicas y biomédicas por la UNAM. Fuente: catálogo de septiembre 2026 (`_privado/`, no publicado).
-- Condiciones de compra confirmadas en el catálogo: contacto por Instagram, WhatsApp o correo; apartado con 50 % y resto contra entrega; transferencia o efectivo; entrega en persona en CDMX o envío asegurado a todo México; ediciones con certificado de autenticidad; precios en USD de referencia. Aún no hay número de WhatsApp publicado.
+- Condiciones de compra confirmadas en el catálogo: contacto por Instagram, WhatsApp o correo; apartado con 50 % y resto contra entrega; transferencia o efectivo; entrega en persona en CDMX o envío asegurado a todo México; ediciones con certificado de autenticidad; precios en USD de referencia. Decisión: no se publica WhatsApp; el contacto es solo por Instagram y correo.
 - **No existen** y no deben inventarse: testimonios de compradores, reseñas, prensa citada, otras exposiciones, galerías representantes, cifras de ventas, envíos internacionales ni políticas de devolución.
 - El Archivo visual (Jardín Botánico, Cuernavaca, Xometla) sigue con series por seleccionar.
 
