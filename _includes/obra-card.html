@@ -64,8 +64,7 @@
         {% capture mail_subject %}{{ ui.mail_subject }} {{ obra.title }}{% endcapture %}
         {% capture mail_line %}{{ ui.mail_interest }} «{{ obra.title }}»{% if obra.edition %} ({{ obra.edition }}){% endif %}.{% endcapture %}
         <a class="art-cta" href="mailto:{{ site.email }}?subject={{ mail_subject | uri_escape }}&amp;body={{ ui.mail_greeting | uri_escape }}%0D%0A%0D%0A{{ mail_line | uri_escape }}{% if obra.price_framed %}%0D%0A{{ ui.mail_framed_question | uri_escape }} {% endif %}">{{ cta }}</a>
-        <p class="art-email">{{ ui.email_prefix }} <span>{{ site.email }}</span></p>
-        {% if show_price and ui.process_note != "" %}<p class="art-process">{{ ui.process_note }}</p>{% endif %}
+        {% if show_price %}<p class="art-terms">{{ ui.terms_line }} · <a href="#adquirir">{{ ui.terms_link }}</a></p>{% endif %}
       {% endif %}
     </div>
   </div>

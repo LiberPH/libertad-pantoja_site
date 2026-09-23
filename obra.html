@@ -18,11 +18,16 @@ permalink: /obra/
   </p>
 </section>
 
+{% assign n_original = site.data.obras | where: "category", "original" | size %}
+{% assign n_ediciones = site.data.obras | where: "category", "edicion-limitada" | size %}
+{% assign n_fotografia = site.data.obras | where: "category", "fotografia" | size %}
+{% assign n_intervenida = site.data.obras | where: "category", "fotografia-intervenida" | size %}
+
 <nav class="category-nav" aria-label="Categorías de obra">
   <a href="#original">Obra original</a>
   <a href="#ediciones">Ediciones limitadas</a>
-  <a href="#fotografia">Fotografía</a>
-  <a href="#intervenida">Fotografía intervenida</a>
+  <a href="#fotografia">Fotografía impresa</a>
+  {% if n_intervenida > 0 %}<a href="#intervenida">Fotografía intervenida</a>{% endif %}
   <a href="#adquirir">Cómo adquirir</a>
   <a href="#archivo-visual">Archivo visual</a>
 </nav>
@@ -75,6 +80,7 @@ permalink: /obra/
   </div>
 </section>
 
+{% if n_intervenida > 0 %}
 <section id="intervenida" class="collection-section tinted">
   <div class="section-heading">
     <h2>Fotografía intervenida</h2>
@@ -92,6 +98,7 @@ permalink: /obra/
     {% endfor %}
   </div>
 </section>
+{% endif %}
 
 <section id="adquirir" class="two-column-panel acquire-panel">
   <div>
@@ -110,6 +117,7 @@ permalink: /obra/
       <li>Apartado con el 50 %; el resto contra entrega. Transferencia bancaria o efectivo.</li>
       <li>Los precios en dólares son de referencia y pueden ajustarse según el tipo de cambio.</li>
     </ul>
+    <p class="acquire-email">Correo: <span>{{ site.email }}</span></p>
   </div>
 </section>
 

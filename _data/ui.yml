@@ -49,9 +49,11 @@ obra:
   story_less: "Cerrar"
 
   email_prefix: "o escribe a"
+  terms_line: "Apartado con 50 % · envío asegurado en México"
+  terms_link: "Cómo adquirir"
   process_note: "Te respondo personalmente con disponibilidad, forma de pago y costo de envío."
 
   mail_subject: "Consulta sobre"
   mail_greeting: "Hola, Libertad:"
   mail_interest: "Me interesa"
-  mail_framed_question: "¿La quiero sin marco o enmarcada?:"
+  mail_framed_question: "¿Sin marco o enmarcada?"

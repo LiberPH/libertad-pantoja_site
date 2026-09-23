@@ -585,15 +585,16 @@ figcaption {
 /* Ajuste editorial: cabecera oscura + cuerpo crema */
 
 :root {
-  --crema-fondo: #F7E9D2;
-  --crema-panel: #FFF6E8;
-  --crema-panel-suave: #F2DEC1;
+  --crema-fondo: #FBF8F2;
+  --crema-panel: #FFFFFF;
+  --crema-panel-suave: #E7E3DD;
   --tinta-oscura: #2B1133;
   --tinta-profunda: #16091E;
-  --tinta-cafe: #4A302F;
-  --tinta-media: #765A4C;
+  --tinta-cafe: #2A2622;
+  --tinta-media: #635A51;
   --borde-crema: rgba(43, 17, 51, 0.16);
-  --sombra-crema: rgba(43, 17, 51, 0.10);
+  --sombra-crema: rgba(42, 38, 34, 0.06);
+  --verde: #2C5D4F;
 }
 
 body {
@@ -611,8 +612,7 @@ body {
 
 body::before {
   background:
-    radial-gradient(circle at 80% 8%, rgba(246, 161, 58, 0.18), transparent 26%),
-    radial-gradient(circle at 14% 20%, rgba(214, 95, 39, 0.12), transparent 24%);
+    radial-gradient(circle at 80% 8%, rgba(246, 161, 58, 0.18), transparent 26%);
 }
 
 /* La parte superior permanece nocturna */
@@ -678,7 +678,7 @@ h3 {
 .publication-card,
 .art-card,
 .contact-card {
-  background: rgba(255, 246, 232, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   border-color: var(--borde-crema);
   color: var(--tinta-cafe);
   box-shadow: 0 16px 38px var(--sombra-crema);
@@ -726,7 +726,7 @@ h3 {
 .collection-section.tinted,
 .publication-section.tinted,
 .publication-section.quiet {
-  background: rgba(242, 222, 193, 0.42);
+  background: rgba(231, 227, 221, 0.42);
   border-top: 1px solid var(--borde-crema);
   border-bottom: 1px solid var(--borde-crema);
 }
@@ -756,7 +756,7 @@ h3 {
 
 .compact-list .publication-card {
   opacity: 1;
-  background: rgba(255, 246, 232, 0.72);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 /* Links en fondo crema */
@@ -773,7 +773,7 @@ h3 {
 
 .button.secondary {
   color: var(--tinta-oscura);
-  background: rgba(255, 246, 232, 0.78);
+  background: rgba(255, 255, 255, 0.78);
   border-color: var(--borde-crema);
 }
 
@@ -834,7 +834,7 @@ h3 {
   max-width: 900px;
   border: 1px solid var(--borde-crema, rgba(43, 17, 51, 0.16));
   border-radius: 24px;
-  background: rgba(255, 246, 232, 0.76);
+  background: rgba(255, 255, 255, 0.76);
   backdrop-filter: none;
   display: flex;
   flex-wrap: wrap;
@@ -851,7 +851,7 @@ h3 {
   border: 1px solid rgba(43, 17, 51, 0.14);
   border-radius: 999px;
   color: var(--tinta-oscura, #2B1133);
-  background: rgba(255, 246, 232, 0.72);
+  background: rgba(255, 255, 255, 0.72);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -874,7 +874,7 @@ h3 {
   margin-top: 48px;
   margin-bottom: 48px;
   padding: clamp(28px, 5vw, 48px);
-  background: rgba(242, 222, 193, 0.48);
+  background: rgba(231, 227, 221, 0.48);
   border: 1px solid var(--borde-crema, rgba(43, 17, 51, 0.16));
   border-radius: 32px;
 }
@@ -891,7 +891,7 @@ h3 {
 }
 
 .section-heading p {
-  color: var(--tinta-media, #765A4C);
+  color: var(--tinta-media, #635A51);
 }
 
 .art-grid {
@@ -906,8 +906,8 @@ h3 {
   flex-direction: column;
   border: 1px solid var(--borde-crema, rgba(43, 17, 51, 0.16));
   border-radius: 28px;
-  background: rgba(255, 246, 232, 0.88);
-  color: var(--tinta-cafe, #4A302F);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--tinta-cafe, #2A2622);
   overflow: hidden;
   box-shadow: 0 16px 38px rgba(43, 17, 51, 0.10);
 }
@@ -921,7 +921,7 @@ h3 {
   padding: 18px;
   background:
     radial-gradient(circle at 50% 42%, rgba(246, 161, 58, 0.13), transparent 44%),
-    rgba(242, 222, 193, 0.48);
+    rgba(231, 227, 221, 0.48);
 }
 
 .art-card-body {
@@ -940,7 +940,7 @@ h3 {
 }
 
 .art-card-body p {
-  color: var(--tinta-media, #765A4C);
+  color: var(--tinta-media, #635A51);
 }
 
 .metadata-list {
@@ -958,7 +958,7 @@ h3 {
 }
 
 .metadata-list dt {
-  color: var(--tinta-media, #765A4C);
+  color: var(--tinta-media, #635A51);
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -966,7 +966,7 @@ h3 {
 
 .metadata-list dd {
   margin: 0;
-  color: var(--tinta-cafe, #4A302F);
+  color: var(--tinta-cafe, #2A2622);
 }
 
 .status-pill {
@@ -975,7 +975,7 @@ h3 {
   border: 1px solid rgba(156, 59, 50, 0.42);
   border-radius: 999px;
   color: var(--brasa, #9C3B32);
-  background: rgba(255, 246, 232, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   text-transform: capitalize;
 }
 
@@ -993,9 +993,9 @@ h3 {
 }
 
 .cta-band.small {
-  background: rgba(255, 246, 232, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   border-color: var(--borde-crema, rgba(43, 17, 51, 0.16));
-  color: var(--tinta-cafe, #4A302F);
+  color: var(--tinta-cafe, #2A2622);
 }
 
 .cta-band.small h2 {
@@ -1003,7 +1003,7 @@ h3 {
 }
 
 .cta-band.small p {
-  color: var(--tinta-media, #765A4C);
+  color: var(--tinta-media, #635A51);
 }
 
 @media (max-width: 580px) {
@@ -1110,7 +1110,7 @@ h3 {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: clamp(44px, 7vw, 76px) max(32px, calc((100vw - var(--max-width)) / 2));
-  background: linear-gradient(180deg, #FFF8EC 0%, #F7E9D2 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7E9D2 100%);
   color: var(--tinta-profunda);
 }
 
@@ -1375,7 +1375,7 @@ main {
 .intro-panel,
 .contact-panel,
 .timeline-panel {
-  background: rgba(255, 248, 236, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(43, 17, 51, 0.14);
   color: var(--tinta-cafe);
   box-shadow: 0 18px 42px rgba(43, 17, 51, 0.08);
@@ -1425,7 +1425,7 @@ main {
 /* Obra más galería, menos tarjeta pesada */
 
 .category-nav {
-  background: rgba(255, 248, 236, 0.76);
+  background: rgba(255, 255, 255, 0.76);
   border-color: rgba(43, 17, 51, 0.14);
 }
 
@@ -1444,19 +1444,19 @@ main {
 .collection-section.tinted,
 .publication-section.tinted,
 .publication-section.quiet {
-  background: rgba(242, 222, 193, 0.36);
+  background: rgba(231, 227, 221, 0.36);
   border-color: rgba(43, 17, 51, 0.12);
 }
 
 .art-card {
-  background: rgba(255, 248, 236, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-color: rgba(43, 17, 51, 0.14);
   color: var(--tinta-cafe);
   box-shadow: 0 16px 36px rgba(43, 17, 51, 0.08);
 }
 
 .art-card img {
-  background: rgba(242, 222, 193, 0.42);
+  background: rgba(231, 227, 221, 0.42);
 }
 
 .art-card h3 {
@@ -1480,7 +1480,7 @@ main {
 /* Publicaciones más sobrias */
 
 .publication-card {
-  background: rgba(255, 248, 236, 0.82);
+  background: rgba(255, 255, 255, 0.82);
   border-color: rgba(43, 17, 51, 0.12);
   box-shadow: none;
 }
@@ -1520,7 +1520,7 @@ main {
 /* Contacto */
 
 .contact-card {
-  background: rgba(255, 248, 236, 0.86);
+  background: rgba(255, 255, 255, 0.86);
   border-color: rgba(43, 17, 51, 0.14);
   color: var(--tinta-cafe);
 }
@@ -1534,7 +1534,7 @@ main {
 
 .bio-portrait img {
   border-color: rgba(43, 17, 51, 0.16);
-  background: rgba(242, 222, 193, 0.42);
+  background: rgba(231, 227, 221, 0.42);
 }
 
 .bio-copy {
@@ -1983,4 +1983,133 @@ summary:focus-visible,
   .visor-siguiente { top: auto; bottom: 14px; }
   .visor-anterior { left: calc(50% - 60px); }
   .visor-siguiente { right: calc(50% - 60px); }
+}
+
+/* =========================================================
+   Marfil y verde (herencia del catálogo)
+   Fondos claros neutros; títulos y enlaces en verde.
+   ========================================================= */
+
+.section-heading h2,
+.art-card h3,
+.art-card-body h3,
+.two-column-panel h2,
+.contact-panel h2,
+.timeline-panel h2,
+.text-block h2,
+.cta-band.small h2,
+.home-art-feature h2,
+.home-books-feature h2,
+.home-mini-card h2 {
+  color: var(--verde);
+}
+
+.art-card,
+.text-block,
+.collection-section.tinted,
+.category-nav,
+.cta-band.small {
+  box-shadow: none;
+  border-color: rgba(42, 38, 34, 0.12);
+}
+
+.art-card img { background: rgba(231, 227, 221, 0.5); }
+
+.text-link,
+.site-footer a,
+.catalogo-descarga a,
+.acquire-panel a,
+.art-story-more summary,
+.art-card .text-link {
+  color: var(--verde);
+  border-bottom-color: rgba(44, 93, 79, 0.4);
+}
+
+.text-link:hover,
+.site-footer a:hover,
+.catalogo-descarga a:hover,
+.acquire-panel a:hover {
+  color: var(--tinta-profunda);
+  border-bottom-color: var(--tinta-profunda);
+}
+
+.art-cta { background: var(--verde); color: #FFFFFF; }
+.art-cta:hover { background: var(--tinta-profunda); color: #FFFFFF; }
+
+.art-card.status-disponible .status-pill {
+  color: var(--verde);
+  border-color: rgba(44, 93, 79, 0.4);
+  background: rgba(44, 93, 79, 0.06);
+}
+
+/* Sin resplandor durazno sobre las zonas claras */
+body::before { background: none; }
+
+/* Condiciones en una línea por tarjeta */
+
+.art-terms {
+  color: var(--tinta-media);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.art-terms a {
+  color: var(--verde);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(44, 93, 79, 0.4);
+  white-space: nowrap;
+}
+
+.art-card .price-list dd { white-space: nowrap; }
+
+.acquire-email { margin-top: 14px; color: var(--tinta-media); }
+.acquire-email span { color: var(--tinta-cafe); user-select: all; }
+
+/* Retícula: 4 obras en 2 columnas, una sola obra a lo ancho */
+
+@media (min-width: 901px) {
+  .art-grid:has(> .art-card:nth-child(4):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .art-grid > .art-card:only-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .art-grid > .art-card:only-child .art-zoom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    background: rgba(231, 227, 221, 0.5);
+  }
+
+  .art-grid > .art-card:only-child img {
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    padding: 0;
+    background: none;
+  }
+}
+
+/* Móvil: la obra a todo el ancho de la tarjeta */
+
+@media (max-width: 580px) {
+  .art-card img {
+    height: auto;
+    max-height: 75vh;
+    padding: 0;
+  }
+
+  .category-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .category-nav a { flex: 0 0 auto; }
 }
