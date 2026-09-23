@@ -1834,3 +1834,22 @@ summary:focus-visible,
   .button:hover { transform: none; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* Obra · cómo adquirir */
+
+.acquire-panel h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  text-wrap: balance;
+}
+
+.acquire-panel a {
+  color: var(--brasa);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(156, 59, 50, 0.4);
+}
+
+.acquire-panel a:hover {
+  color: var(--tinta-profunda);
+  border-bottom-color: var(--tinta-profunda);
+}
