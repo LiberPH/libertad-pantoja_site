@@ -36,7 +36,7 @@ em { font-style: italic; }
   position: absolute;
   right: 30px;
   bottom: 22px;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--tinta-media);
 }
 .v .folio { right: 24px; bottom: 16px; font-size: 11px; }
@@ -125,6 +125,7 @@ ol.indice img { width: 100%; height: 118px; object-fit: cover; display: block; }
 /* ---------- Página de obra ---------- */
 
 .h .pieza { grid-template-columns: 360px 1fr; gap: 44px; align-items: center; }
+.h .pieza.apaisada { grid-template-columns: 430px 1fr; gap: 36px; }
 .v .pieza { grid-template-rows: 360px 1fr; gap: 20px; }
 .pieza-obra { display: flex; align-items: center; justify-content: center; }
 .h .pieza-obra { height: 516px; }
@@ -141,7 +142,6 @@ ol.indice img { width: 100%; height: 118px; object-fit: cover; display: block; }
 .verso { font-style: italic; font-size: 16px; line-height: 1.4; margin: 14px 0 8px; }
 .v .verso { font-size: 15px; margin: 8px 0 5px; }
 .relato { font-size: 11.5px; line-height: 1.5; color: var(--tinta-relato); }
-.relato-largo .relato { font-size: 10.8px; line-height: 1.45; }
 .v .relato { font-size: 12.5px; line-height: 1.42; }
 .datos { margin-top: 14px; font-size: 11px; line-height: 1.55; color: var(--tinta-media); }
 .v .datos { margin-top: 8px; font-size: 12px; }

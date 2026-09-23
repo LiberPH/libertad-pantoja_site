@@ -108,11 +108,24 @@ def partir_relato(texto):
 
 
 def recortar(texto, palabras):
-    lista = texto.split()
-    if len(lista) <= palabras:
+    """Corta en la última oración completa que cabe; si ninguna cabe, en una pausa."""
+    if len(texto.split()) <= palabras:
         return texto
-    corto = " ".join(lista[:palabras]).rstrip(",;:")
-    return corto + "…"
+    oraciones = re.split(r"(?<=[.!?])\s+", texto)
+    corto = ""
+    for o in oraciones:
+        prueba = (corto + " " + o).strip()
+        if len(prueba.split()) > palabras:
+            break
+        corto = prueba
+    if corto:
+        return corto
+    lista = texto.split()[:palabras]
+    frase = " ".join(lista)
+    corte = max(frase.rfind(","), frase.rfind(";"), frase.rfind(":"))
+    if corte > len(frase) // 2:
+        frase = frase[:corte]
+    return frase.rstrip(",;: ") + "…"
 
 
 def mailto(config, ui, o):
@@ -210,6 +223,8 @@ def paginas(fmt, config, ui, onirica, hadas):
     for o in obras:
         etiqueta, mostrar = estado(ui, o)
         cifra = o["price"].split("·")[0].strip() if (mostrar and o.get("price")) else etiqueta
+        if mostrar and o.get("category") != "original":
+            cifra += " · impresión"
         celdas.append(f"""
           <li><img src="{e(src(o))}" alt="">
             <span class="indice-titulo">{e(o['title'])}</span>
@@ -228,8 +243,9 @@ def paginas(fmt, config, ui, onirica, hadas):
         for o in lista:
             verso, resto = partir_relato(o.get("description"))
             if H:
-                img = obra_img(src(o), o["aspecto"], 360, 516, o["title"])
-                chico = " relato-largo" if len(resto.split()) > 110 else ""
+                ancha = o["aspecto"] > 1.05
+                img = obra_img(src(o), o["aspecto"], 430 if ancha else 360, 516, o["title"])
+                chico = ""
                 relato = f'<p class="relato">{e(resto)}</p>' if resto else ""
                 texto = f"""
                   <h2>{e(o['title'])}</h2>
@@ -240,16 +256,17 @@ def paginas(fmt, config, ui, onirica, hadas):
                   {precio(ui, o, config)}"""
             else:
                 img = obra_img(src(o), o["aspecto"], 472, 360, o["title"])
-                chico = ""
-                corto = recortar(resto, 24) if resto else ""
+                chico, ancha = "", False
+                corto = recortar(resto, 30) if resto else ""
                 relato = f'<p class="relato">{e(corto)}</p>' if corto else ""
                 texto = f"""
                   <h2>{e(o['title'])}</h2>
+                  {f'<p class="subtitulo">{e(o["subtitle"])}</p>' if o.get('subtitle') and o['serie'] != 'Hadas urbanas' else ''}
                   <p class="verso">{e(verso)}</p>
                   {relato}
-                  <p class="datos">{e(' · '.join(str(o[k]) for k in ('technique', 'dimensions', 'year') if o.get(k)))}</p>
+                  <p class="datos">{e(' · '.join(str(o[k]) for k in ('technique', 'dimensions', 'year') if o.get(k)))}<br>{e(o.get('edition', ''))}</p>
                   {precio(ui, o, config, compacto=True)}"""
-            p.append((f"{fondo} pieza", f"""
+            p.append((f"{fondo} pieza{' apaisada' if H and ancha else ''}", f"""
               <div class="pieza-obra">{img}</div>
               <div class="pieza-texto{chico}">{texto}</div>"""))
 
