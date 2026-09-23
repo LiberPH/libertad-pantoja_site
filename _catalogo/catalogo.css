@@ -1,0 +1,180 @@
+/* Catálogo de obra · libro de arte clásico
+   Papel marfil; la obra onírica sobre un gris cálido sutil.
+   Títulos en verde; portada en Libre Caslon Display; texto en EB Garamond. */
+
+:root {
+  --marfil: #FBF8F2;
+  --gris: #E7E3DD;
+  --tinta: #2A2622;
+  --tinta-relato: #453F39;
+  --tinta-media: #635A51;
+  --verde: #2C5D4F;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { background: var(--marfil); }
+
+body {
+  font-family: 'EB Garamond', serif;
+  color: var(--tinta);
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+a { color: inherit; text-decoration: none; }
+em { font-style: italic; }
+
+.pagina { position: relative; overflow: hidden; display: grid; }
+.h .pagina { width: 792px; height: 612px; padding: 48px 56px; }
+.v .pagina { width: 540px; height: 675px; padding: 34px 36px; }
+
+.marfil { background: var(--marfil); }
+.gris { background: var(--gris); }
+
+.folio {
+  position: absolute;
+  right: 30px;
+  bottom: 22px;
+  font-size: 10px;
+  color: var(--tinta-media);
+}
+.v .folio { right: 24px; bottom: 16px; font-size: 11px; }
+
+h1, h2 { font-weight: 400; color: var(--verde); }
+h2 { font-size: 25px; line-height: 1.2; letter-spacing: 0.02em; }
+.v h2 { font-size: 23px; }
+
+.filete { display: block; width: 40px; height: 1px; background: var(--verde); margin: 20px 0; }
+
+img.obra { display: block; }
+
+/* ---------- Portada ---------- */
+
+.h .portada { grid-template-columns: 400px 1fr; gap: 44px; align-items: center; }
+.v .portada { grid-template-rows: 1fr auto; gap: 26px; justify-items: center; text-align: center; align-content: center; }
+.portada-obra { display: flex; justify-content: center; }
+
+.portada h1 {
+  font-family: 'Libre Caslon Display', serif;
+  font-size: 46px;
+  line-height: 1.08;
+}
+.v .portada h1 { font-size: 40px; }
+.v .portada .filete { margin: 16px auto; }
+.portada-sub {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--tinta-media);
+}
+.portada-linea {
+  margin-top: 28px;
+  max-width: 250px;
+  font-style: italic;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--tinta-media);
+}
+.v .portada-linea { margin: 10px auto 0; max-width: 360px; }
+
+/* ---------- Sobre mi obra ---------- */
+
+.h .sobre { grid-template-columns: 290px 1fr; gap: 48px; align-items: center; }
+.v .sobre { grid-template-rows: 290px 1fr; gap: 22px; }
+.sobre-foto img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.h .sobre-foto img { height: 390px; }
+.v .sobre-foto { height: 290px; overflow: hidden; }
+.v .sobre-foto img { object-position: 50% 30%; }
+.sobre h2 { margin-bottom: 16px; }
+.v .sobre h2 { margin-bottom: 10px; }
+.sobre p { font-size: 14px; line-height: 1.55; max-width: 62ch; color: var(--tinta-relato); }
+.v .sobre p { font-size: 13.5px; line-height: 1.45; }
+.sobre p + p { margin-top: 10px; }
+.v .sobre p + p { margin-top: 7px; }
+
+/* ---------- Índice ---------- */
+
+.h .indice.pagina { grid-template-columns: 180px 1fr; gap: 40px; align-items: center; }
+.v .indice.pagina { grid-template-rows: auto 1fr; gap: 16px; }
+.indice-cabeza p { margin-top: 12px; font-size: 13px; line-height: 1.45; font-style: italic; color: var(--tinta-media); }
+.v .indice-cabeza p { margin-top: 4px; }
+
+ol.indice {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 22px;
+}
+ol.indice li { display: flex; flex-direction: column; }
+ol.indice img { width: 100%; height: 118px; object-fit: cover; display: block; }
+.v ol.indice img { height: 112px; }
+.indice-titulo { margin-top: 6px; font-size: 12px; line-height: 1.2; color: var(--verde); }
+.indice-precio { margin-top: 1px; font-size: 11px; color: var(--tinta-media); }
+
+/* ---------- Portadillas ---------- */
+
+.portadilla { align-items: center; }
+.h .portadilla { padding: 70px 170px 70px 96px; }
+.v .portadilla { padding: 60px 44px; }
+.portadilla h2 { font-family: 'Libre Caslon Display', serif; font-size: 44px; letter-spacing: 0; }
+.v .portadilla h2 { font-size: 38px; }
+.portadilla p { font-size: 15px; line-height: 1.6; max-width: 58ch; color: var(--tinta-relato); }
+.portadilla p + p { margin-top: 12px; }
+
+/* ---------- Página de obra ---------- */
+
+.h .pieza { grid-template-columns: 360px 1fr; gap: 44px; align-items: center; }
+.v .pieza { grid-template-rows: 360px 1fr; gap: 20px; }
+.pieza-obra { display: flex; align-items: center; justify-content: center; }
+.h .pieza-obra { height: 516px; }
+
+.serie {
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  color: var(--tinta-media);
+  margin-bottom: 8px;
+}
+.v .serie { margin-bottom: 4px; }
+.subtitulo { margin-top: 4px; font-size: 12.5px; font-style: italic; color: var(--tinta-media); }
+.verso { font-style: italic; font-size: 16px; line-height: 1.4; margin: 14px 0 8px; }
+.v .verso { font-size: 15px; margin: 8px 0 5px; }
+.relato { font-size: 11.5px; line-height: 1.5; color: var(--tinta-relato); }
+.relato-largo .relato { font-size: 10.8px; line-height: 1.45; }
+.v .relato { font-size: 12.5px; line-height: 1.42; }
+.datos { margin-top: 14px; font-size: 11px; line-height: 1.55; color: var(--tinta-media); }
+.v .datos { margin-top: 8px; font-size: 12px; }
+
+.compra-pieza { margin-top: 12px; }
+.v .compra-pieza { margin-top: 8px; }
+.precio { font-size: 14px; line-height: 1.45; font-variant-numeric: lining-nums; }
+.precio span { font-size: 11.5px; font-style: italic; color: var(--tinta-media); }
+.nota { margin-top: 3px; font-size: 10.5px; font-style: italic; color: var(--tinta-media); }
+.escribir {
+  display: inline-block;
+  margin-top: 8px;
+  font-style: italic;
+  font-size: 12.5px;
+  color: var(--verde);
+  border-bottom: 1px solid rgba(44, 93, 79, 0.4);
+}
+
+/* ---------- Cómo adquirir ---------- */
+
+.h .compra { grid-template-columns: 1fr 240px; gap: 52px; align-items: center; }
+.v .compra { align-content: center; gap: 30px; }
+.compra-pasos h2 { margin-bottom: 16px; }
+.pasos { padding-left: 20px; font-size: 14.5px; line-height: 1.45; }
+.pasos li + li { margin-top: 5px; }
+.pasos li::marker { color: var(--verde); }
+.condiciones { margin-top: 16px; padding-left: 16px; font-size: 12.5px; line-height: 1.45; color: var(--tinta-relato); }
+.condiciones li + li { margin-top: 3px; }
+
+.contacto { border-top: 1px solid var(--verde); padding-top: 16px; }
+.contacto dl { display: grid; gap: 8px; }
+.v .contacto dl { grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+.contacto dt { font-variant: small-caps; letter-spacing: 0.12em; font-size: 11px; color: var(--tinta-media); }
+.contacto dd { font-size: 13px; }
+.contacto dd a { color: var(--verde); overflow-wrap: anywhere; }
+.cierre { margin-top: 18px; font-style: italic; font-size: 14px; line-height: 1.4; color: var(--verde); }

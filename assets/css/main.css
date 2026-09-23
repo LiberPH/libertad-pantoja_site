@@ -1853,3 +1853,31 @@ summary:focus-visible,
   color: var(--tinta-profunda);
   border-bottom-color: var(--tinta-profunda);
 }
+
+/* Obra · descarga del catálogo */
+
+.catalogo-descarga {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin: 18px 0 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+}
+
+.catalogo-descarga a {
+  color: var(--brasa);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(156, 59, 50, 0.4);
+}
+
+.catalogo-descarga a:hover {
+  color: var(--tinta-profunda);
+  border-bottom-color: var(--tinta-profunda);
+}
+
+.catalogo-descarga span {
+  color: var(--tinta-media);
+  font-size: 0.85rem;
+}
