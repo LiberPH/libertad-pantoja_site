@@ -51,7 +51,7 @@
             <div><dt>{{ ui.price_framed }}</dt><dd>{{ obra.price_framed }}</dd></div>
           </dl>
         {% else %}
-          <p class="art-price">{{ obra.price }}</p>
+          <p class="art-price">{{ obra.price }}{% if obra.framing %} <span class="art-framing">{{ obra.framing | downcase }}</span>{% endif %}</p>
         {% endif %}
         {% if obra.price_varies or obra.price contains "Desde" %}
           <p class="price-note">{{ ui.price_varies_note }}</p>

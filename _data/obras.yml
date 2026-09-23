@@ -1,6 +1,6 @@
 # Edita este archivo para agregar o quitar obra.
 # Estados sugeridos: disponible, reservada, vendida, agotada, archivo, proximamente.
-# Campos opcionales: subtitle, story_label (texto de "Seguir leyendo"), alt, price_framed, price_varies.
+# Campos opcionales: framing (originales: «Enmarcada» o «Sin marco»), subtitle, story_label (texto de "Seguir leyendo"), alt, price_framed, price_varies.
 # Categorías sugeridas: original, edicion-limitada, fotografia, fotografia-intervenida, archivo-visual.
 - title: "Planta carnívora"
   category: "original"
@@ -10,6 +10,7 @@
   edition: "Pieza única"
   status: "disponible"
   price: "$7,500 MXN · 375 USD"
+  framing: "Enmarcada"
   image: "/assets/img/obra/Planta_carnivora.jpeg"
   featured: true
   description: >-
@@ -29,6 +30,7 @@
   edition: "Pieza única"
   status: "disponible"
   price: "$14,000 MXN · 700 USD"
+  framing: "Sin marco"
   image: "/assets/img/obra/lo-que-deje-secar.jpg"
   featured: true
   description: >-
@@ -54,6 +56,7 @@
   edition: "Pieza única"
   status: "disponible"
   price: "$9,000 MXN · 450 USD"
+  framing: "Enmarcada"
   image: "/assets/img/obra/el-rescate-del-gato-blanco.jpg"
   featured: true
   description: >-
@@ -77,6 +80,7 @@
   edition: "Pieza única"
   status: "disponible"
   price: "$8,500 MXN · 425 USD"
+  framing: "Enmarcada"
   image: "/assets/img/obra/el-fruto-de-la-hojarasca.jpg"
   featured: true
   description: >-

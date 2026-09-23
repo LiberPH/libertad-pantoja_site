@@ -176,7 +176,8 @@ def precio(ui, o, config, compacto=False):
                 f'<p class="precio">{e(o["price_framed"])} <span>{e(ui["price_framed"].lower())}</span></p>'
             )
         else:
-            partes.append(f'<p class="precio">{e(o["price"])}</p>')
+            marco = f' <span>{e(o["framing"].lower())}</span>' if o.get("framing") else ""
+            partes.append(f'<p class="precio">{e(o["price"])}{marco}</p>')
         if not compacto and (o.get("price_varies") or "Desde" in str(o.get("price"))):
             partes.append(f'<p class="nota">{e(ui["price_varies_note"])}</p>')
     else:
