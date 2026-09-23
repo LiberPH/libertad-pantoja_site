@@ -19,6 +19,10 @@ permalink: pretty
 
 exclude:
   - README.md
+  - DESIGN.md
+  - PRODUCT.md
+  - _catalogo
+  - _privado
   - Gemfile
   - Gemfile.lock
   - node_modules
