@@ -40,6 +40,11 @@ obra:
   price_framed: "Enmarcada"
   price_varies_note: "El precio varía según el tamaño de impresión. Escríbeme para cotizar el que buscas."
 
+  zoom_label: "Ampliar"
+  zoom_close: "Cerrar"
+  zoom_prev: "Obra anterior"
+  zoom_next: "Obra siguiente"
+
   story_more: "Seguir leyendo"
   story_less: "Cerrar"
 

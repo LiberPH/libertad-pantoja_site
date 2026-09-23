@@ -5,7 +5,9 @@
 
 <article class="art-card {{ obra.category }} status-{{ obra.status }}" id="{{ obra.title | slugify }}">
   {% if obra.image %}
-  <img src="{{ obra.image | relative_url }}" alt="{{ obra.alt | default: obra.title }}" loading="lazy" decoding="async">
+  <a class="art-zoom" href="{{ obra.image | relative_url }}" data-title="{{ obra.title | escape }}" data-meta="{{ obra.technique | escape }}{% if obra.dimensions %} · {{ obra.dimensions | escape }}{% endif %}{% if obra.year %} · {{ obra.year }}{% endif %}" aria-label="{{ ui.zoom_label }}: {{ obra.title | escape }}">
+    <img src="{{ obra.image | relative_url }}" alt="{{ obra.alt | default: obra.title }}" loading="lazy" decoding="async">
+  </a>
   {% endif %}
 
   <div class="art-card-body">

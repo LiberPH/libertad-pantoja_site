@@ -119,3 +119,6 @@ permalink: /obra/
   <p>El archivo fotográfico conserva la mirada sobre insectos, jardines, cuerpos mínimos y apariciones de lo vivo.</p>
   <a class="button secondary" href="{{ '/archivo-visual/' | relative_url }}">Ver archivo visual</a>
 </section>
+
+<script>window.visorTextos = {{ site.data.ui.obra | jsonify }};</script>
+<script src="{{ '/assets/js/visor.js' | relative_url }}" defer></script>
