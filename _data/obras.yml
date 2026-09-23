@@ -1,9 +1,9 @@
 # Edita este archivo para agregar o quitar obra.
 # Estados sugeridos: disponible, reservada, vendida, agotada, archivo, proximamente.
+# Campos opcionales: subtitle, story_label (texto de "Seguir leyendo"), alt, price_framed, price_varies.
 # Categorías sugeridas: original, edicion-limitada, fotografia, fotografia-intervenida, archivo-visual.
 - title: "Planta carnívora"
   category: "original"
-  subtitle: "Pieza única disponible"
   year: "2012"
   technique: "Tinta china sobre papel"
   dimensions: "26 × 22 cm"
@@ -21,8 +21,8 @@
     obsesiones biológicas.
 
 - title: "Lo que dejé secar sobre la alfombra"
+  story_label: "Leer el sueño"
   category: "original"
-  subtitle: "Pieza única"
   year: "2026"
   technique: "Óleo sobre tela"
   dimensions: "35 × 45 cm"
@@ -46,8 +46,8 @@
     Darío Salzman.
 
 - title: "El rescate del gato blanco"
+  story_label: "Leer el sueño"
   category: "original"
-  subtitle: "Pieza única"
   year: "2026"
   technique: "Gis pastel sobre papel negro"
   dimensions: "20.3 × 28 cm"
@@ -71,7 +71,6 @@
 
 - title: "El fruto de la hojarasca"
   category: "original"
-  subtitle: "Pieza única"
   year: "2026"
   technique: "Lápiz de color sobre papel Strathmore Toned Tan"
   dimensions: "19.5 × 20 cm"
@@ -143,6 +142,7 @@
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
   price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
   price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/ciudad-de-los-insectos.jpg"
   featured: false
@@ -161,6 +161,7 @@
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
   price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
   price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/el-fuego.jpg"
   featured: false
@@ -179,6 +180,7 @@
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
   price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
   price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/flor-amarilla-atlanta.jpg"
   featured: false

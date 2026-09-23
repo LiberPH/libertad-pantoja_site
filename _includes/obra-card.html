@@ -1,28 +1,70 @@
-<article class="art-card {{ include.obra.category }}">
-  <img src="{{ include.obra.image | relative_url }}" alt="{{ include.obra.title }}">
+{% assign obra = include.obra %}
+{% assign ui = site.data.ui.obra %}
+{% assign st = ui.status[obra.status] %}
+{% assign story_words = obra.description | number_of_words %}
+
+<article class="art-card {{ obra.category }} status-{{ obra.status }}" id="{{ obra.title | slugify }}">
+  {% if obra.image %}
+  <img src="{{ obra.image | relative_url }}" alt="{{ obra.alt | default: obra.title }}" loading="lazy" decoding="async">
+  {% endif %}
+
   <div class="art-card-body">
-    <p class="card-label">{{ include.obra.subtitle }}</p>
-    <h3>{{ include.obra.title }}</h3>
-    <p>{{ include.obra.description }}</p>
+    <h3>{{ obra.title }}</h3>
+    {% if obra.subtitle %}<p class="art-series">{{ obra.subtitle }}</p>{% endif %}
+
+    {% if obra.description %}
+    <div class="art-story">
+      {% if story_words > 45 %}
+        <p class="art-story-teaser">{{ obra.description | truncatewords: 32, "…" | replace: ",…", "…" | replace: ";…", "…" | replace: ":…", "…" }}</p>
+        <details class="art-story-more">
+          <summary>
+            <span class="when-closed">{{ obra.story_label | default: ui.story_more }}</span>
+            <span class="when-open">{{ ui.story_less }}</span>
+          </summary>
+          <p>{{ obra.description }}</p>
+        </details>
+      {% else %}
+        <p>{{ obra.description }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+
     <dl class="metadata-list">
-      <div><dt>Año</dt><dd>{{ include.obra.year }}</dd></div>
-      <div><dt>Técnica</dt><dd>{{ include.obra.technique }}</dd></div>
-      <div><dt>Medidas</dt><dd>{{ include.obra.dimensions }}</dd></div>
-      <div><dt>Edición</dt><dd>{{ include.obra.edition }}</dd></div>
-      <div><dt>Estado</dt><dd><span class="status-pill">{{ include.obra.status }}</span></dd></div>
+      {% if obra.technique %}<div><dt>{{ ui.facts.technique }}</dt><dd>{{ obra.technique }}</dd></div>{% endif %}
+      {% if obra.dimensions %}<div><dt>{{ ui.facts.dimensions }}</dt><dd>{{ obra.dimensions }}</dd></div>{% endif %}
+      {% if obra.edition %}<div><dt>{{ ui.facts.edition }}</dt><dd>{{ obra.edition }}</dd></div>{% endif %}
+      {% if obra.year %}<div><dt>{{ ui.facts.year }}</dt><dd>{{ obra.year }}</dd></div>{% endif %}
     </dl>
 
-    {% if include.obra.price_framed %}
-      <dl class="metadata-list price-list">
-        <div><dt>Sin marco</dt><dd>{{ include.obra.price }}</dd></div>
-        <div><dt>Enmarcada</dt><dd>{{ include.obra.price_framed }}</dd></div>
-      </dl>
-      {% if include.obra.price contains "Desde" %}
-        <p class="price-note">El precio varía según el tamaño de impresión. Escríbeme para cotizar el que buscas.</p>
+    <div class="art-acquire">
+      <p class="status-pill">{{ st.label | default: obra.status }}</p>
+
+      {% assign show_price = true %}
+      {% if st and st.show_price == false %}{% assign show_price = false %}{% endif %}
+
+      {% if show_price and obra.price %}
+        {% if obra.price_framed %}
+          <dl class="price-list">
+            <div><dt>{{ ui.price_unframed }}</dt><dd>{{ obra.price }}</dd></div>
+            <div><dt>{{ ui.price_framed }}</dt><dd>{{ obra.price_framed }}</dd></div>
+          </dl>
+        {% else %}
+          <p class="art-price">{{ obra.price }}</p>
+        {% endif %}
+        {% if obra.price_varies or obra.price contains "Desde" %}
+          <p class="price-note">{{ ui.price_varies_note }}</p>
+        {% endif %}
       {% endif %}
-      <a class="text-link" href="mailto:{{ site.email }}?subject=Consulta%20sobre%20{{ include.obra.title | uri_escape }}">Consultar disponibilidad</a>
-    {% else %}
-      <a class="text-link" href="mailto:{{ site.email }}?subject=Consulta%20sobre%20{{ include.obra.title | uri_escape }}">{{ include.obra.price }}</a>
-    {% endif %}
+
+      {% assign cta = ui.status.disponible.cta %}
+      {% if st %}{% assign cta = st.cta %}{% endif %}
+      {% if cta != "" %}
+        {% capture mail_subject %}{{ ui.mail_subject }} {{ obra.title }}{% endcapture %}
+        {% capture mail_line %}{{ ui.mail_interest }} «{{ obra.title }}»{% if obra.edition %} ({{ obra.edition }}){% endif %}.{% endcapture %}
+        <a class="art-cta" href="mailto:{{ site.email }}?subject={{ mail_subject | uri_escape }}&amp;body={{ ui.mail_greeting | uri_escape }}%0D%0A%0D%0A{{ mail_line | uri_escape }}{% if obra.price_framed %}%0D%0A{{ ui.mail_framed_question | uri_escape }} {% endif %}">{{ cta }}</a>
+        <p class="art-email">{{ ui.email_prefix }} <span>{{ site.email }}</span></p>
+        {% if show_price and ui.process_note != "" %}<p class="art-process">{{ ui.process_note }}</p>{% endif %}
+      {% endif %}
+    </div>
   </div>
 </article>
