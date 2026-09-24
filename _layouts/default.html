@@ -4,7 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  {% capture titulo_compartir %}{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}{% endcapture %}
+  {% assign descripcion = page.description | default: page.intro | default: site.description %}
+  <meta name="description" content="{{ descripcion }}">
+
+  <!-- Vista previa al compartir (WhatsApp, Facebook, iMessage, correo) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ titulo_compartir | strip }}">
+  <meta property="og:description" content="{{ descripcion }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.share_image | default: '/assets/img/compartir/inicio.jpg' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Libertad Pantoja">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
