@@ -594,34 +594,17 @@ main {
   border-color: var(--tinta-profunda);
 }
 
-/* ---------- Obra: descarga del catálogo ---------- */
+/* ---------- Obra: enlaces de «Cómo adquirir» ---------- */
 
-.catalogo-descarga {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 14px;
-  margin: 18px 0 0;
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-size: 0.95rem;
-}
-
-.catalogo-descarga a,
 .acquire-panel a {
   color: var(--verde);
   font-weight: 600;
   border-bottom: 1px solid rgba(44, 93, 79, 0.4);
 }
 
-.catalogo-descarga a:hover,
 .acquire-panel a:hover {
   color: var(--tinta-profunda);
   border-bottom-color: var(--tinta-profunda);
-}
-
-.catalogo-descarga span {
-  color: var(--tinta-media);
-  font-size: 0.85rem;
 }
 
 /* ---------- Obra: ficha de pieza ----------
@@ -1470,6 +1453,36 @@ main {
   font-size: clamp(1.35rem, 2.8vw, 2rem);
   line-height: 1.35;
   color: var(--tinta-clara);
+}
+
+/* ---------- Área de toque ----------
+   Los enlaces de texto miden 19–23 px de alto; este margen invisible
+   amplía la zona que responde al dedo sin cambiar su aspecto. */
+
+.site-nav a,
+.footer-links a,
+.stacked-links a,
+.home-section-links a,
+.hero-link a,
+.text-link,
+.pub-credenciales a,
+.pub-enlace,
+.art-terms a,
+.acquire-panel a { position: relative; }
+
+.site-nav a::after,
+.footer-links a::after,
+.stacked-links a::after,
+.home-section-links a::after,
+.hero-link a::after,
+.text-link::after,
+.pub-credenciales a::after,
+.pub-enlace::after,
+.art-terms a::after,
+.acquire-panel a::after {
+  content: "";
+  position: absolute;
+  inset: -10px -6px;
 }
 
 /* ---------- Foco y movimiento ---------- */
