@@ -52,6 +52,37 @@ permalink: /bio/
   </ul>
 </section>
 
+<section class="timeline-panel bio-prensa">
+  <h2>Bio corta</h2>
+  <p class="bio-prensa-nota">Para prensa, convocatorias y presentaciones.</p>
+
+  <div class="bio-prensa-texto">
+    <p id="bio-parrafo">Libertad Pantoja (Ciudad de México) es narradora y artista visual. Su trabajo cruza escritura, pintura y fotografía alrededor del sueño, el mito y el inframundo. Es autora del libro de cuentos <em>Tú, enfermo no estás</em> (Malabar Editorial, 2021) y fue becaria de Jóvenes Creadores del FONCA en cuento (2018) y novela (2021). Sus cuentos aparecen en antologías y revistas literarias. Desde 2026 forma parte del taller de proyectos pictóricos de Darío Salzman y coordina el club de lectura <em>Los sueños y el inframundo</em>.</p>
+    <button type="button" class="bio-copiar" data-copiar="bio-parrafo" hidden>Copiar</button>
+  </div>
+
+  <div class="bio-prensa-texto">
+    <p id="bio-linea">Narradora y artista visual. Autora de <em>Tú, enfermo no estás</em> (Malabar, 2021); escribe y pinta el territorio interior: sueño, mito e inframundo.</p>
+    <button type="button" class="bio-copiar" data-copiar="bio-linea" hidden>Copiar</button>
+  </div>
+</section>
+
+<script>
+  // «Copiar» solo aparece si el navegador puede copiar al portapapeles.
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    document.querySelectorAll('.bio-copiar').forEach(function (boton) {
+      boton.hidden = false;
+      boton.addEventListener('click', function () {
+        var texto = document.getElementById(boton.dataset.copiar).textContent.replace(/\s+/g, ' ').trim();
+        navigator.clipboard.writeText(texto).then(function () {
+          boton.textContent = 'Copiado';
+          setTimeout(function () { boton.textContent = 'Copiar'; }, 2000);
+        });
+      });
+    });
+  }
+</script>
+
 <section class="cta-band small">
   <h2>Conocer el trabajo</h2>
   <p>La obra visual disponible y los libros, antologías y revistas donde aparecen sus cuentos.</p>
