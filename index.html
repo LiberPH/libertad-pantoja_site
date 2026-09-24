@@ -38,10 +38,12 @@ title: "Inicio"
       {% assign featured_obras = site.data.obras | where: "featured", true | slice: 0, 4 %}
       {% for obra in featured_obras %}
       <article class="home-art-item">
-        <img src="{{ obra.image | relative_url }}" alt="{{ obra.title }}">
-        <h3>{{ obra.title }}</h3>
-        <p>{{ obra.technique }}</p>
-        <p>{{ obra.dimensions }}</p>
+        <a class="home-art-link" href="{{ '/obra/' | relative_url }}#{{ obra.title | slugify }}">
+          <img src="{{ obra.image | relative_url }}" alt="{{ obra.title }}" loading="lazy" decoding="async">
+          <h3>{{ obra.title }}</h3>
+          <p>{{ obra.technique }}</p>
+          <p>{{ obra.dimensions }}</p>
+        </a>
       </article>
       {% endfor %}
     </div>
