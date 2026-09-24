@@ -1,6 +1,10 @@
 # Textos de interfaz. Separados de las plantillas para poder traducirlos
 # cuando exista la versión en inglés.
 
+general:
+  skip: "Saltar al contenido"
+  status_prefix: "Estado:"
+
 obra:
   facts:
     year: "Año"
@@ -44,6 +48,7 @@ obra:
   zoom_close: "Cerrar"
   zoom_prev: "Obra anterior"
   zoom_next: "Obra siguiente"
+  zoom_of: "de"
 
   story_more: "Seguir leyendo"
   story_less: "Cerrar"

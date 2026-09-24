@@ -1,5 +1,6 @@
 # Edita este archivo para agregar o quitar obra.
 # Estados sugeridos: disponible, reservada, vendida, agotada, archivo, proximamente.
+# image_width / image_height: tamaño real de la imagen en px (evita saltos al cargar).
 # Campos opcionales: framing (originales: «Enmarcada» o «Sin marco»), subtitle, story_label (texto de "Seguir leyendo"), alt, price_framed, price_varies.
 # Categorías sugeridas: original, edicion-limitada, fotografia, fotografia-intervenida, archivo-visual.
 - title: "Planta carnívora"
@@ -12,6 +13,8 @@
   price: "$7,500 MXN · 375 USD"
   framing: "Enmarcada"
   image: "/assets/img/obra/Planta_carnivora.jpeg"
+  image_width: 1140
+  image_height: 920
   featured: true
   description: >-
     Tuve una temporada de fijación con las serpientes y los animales híbridos.
@@ -32,6 +35,8 @@
   price: "$14,000 MXN · 700 USD"
   framing: "Sin marco"
   image: "/assets/img/obra/lo-que-deje-secar.jpg"
+  image_width: 944
+  image_height: 1200
   featured: true
   description: >-
     Soñé que visitaba a mi abuela. Al entrar en la casa de mi infancia
@@ -58,6 +63,8 @@
   price: "$9,000 MXN · 450 USD"
   framing: "Enmarcada"
   image: "/assets/img/obra/el-rescate-del-gato-blanco.jpg"
+  image_width: 820
+  image_height: 1200
   featured: true
   description: >-
     Una noche soñé que iba por la calle en Cuernavaca con mi pareja. Él
@@ -82,6 +89,8 @@
   price: "$8,500 MXN · 425 USD"
   framing: "Enmarcada"
   image: "/assets/img/obra/el-fruto-de-la-hojarasca.jpg"
+  image_width: 1182
+  image_height: 1200
   featured: true
   description: >-
     Al caminar por un parque, las cerezas de Jerusalén deslumbran como un fruto
@@ -106,6 +115,8 @@
   price: "$3,000 MXN · 150 USD"
   price_framed: "$4,500 MXN · 225 USD"
   image: "/assets/img/obra/La_luz_de_los_insectos.jpeg"
+  image_width: 1100
+  image_height: 734
   featured: true
   description: >-
     El daimon de este dibujo está inspirado en un personaje de una novela que
@@ -129,6 +140,8 @@
   price: "$3,000 MXN · 150 USD"
   price_framed: "$4,500 MXN · 225 USD"
   image: "/assets/img/obra/el-reino-del-sol.jpg"
+  image_width: 1200
+  image_height: 847
   featured: true
   description: >-
     Descubrí esta imagen caminando por el parque Tezozómoc, en Azcapotzalco.
@@ -149,6 +162,8 @@
   price_varies: true
   price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/ciudad-de-los-insectos.jpg"
+  image_width: 1200
+  image_height: 800
   featured: false
   description: >-
     Tomada en el Jardín Botánico de la UNAM, cuando todavía se permitía entrar
@@ -168,6 +183,8 @@
   price_varies: true
   price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/el-fuego.jpg"
+  image_width: 1200
+  image_height: 801
   featured: false
   description: >-
     Tomada en el Jardín Botánico de la UNAM. Me atrajo el contraste entre la
@@ -187,6 +204,8 @@
   price_varies: true
   price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/flor-amarilla-atlanta.jpg"
+  image_width: 1200
+  image_height: 800
   featured: false
   description: >-
     Tomada en Piedmont Park, Atlanta. Es una de las dos fotografías de la serie
