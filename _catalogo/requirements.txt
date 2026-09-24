@@ -1,0 +1,5 @@
+# Versiones con las que se probó el catálogo (GitHub Actions instala estas).
+pyyaml==6.0.3
+pillow==11.3.0
+pypdf==6.19.0
+pymupdf==1.26.5

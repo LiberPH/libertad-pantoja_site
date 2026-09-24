@@ -111,6 +111,10 @@ ol.indice {
 ol.indice li { display: flex; flex-direction: column; }
 ol.indice img { width: 100%; height: 118px; object-fit: cover; display: block; }
 .v ol.indice img { height: 112px; }
+/* Más de nueve obras: cuatro columnas para que el índice quepa en una página. */
+ol.indice.cols-4 { grid-template-columns: repeat(4, 1fr); gap: 14px 16px; }
+.h ol.indice.cols-4 img { height: 112px; }
+.v ol.indice.cols-4 img { height: 84px; }
 .indice-titulo { margin-top: 6px; font-size: 12px; line-height: 1.2; color: var(--verde); }
 .indice-precio { margin-top: 1px; font-size: 11px; color: var(--tinta-media); }
 

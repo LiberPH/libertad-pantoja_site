@@ -240,7 +240,7 @@ def paginas(fmt, config, ui, onirica, hadas):
     p.append(("marfil indice", f"""
       <div class="indice-cabeza"><h2>Obras</h2>
         <p>Precios en pesos mexicanos; cada original indica si va enmarcado. Los detalles, en la página de cada obra.</p></div>
-      <ol class="indice">{''.join(celdas)}</ol>"""))
+      <ol class="indice{' cols-4' if len(celdas) > 9 else ''}">{''.join(celdas)}</ol>"""))
 
     # Series
     for nombre, intro, lista, fondo in (("Obra onírica", ONIRICA, onirica, "gris"),
@@ -330,7 +330,8 @@ def comprimir(origen, destino):
     import fitz
 
     doc = fitz.open(origen)
-    doc.rewrite_images(quality=80, lossy=True, lossless=True, bitonal=False)
+    # Sin reducir resolución: las obras ya vienen a 1200 px como máximo.
+    doc.rewrite_images(dpi_threshold=None, quality=80, lossy=True, lossless=True, bitonal=False)
     doc.save(destino, garbage=4, deflate=True, clean=True)
 
 

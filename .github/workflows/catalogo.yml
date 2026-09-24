@@ -11,6 +11,7 @@ on:
       - "_catalogo/generar.py"
       - "_catalogo/catalogo.css"
       - "_catalogo/exportar.swift"
+      - "_catalogo/requirements.txt"
       - "_catalogo/img/**"
       - ".github/workflows/catalogo.yml"
   workflow_dispatch:
@@ -36,7 +37,7 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependencias
-        run: pip install pyyaml pillow pypdf pymupdf
+        run: pip install -r _catalogo/requirements.txt
 
       - name: Generar el catálogo
         run: python _catalogo/generar.py --sin-instagram
