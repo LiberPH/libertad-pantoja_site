@@ -66,6 +66,7 @@
         <a class="art-cta" href="mailto:{{ site.email }}?subject={{ mail_subject | uri_escape }}&amp;body={{ ui.mail_greeting | uri_escape }}%0D%0A%0D%0A{{ mail_line | uri_escape }}{% if obra.price_framed %}%0D%0A{{ ui.mail_framed_question | uri_escape }} {% endif %}">{{ cta }}</a>
         {% if show_price %}<p class="art-terms">{{ ui.terms_line }} · <a href="#adquirir">{{ ui.terms_link }}</a></p>{% endif %}
       {% endif %}
+      <button type="button" class="art-compartir" data-obra="{{ obra.title | slugify }}" data-title="{{ obra.title | escape }}" hidden>{{ ui.share_label }}</button>
     </div>
   </div>
 </article>

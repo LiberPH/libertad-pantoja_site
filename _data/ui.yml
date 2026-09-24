@@ -49,6 +49,9 @@ obra:
   zoom_prev: "Obra anterior"
   zoom_next: "Obra siguiente"
   zoom_of: "de"
+  share_label: "Compartir"
+  share_copied: "Enlace copiado"
+  share_text: "Obra de Libertad Pantoja"
 
   story_more: "Seguir leyendo"
   story_less: "Cerrar"

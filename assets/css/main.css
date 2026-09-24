@@ -867,6 +867,27 @@ main {
   line-height: 1.45;
 }
 
+.art-compartir {
+  position: relative;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(44, 93, 79, 0.4);
+  background: none;
+  color: var(--verde);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.art-compartir::after {
+  content: "";
+  position: absolute;
+  inset: -10px -6px;
+}
+
+.art-compartir[hidden] { display: none; }
+
 .art-terms a {
   color: var(--verde);
   font-weight: 600;
@@ -1024,6 +1045,22 @@ main {
   outline: 2px solid var(--horizonte);
   outline-offset: 2px;
 }
+
+.visor .visor-compartir {
+  position: static;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  min-height: 44px;
+  padding: 0 8px;
+  border-radius: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.visor .visor-compartir[hidden] { display: none; }
 
 .visor-cerrar { top: 14px; right: 14px; }
 .visor-anterior { left: 8px; top: calc(50% - 24px); }
@@ -1492,6 +1529,7 @@ main {
 
 a:focus-visible,
 summary:focus-visible,
+.art-compartir:focus-visible,
 .button:focus-visible {
   outline: 2px solid var(--brasa);
   outline-offset: 3px;

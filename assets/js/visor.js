@@ -16,6 +16,7 @@
     '<span class="visor-meta"></span>' +
     '<span class="visor-precio"></span>' +
     '<a class="visor-cta"></a>' +
+    '<button type="button" class="visor-compartir">' + (t.share_label || 'Compartir') + '</button>' +
     '<span class="visor-posicion"></span>' +
     '</figcaption></figure>' +
     '<button type="button" class="visor-siguiente" aria-label="' + (t.zoom_next || 'Obra siguiente') + '">›</button>';
@@ -24,6 +25,7 @@
   var img = visor.querySelector('img');
   var precio = visor.querySelector('.visor-precio');
   var cta = visor.querySelector('.visor-cta');
+  var compartir = visor.querySelector('.visor-compartir');
   var actual = 0;
 
   function texto(el) {
@@ -34,6 +36,8 @@
     actual = (n + enlaces.length) % enlaces.length;
     var a = enlaces[actual];
     var ficha = a.closest('.art-card');
+    // La dirección apunta a la obra abierta, para que se pueda copiar y compartir.
+    if (ficha && ficha.id && window.history.replaceState) history.replaceState(null, '', '#' + ficha.id);
     img.src = a.getAttribute('href');
     var miniatura = a.querySelector('img');
     img.alt = miniatura ? miniatura.alt : a.dataset.title;
@@ -70,6 +74,12 @@
       mostrar(n);
       visor.showModal();
     });
+  });
+
+  compartir.hidden = typeof window.compartirObra !== 'function';
+  compartir.addEventListener('click', function () {
+    var a = enlaces[actual];
+    window.compartirObra(a.closest('.art-card').id, a.dataset.title, compartir);
   });
 
   visor.querySelector('.visor-cerrar').addEventListener('click', function () { visor.close(); });
