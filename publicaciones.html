@@ -6,74 +6,60 @@ intro: "Una selección de libros, cuentos, antologías, revistas y textos public
 permalink: /publicaciones/
 ---
 
-<section class="text-block wide">
-  <p>
-    Soy autora de <em>Tú, enfermo no estás</em>, libro de cuentos publicado por Malabar Editorial.
-    Mis textos han aparecido en antologías, revistas literarias y proyectos de divulgación.
-    Esta página reúne una selección de mi archivo publicado.
-  </p>
-</section>
+<ul class="pub-credenciales">
+  <li><strong>Beca Jóvenes Creadores</strong> FONCA · cuento 2018 · novela 2021</li>
+  <li><strong>Under the Volcano</strong> · tres ediciones</li>
+  <li><strong>Malabar Editorial</strong> · libro de cuentos, 2021</li>
+  <li><a href="{{ '/bio/' | relative_url }}">Ver trayectoria →</a></li>
+</ul>
 
-<section class="publication-section">
-  <div class="section-heading">
-    <p class="eyebrow">Libro</p>
-    <h2>Libros</h2>
+{% assign libros = site.data.publicaciones | where: "category", "libro" %}
+{% for libro in libros %}
+<section class="pub-libro">
+  {% if libro.image %}<img src="{{ libro.image | relative_url }}" alt="Portada de {{ libro.title }}">{% endif %}
+  <div>
+    <p class="pub-tipo">Libro de cuentos</p>
+    <h2>{{ libro.title }}</h2>
+    <p class="pub-datos">{{ libro.publisher }}{% if libro.year != "" %} · {{ libro.year }}{% endif %}</p>
+    {% if libro.url %}<a class="text-link" href="{{ libro.url }}" target="_blank" rel="noopener noreferrer">Ver en {{ libro.publisher }} →</a>{% endif %}
   </div>
+</section>
+{% endfor %}
 
-  <div class="publication-list featured-list">
-    {% for item in site.data.publicaciones %}
-      {% if item.category == 'libro' %}
-        {% include publication-card.html item=item %}
-      {% endif %}
+<section class="pub-seccion">
+  <h2>Antologías</h2>
+  <div class="pub-estante">
+    {% assign antologias = site.data.publicaciones | where: "category", "antologia" %}
+    {% for item in antologias %}
+    <article class="pub-tomo">
+      {% if item.image %}<img src="{{ item.image | relative_url }}" alt="Portada de {{ item.title }}">
+      {% else %}<div class="pub-sin-portada"><span>{{ item.title }}</span></div>{% endif %}
+      <h3>{{ item.title }}</h3>
+      <p class="pub-cuento">{{ item.type }}</p>
+      <p class="pub-datos">{{ item.publisher }}{% if item.year != "" %} · {{ item.year }}{% endif %}</p>
+      {% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Ver →</a>{% endif %}
+    </article>
     {% endfor %}
   </div>
 </section>
 
-<section class="publication-section tinted">
-  <div class="section-heading">
-    <p class="eyebrow">Trayectoria</p>
-    <h2>Antologías</h2>
-  </div>
-
-  <div class="publication-list">
-    {% for item in site.data.publicaciones %}
-      {% if item.category == 'antologia' %}
-        {% include publication-card.html item=item %}
-      {% endif %}
+<section class="pub-seccion">
+  <h2>Cuentos en revistas y sitios literarios</h2>
+  <ul class="pub-lista">
+    {% assign revistas = site.data.publicaciones | where: "category", "revista" %}
+    {% for item in revistas %}
+    <li><span class="pub-titulo">{{ item.title }}</span><span class="pub-datos">{{ item.publisher }}{% if item.year != "" %} · {{ item.year }}{% endif %}</span>{% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Ver →</a>{% endif %}</li>
     {% endfor %}
-  </div>
+  </ul>
 </section>
 
-<section class="publication-section">
-  <div class="section-heading">
-    <p class="eyebrow">Cuentos en línea</p>
-    <h2>Revistas y sitios literarios</h2>
-  </div>
-
-  <div class="publication-list">
-    {% for item in site.data.publicaciones %}
-      {% if item.category == 'revista' %}
-        {% include publication-card.html item=item %}
-      {% endif %}
+<section class="pub-seccion pub-secundaria">
+  <h2>Archivo de divulgación</h2>
+  <p>Antes y alrededor de mi trabajo literario y visual, escribí textos de divulgación científica sobre insectos, cuerpo, enfermedad, evolución y mundo natural.</p>
+  <ul class="pub-lista">
+    {% assign divulgacion = site.data.publicaciones | where: "category", "divulgacion" %}
+    {% for item in divulgacion %}
+    <li><span class="pub-titulo">{{ item.title }}</span><span class="pub-datos">{{ item.publisher }}</span>{% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Ver →</a>{% endif %}</li>
     {% endfor %}
-  </div>
-</section>
-
-<section class="publication-section quiet">
-  <div class="section-heading">
-    <p class="eyebrow">Archivo secundario</p>
-    <h2>Archivo de divulgación</h2>
-    <p>
-      Antes y alrededor de mi trabajo literario y visual, escribí textos de divulgación científica
-      sobre insectos, cuerpo, enfermedad, evolución y mundo natural. Los conservo aquí como parte de mi archivo de observación.
-    </p>
-  </div>
-
-  <div class="publication-list compact-list">
-    {% for item in site.data.publicaciones %}
-      {% if item.category == 'divulgacion' %}
-        {% include publication-card.html item=item %}
-      {% endif %}
-    {% endfor %}
-  </div>
+  </ul>
 </section>

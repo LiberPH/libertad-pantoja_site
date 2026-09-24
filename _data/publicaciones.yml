@@ -1,5 +1,6 @@
 # Categorías: libro, antologia, revista, divulgacion.
 # La divulgación queda como archivo secundario.
+# url: solo si la liga lleva al texto y funciona (revisadas el 24 sep 2026).
 
 - title: "Tú, enfermo no estás"
   category: "libro"
@@ -28,7 +29,6 @@
   type: "Cuento: Hilos"
   publisher: "Ediciones del Ermitaño"
   year: "2011"
-  url: "https://www.edicionesdelermitano.com/libro/historia-de-las-historias_7253/"
   image: "/assets/img/publicaciones/historias_de_las_historias.jpg"
   description: "Antología de minificción derivada del sitio Las Historias."
   featured: true
@@ -48,6 +48,7 @@
   publisher: "Revista Penumbria"
   year: "2020"
   url: "https://www.penumbria.mx/penumbria-pandemica/"
+  image: "/assets/img/publicaciones/penumbria-pandemica.jpg"
   description: "Antología de historias para leer en el ocaso en torno a la pandemia."
 
 - title: "Antología Jóvenes Creadores 2018–2019"
@@ -55,6 +56,7 @@
   type: "Cuento: De cadáveres"
   publisher: "FONCA / Jóvenes Creadores"
   year: "2019"
+  image: "/assets/img/publicaciones/antologia-jovenes-creadores.jpg"
   description: "Antología del segundo periodo 2018/2019 del programa Jóvenes Creadores."
 
 - title: "Sushi y esgrima"
@@ -62,7 +64,6 @@
   type: "Cuento"
   publisher: "Revista Literaria"
   year: ""
-  url: "https://www.literariacentro.org/"
   description: "Cuento publicado en el primer número de la revista Literaria."
 
 - title: "Porcelana"
@@ -70,7 +71,6 @@
   type: "Cuento"
   publisher: "Temporales / Universidad de Nueva York"
   year: ""
-  url: "https://wp.nyu.edu/gsas-revistatemporales/"
   description: "Cuento publicado en la revista Temporales."
 
 - title: "¿Dónde está Cecilia?"
@@ -78,7 +78,6 @@
   type: "Cuento"
   publisher: "Malabar Editorial"
   year: ""
-  url: "https://malabared.files.wordpress.com/"
   description: "Cuento publicado por Malabar Editorial."
 
 - title: "Nautla"
@@ -94,7 +93,6 @@
   type: "Artículo de divulgación"
   publisher: "Más Ciencia por México"
   year: ""
-  url: "https://www.masciencia.org/"
   description: "Texto de divulgación sobre insectos, observación y mundo natural."
 
 - title: "¿Cómo cambia de sexo un dinosaurio?"
@@ -110,7 +108,6 @@
   type: "Artículo de divulgación"
   publisher: "Cienciorama"
   year: ""
-  url: "https://www.cienciorama.unam.mx/"
   description: "Texto de divulgación científica."
 
 - title: "El trigo: una historia de diversidad y mejoramiento"
@@ -118,5 +115,4 @@
   type: "Artículo de divulgación en colaboración con Mariana Esther Martínez"
   publisher: "Cienciorama"
   year: ""
-  url: "https://www.cienciorama.unam.mx/"
   description: "Texto de divulgación científica."
