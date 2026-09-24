@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<section class="page-hero compact">
+<section class="page-hero compact{% if page.hero_image %} con-obra{% endif %}">
+  {% if page.hero_image %}<div class="page-hero-texto">{% endif %}
   {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
   <h1>{{ page.title }}</h1>
   {% if page.intro %}
@@ -11,6 +12,11 @@ layout: default
   {% if page.hero_link %}
     <p class="hero-link"><a href="{{ page.hero_link.url | relative_url }}"{% if page.hero_link.download %} download{% endif %}>{{ page.hero_link.label }}</a>{% if page.hero_link.note %} <span>{{ page.hero_link.note }}</span>{% endif %}</p>
   {% endif %}
+  {% if page.hero_image %}</div>
+  <figure class="page-hero-obra">
+    <img src="{{ page.hero_image.src | relative_url }}" alt="{{ page.hero_image.alt }}" width="{{ page.hero_image.width }}" height="{{ page.hero_image.height }}" fetchpriority="high">
+    <figcaption>{{ page.hero_image.caption }}</figcaption>
+  </figure>{% endif %}
 </section>
 
 {{ content }}

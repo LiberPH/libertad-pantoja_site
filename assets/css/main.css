@@ -291,6 +291,53 @@ main {
 .pagina-obra .category-nav { margin-bottom: 8px; }
 .pagina-obra #original { padding-top: 24px; }
 
+
+/* Marca: el fugu volador */
+.brand-fugu { display: block; width: 40px; height: 40px; }
+
+/* Propuesta: cabecera clara con una pintura (Obra) */
+body.cabecera-clara { background: var(--crema-fondo); }
+.cabecera-clara .site-header,
+.cabecera-clara .site-header a,
+.cabecera-clara .site-brand { color: var(--tinta-cafe); }
+.cabecera-clara .site-nav a[aria-current="page"],
+.cabecera-clara .site-nav a:hover { color: var(--verde); border-bottom-color: var(--verde); }
+.cabecera-clara .site-header { border-bottom: 1px solid rgba(42, 38, 34, 0.12); }
+
+.cabecera-clara .page-hero {
+  background: var(--crema-fondo);
+  color: var(--tinta-cafe);
+  border-bottom: 1px solid rgba(42, 38, 34, 0.12);
+}
+.cabecera-clara .page-hero h1 { color: var(--verde); }
+.cabecera-clara .page-hero h1::after { background: var(--verde); }
+.cabecera-clara .page-hero .hero-lede { color: var(--tinta-cafe); }
+.cabecera-clara .hero-link a { color: var(--verde); border-bottom-color: rgba(44, 93, 79, 0.45); }
+.cabecera-clara .hero-link span { color: var(--tinta-media); }
+
+.page-hero.con-obra {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+.page-hero-obra { margin: 0; }
+.page-hero-obra img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 460px;
+  margin-left: auto;
+  box-shadow: 0 18px 40px rgba(42, 38, 34, 0.18);
+}
+.page-hero-obra figcaption {
+  margin-top: 10px;
+  color: var(--tinta-media);
+  font-size: 0.8rem;
+  text-align: right;
+}
+
 /* ---------- Etiquetas y enlaces ---------- */
 
 .eyebrow,
@@ -1609,6 +1656,9 @@ summary:focus-visible,
 /* ---------- Teléfonos (≤580px) ---------- */
 
 @media (max-width: 580px) {
+  .page-hero.con-obra { grid-template-columns: 1fr; }
+  .page-hero-obra img { max-height: 340px; margin-left: 0; }
+  .page-hero-obra figcaption { text-align: left; }
   .site-nav { gap: 8px 14px; letter-spacing: 0.05em; }
 
   body {
