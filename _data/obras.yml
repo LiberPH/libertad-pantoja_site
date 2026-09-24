@@ -204,6 +204,6 @@
 #   edition: "Pieza única o variación irrepetible"
 #   status: "proximamente"
 #   price: "Consultar"
-#   image: "/assets/img/obra/placeholder-intervenida.svg"
+#   image: "/assets/img/obra/<imagen>.jpg"
 #   featured: false
 #   description: "Impresión fotográfica más intervención manual."
