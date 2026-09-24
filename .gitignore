@@ -4,3 +4,7 @@ _privado/
 _catalogo/build/
 # Lista de trabajo interna
 PENDIENTES.md
+# Contexto y sistema de diseño de impeccable (uso interno)
+.impeccable/
+PRODUCT.md
+DESIGN.md
