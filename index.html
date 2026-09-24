@@ -20,7 +20,7 @@ title: "Inicio"
   </div>
 
   <div class="home-hero-art">
-    <img src="{{ '/assets/img/home/hero-obra.jpg' | relative_url }}" alt="Retrato de Libertad Pantoja">
+    <img src="{{ '/assets/img/home/hero-obra.jpg' | relative_url }}" alt="Retrato de Libertad Pantoja" width="1200" height="800" fetchpriority="high">
   </div>
 </section>
 
@@ -43,7 +43,7 @@ title: "Inicio"
       {% assign verso = obra.description | split: ". " | first %}
       <article class="home-art-item">
         <a class="home-art-link" href="{{ '/obra/' | relative_url }}#{{ obra.title | slugify }}">
-          <span class="home-art-image"><img src="{{ obra.image | relative_url }}" alt="{{ obra.alt | default: obra.title }}" loading="lazy" decoding="async"></span>
+          <span class="home-art-image"><img src="{{ obra.image | relative_url }}" alt="{{ obra.alt | default: obra.title }}"{% if obra.image_width %} width="{{ obra.image_width }}" height="{{ obra.image_height }}"{% endif %} loading="lazy" decoding="async"></span>
           <h3>{{ obra.title }}</h3>
           {% if verso %}<p class="home-art-verso">{{ verso | strip }}{% unless verso contains "." %}.{% endunless %}</p>{% endif %}
           <p class="home-art-price">
