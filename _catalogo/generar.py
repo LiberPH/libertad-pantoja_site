@@ -239,7 +239,7 @@ def paginas(fmt, config, ui, onirica, hadas):
             <span class="indice-precio">{e(cifra)}</span></li>""")
     p.append(("marfil indice", f"""
       <div class="indice-cabeza"><h2>Obras</h2>
-        <p>Precios sin marco, en pesos mexicanos. Los detalles, en la página de cada obra.</p></div>
+        <p>Precios en pesos mexicanos; cada original indica si va enmarcado. Los detalles, en la página de cada obra.</p></div>
       <ol class="indice">{''.join(celdas)}</ol>"""))
 
     # Series
