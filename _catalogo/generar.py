@@ -4,12 +4,17 @@ Produce:
   assets/docs/catalogo-libertad-pantoja.pdf           horizontal (carta), para descarga y correo
   assets/docs/catalogo-libertad-pantoja-vertical.pdf  vertical 4:5, para WhatsApp
   _privado/instagram/catalogo-NN.png                  1080 × 1350, para carrusel de Instagram
+  _data/catalogo.yml                                  fecha y peso, para el enlace de descarga en Obra
 
-Requiere Python con pyyaml, pillow y pypdf, y Swift (Xcode Command Line Tools).
+Requiere Python con pyyaml, pillow, pypdf y pymupdf, y Swift (Xcode Command Line Tools).
 Uso, desde la raíz del sitio:  python _catalogo/generar.py
+Con --sin-instagram (o en GitHub Actions) no genera las imágenes de Instagram.
+Se corre solo en GitHub Actions al cambiar obras o precios (.github/workflows/catalogo.yml).
 """
 
+import datetime
 import html
+import os
 import re
 import shutil
 import subprocess
@@ -25,7 +30,10 @@ RAIZ = Path(__file__).resolve().parent.parent
 CAT = RAIZ / "_catalogo"
 BUILD = CAT / "build"
 
-FECHA = "septiembre 2026"
+MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+         "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+_hoy = datetime.date.today()
+FECHA = f"{MESES[_hoy.month - 1]} {_hoy.year}"
 SITIO = "https://liberph.github.io/libertad-pantoja_site/"
 SITIO_CORTO = "liberph.github.io/libertad-pantoja_site"
 
@@ -371,8 +379,18 @@ def main():
         return
     docs = RAIZ / "assets/docs"
     exportar("h", 792, 612, docs / "catalogo-libertad-pantoja.pdf")
-    exportar("v", 540, 675, docs / "catalogo-libertad-pantoja-vertical.pdf", RAIZ / "_privado/instagram")
-    print("Listo:", docs)
+    sin_instagram = "--sin-instagram" in sys.argv or os.environ.get("CI")
+    instagram = None if sin_instagram else RAIZ / "_privado/instagram"
+    exportar("v", 540, 675, docs / "catalogo-libertad-pantoja-vertical.pdf", instagram)
+
+    # Fecha y peso para el enlace de descarga en Obra.
+    peso = (docs / "catalogo-libertad-pantoja.pdf").stat().st_size / 1e6
+    (RAIZ / "_data/catalogo.yml").write_text(
+        "# Lo escribe _catalogo/generar.py; no editar a mano.\n"
+        f'fecha: "{FECHA}"\n'
+        f'peso: "{peso:.1f} MB"\n'
+    )
+    print("Listo:", docs, f"({FECHA}, {peso:.1f} MB)")
 
 
 if __name__ == "__main__":

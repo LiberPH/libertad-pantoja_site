@@ -1,0 +1,63 @@
+# Regenera el catálogo en PDF cuando cambian las obras, sus imágenes o los textos de estados y precios.
+name: Catálogo de obra
+
+on:
+  push:
+    branches: [main, catalogo-automatico]
+    paths:
+      - "_data/obras.yml"
+      - "_data/ui.yml"
+      - "assets/img/obra/**"
+      - "_catalogo/generar.py"
+      - "_catalogo/catalogo.css"
+      - "_catalogo/exportar.swift"
+      - "_catalogo/img/**"
+      - ".github/workflows/catalogo.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: catalogo-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalogo:
+    # El exportador usa WebKit (Safari), que solo existe en macOS.
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install pyyaml pillow pypdf pymupdf
+
+      - name: Generar el catálogo
+        run: python _catalogo/generar.py --sin-instagram
+
+      - name: Guardar el catálogo si cambió
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/docs/catalogo-libertad-pantoja.pdf assets/docs/catalogo-libertad-pantoja-vertical.pdf _data/catalogo.yml
+          if git diff --cached --quiet; then
+            echo "El catálogo no cambió."
+            echo "CAMBIO=no" >> "$GITHUB_ENV"
+          else
+            git commit -m "Catálogo regenerado automáticamente"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+            echo "CAMBIO=si" >> "$GITHUB_ENV"
+          fi
+
+      # Los commits hechos con GITHUB_TOKEN no disparan la publicación del sitio por sí solos.
+      - name: Publicar el sitio
+        if: env.CAMBIO == 'si' && github.ref_name == 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

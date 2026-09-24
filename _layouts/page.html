@@ -10,7 +10,7 @@ layout: default
     <p class="hero-lede">{{ page.intro }}</p>
   {% endif %}
   {% if page.hero_link %}
-    <p class="hero-link"><a href="{{ page.hero_link.url | relative_url }}"{% if page.hero_link.download %} download{% endif %}>{{ page.hero_link.label }}</a>{% if page.hero_link.note %} <span>{{ page.hero_link.note }}</span>{% endif %}</p>
+    <p class="hero-link"><a href="{{ page.hero_link.url | relative_url }}"{% if page.hero_link.download %} download{% endif %}>{{ page.hero_link.label }}</a>{% if page.hero_link.catalogo and site.data.catalogo %} <span>PDF · {{ site.data.catalogo.peso }} · {{ site.data.catalogo.fecha }}</span>{% elsif page.hero_link.note %} <span>{{ page.hero_link.note }}</span>{% endif %}</p>
   {% endif %}
   {% if page.hero_image %}</div>
   <figure class="page-hero-obra">
