@@ -325,11 +325,49 @@ def documento(fmt, cuerpo):
 # ---------------------------------------------------------------------------
 
 
-def comprimir(origen, destino):
+def restaurar_originales(doc, html_path):
+    """Pone de vuelta cada imagen a su resolución original.
+
+    WebKit a veces incrusta las imágenes al tamaño en que se ven en la página (pasa en
+    GitHub Actions, no siempre). Cada imagen del PDF se compara con las del HTML de
+    igual proporción y, si es más chica que su original, se sustituye por el archivo.
+    """
+    import io
+
+    fuentes = {}
+    for ruta in set(re.findall(r'src="([^"]+)"', html_path.read_text())):
+        archivo = (html_path.parent / urllib.parse.unquote(ruta)).resolve()
+        if archivo.suffix.lower() in (".jpg", ".jpeg", ".png") and archivo.exists():
+            with Image.open(archivo) as im:
+                fuentes[archivo] = (im.width, im.height, im.convert("L").resize((24, 24)))
+    if not fuentes:
+        return
+    vistos = set()
+    for pagina in doc:
+        for info in pagina.get_images(full=True):
+            xref, ancho, alto = info[0], info[2], info[3]
+            if xref in vistos or not alto:
+                continue
+            vistos.add(xref)
+            candidatas = [(a, f) for a, f in fuentes.items() if abs(f[0] / f[1] - ancho / alto) < 0.02]
+            if not candidatas:
+                continue
+            with Image.open(io.BytesIO(doc.extract_image(xref)["image"])) as im:
+                muestra = im.convert("L").resize((24, 24))
+            def distancia(f):
+                return sum(abs(x - y) for x, y in zip(muestra.getdata(), f[2].getdata()))
+            archivo, datos_f = min(candidatas, key=lambda c: distancia(c[1]))
+            if datos_f[0] > ancho and distancia(datos_f) < 24 * 24 * 30:
+                pagina.replace_image(xref, filename=str(archivo))
+
+
+def comprimir(origen, destino, html_path=None):
     """WebKit guarda las imágenes sin pérdida; se recomprimen a JPEG."""
     import fitz
 
     doc = fitz.open(origen)
+    if html_path:
+        restaurar_originales(doc, html_path)
     # Sin reducir resolución: las obras ya vienen a 1200 px como máximo.
     doc.rewrite_images(dpi_threshold=None, quality=80, lossy=True, lossless=True, bitonal=False)
     doc.save(destino, garbage=4, deflate=True, clean=True)
@@ -361,7 +399,7 @@ def exportar(fmt, ancho, alto, destino_pdf, png_dir=None):
     crudo = salida / "unido.pdf"
     with open(crudo, "wb") as f:
         escritor.write(f)
-    comprimir(crudo, destino_pdf)
+    comprimir(crudo, destino_pdf, html_path)
 
     if png_dir:
         png_dir.mkdir(parents=True, exist_ok=True)
