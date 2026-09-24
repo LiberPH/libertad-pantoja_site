@@ -3,7 +3,7 @@ name: Catálogo de obra
 
 on:
   push:
-    branches: [main, catalogo-automatico]
+    branches: [main]
     paths:
       - "_data/obras.yml"
       - "_data/ui.yml"
