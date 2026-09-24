@@ -2,7 +2,6 @@
 share_image: "/assets/img/compartir/obra.jpg"
 layout: page
 title: "Obra"
-eyebrow: "Imagen · materia · aparición"
 intro: "Trabajo con pintura, dibujo, fotografía e imagen intervenida para explorar el territorio interior: sueño, mito, cuerpo, aparición e inframundo."
 permalink: /obra/
 body_class: "pagina-obra"
@@ -23,7 +22,7 @@ hero_link:
   <a href="#fotografia">Fotografía impresa</a>
   {% if n_intervenida > 0 %}<a href="#intervenida">Fotografía intervenida</a>{% endif %}
   <a href="#adquirir">Cómo adquirir</a>
-  <a href="#archivo-visual">Archivo visual</a>
+  {% comment %}Oculto mientras el Archivo visual no tenga series (ver PENDIENTES.md).{% endcomment %}
 </nav>
 
 <section id="original" class="collection-section">
@@ -115,12 +114,14 @@ hero_link:
   </div>
 </section>
 
+{% comment %} Oculto mientras el Archivo visual no tenga series (ver PENDIENTES.md).
 <section id="archivo-visual" class="cta-band small">
   <p class="eyebrow">Archivo</p>
   <h2>Mundos pequeños</h2>
   <p>El archivo fotográfico conserva la mirada sobre insectos, jardines, cuerpos mínimos y apariciones de lo vivo.</p>
   <a class="button secondary" href="{{ '/archivo-visual/' | relative_url }}">Ver archivo visual</a>
 </section>
+{% endcomment %}
 
 <script>window.visorTextos = {{ site.data.ui.obra | jsonify }};</script>
 <script src="{{ '/assets/js/compartir.js' | relative_url }}" defer></script>

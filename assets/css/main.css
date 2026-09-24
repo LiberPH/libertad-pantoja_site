@@ -498,6 +498,14 @@ main {
 .cta-band.small h2 { color: var(--verde); }
 .cta-band.small p { color: var(--tinta-media); }
 
+.bio-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
 /* Tarjetas genéricas (talleres, archivo) */
 
 .card-grid {
@@ -1601,6 +1609,8 @@ summary:focus-visible,
 /* ---------- Teléfonos (≤580px) ---------- */
 
 @media (max-width: 580px) {
+  .site-nav { gap: 8px 14px; letter-spacing: 0.05em; }
+
   body {
     background: linear-gradient(180deg, var(--noche) 0, var(--umbral) 300px, var(--crema-fondo) 300px, var(--crema-fondo) 100%);
   }
