@@ -1110,7 +1110,7 @@ h3 {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: clamp(44px, 7vw, 76px) max(32px, calc((100vw - var(--max-width)) / 2));
-  background: linear-gradient(180deg, #FFFFFF 0%, #F7E9D2 100%);
+  background: var(--crema-fondo);
   color: var(--tinta-profunda);
 }
 
@@ -2120,3 +2120,40 @@ body::before { background: none; }
   font-weight: 400;
   color: var(--tinta-media);
 }
+
+/* =========================================================
+   Enlaces y etiquetas unificados
+   Verde sobre fondos claros; ámbar solo sobre la noche.
+   ========================================================= */
+
+a { color: var(--verde); }
+main a:hover,
+.site-footer a:hover { color: var(--tinta-profunda); }
+
+.page-hero a,
+.home-hero a:not(.button),
+.cta-band:not(.small) a:not(.button),
+.home-quote-band a { color: var(--horizonte); }
+
+.page-hero a:hover,
+.home-hero a:not(.button):hover,
+.cta-band:not(.small) a:not(.button):hover,
+.home-quote-band a:hover { color: var(--tinta-clara); }
+
+.eyebrow,
+.card-label,
+.section-heading .eyebrow,
+.section-kicker { color: var(--verde); }
+
+.home-hero .eyebrow,
+.page-hero .eyebrow,
+.page-hero.compact .eyebrow { color: var(--horizonte); }
+
+.feature-card h2,
+.feature-card h3,
+.publication-card h3,
+.contact-card h2 { color: var(--verde); }
+
+figcaption { color: var(--tinta-media); }
+
+.publication-card .card-label { font-size: 0.75rem; }
