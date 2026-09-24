@@ -27,7 +27,7 @@
   --tinta-cafe: #2A2622;
   --tinta-media: #635A51;
   --verde: #2C5D4F;
-  --borde-crema: rgba(43, 17, 51, 0.16);
+  --borde-crema: rgba(42, 38, 34, 0.16);
   --sombra-crema: rgba(42, 38, 34, 0.06);
 
   --max-width: 1120px;
@@ -424,19 +424,19 @@ main {
 
 .contact-panel,
 .timeline-panel {
-  border: 1px solid rgba(43, 17, 51, 0.14);
+  border: 1px solid rgba(42, 38, 34, 0.14);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 18px 42px rgba(43, 17, 51, 0.08);
+  box-shadow: 0 18px 42px rgba(42, 38, 34, 0.08);
 }
 
 .two-column-panel {
-  border-top: 1px solid rgba(43, 17, 51, 0.18);
-  border-bottom: 1px solid rgba(43, 17, 51, 0.18);
+  border-top: 1px solid rgba(42, 38, 34, 0.18);
+  border-bottom: 1px solid rgba(42, 38, 34, 0.18);
 }
 
 .two-column-panel > div { padding: clamp(24px, 4vw, 42px); }
-.two-column-panel > div + div { border-left: 1px solid rgba(43, 17, 51, 0.18); }
+.two-column-panel > div + div { border-left: 1px solid rgba(42, 38, 34, 0.18); }
 
 .two-column-panel h2,
 .contact-panel h2,
@@ -577,7 +577,7 @@ main {
   justify-content: center;
   min-height: 34px;
   padding: 7px 12px;
-  border: 1px solid rgba(43, 17, 51, 0.12);
+  border: 1px solid rgba(42, 38, 34, 0.12);
   border-radius: 999px;
   color: var(--tinta-profunda);
   background: rgba(255, 255, 255, 0.28);
@@ -718,7 +718,7 @@ main {
   grid-template-columns: 80px 1fr;
   gap: 12px;
   padding-bottom: 6px;
-  border-bottom: 1px solid rgba(43, 17, 51, 0.12);
+  border-bottom: 1px solid rgba(42, 38, 34, 0.12);
 }
 
 .metadata-list div:last-child {
@@ -745,7 +745,7 @@ main {
 .art-acquire {
   margin-top: auto;
   padding-top: 18px;
-  border-top: 1px solid rgba(43, 17, 51, 0.18);
+  border-top: 1px solid rgba(42, 38, 34, 0.18);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -774,7 +774,7 @@ main {
 
 .art-card.status-reservada .status-pill {
   color: var(--tinta-oscura);
-  border-color: rgba(43, 17, 51, 0.3);
+  border-color: rgba(42, 38, 34, 0.3);
   background: transparent;
 }
 
@@ -782,12 +782,12 @@ main {
 .art-card.status-agotada .status-pill,
 .art-card.status-archivo .status-pill {
   color: var(--tinta-media);
-  border-color: rgba(118, 90, 76, 0.4);
+  border-color: rgba(42, 38, 34, 0.25);
 }
 
 .art-card.status-proximamente .status-pill {
   color: var(--tinta-oscura);
-  border-color: rgba(43, 17, 51, 0.3);
+  border-color: rgba(42, 38, 34, 0.3);
   font-style: italic;
 }
 
@@ -1206,7 +1206,7 @@ main {
 
 .bio-portrait img {
   width: 100%;
-  border: 1px solid rgba(43, 17, 51, 0.16);
+  border: 1px solid rgba(42, 38, 34, 0.16);
   border-radius: 28px;
   background: rgba(231, 227, 221, 0.42);
 }
@@ -1336,7 +1336,7 @@ main {
   align-items: start;
   margin-top: 28px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(43, 17, 51, 0.18);
+  border-bottom: 1px solid rgba(42, 38, 34, 0.18);
 }
 
 .home-art-link {
@@ -1391,17 +1391,19 @@ main {
 
 .home-books-feature {
   display: grid;
-  grid-template-columns: 0.85fr 1.6fr auto;
-  gap: clamp(24px, 5vw, 60px);
-  align-items: center;
-  padding: 38px 0;
-  border-bottom: 1px solid rgba(43, 17, 51, 0.18);
+  grid-template-columns: 1fr auto;
+  gap: 28px clamp(24px, 5vw, 60px);
+  align-items: end;
+  padding: 38px 0 48px;
+  border-bottom: 1px solid rgba(42, 38, 34, 0.18);
 }
 
 .home-book-row {
+  grid-column: 1 / -1;
+  grid-row: 2;
   display: grid;
-  grid-template-columns: repeat(5, minmax(70px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 220px));
+  gap: clamp(20px, 3vw, 40px);
   align-items: start;
 }
 
@@ -1410,25 +1412,26 @@ main {
   width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  box-shadow: 0 16px 30px rgba(43, 17, 51, 0.14);
+  box-shadow: 0 16px 30px rgba(42, 38, 34, 0.14);
 }
 
 .home-book-item h3 {
-  margin-top: 8px;
+  hyphens: manual;
+  margin-top: 10px;
   color: var(--tinta-profunda);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   line-height: 1.2;
 }
 
 .home-three-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid rgba(43, 17, 51, 0.18);
+  border-bottom: 1px solid rgba(42, 38, 34, 0.18);
 }
 
 .home-mini-card {
   padding: clamp(28px, 4vw, 42px);
-  border-right: 1px solid rgba(43, 17, 51, 0.18);
+  border-right: 1px solid rgba(42, 38, 34, 0.18);
 }
 
 .home-mini-card:last-child { border-right: none; }
@@ -1534,7 +1537,7 @@ summary:focus-visible,
 
   .two-column-panel > div + div {
     border-left: none;
-    border-top: 1px solid rgba(43, 17, 51, 0.18);
+    border-top: 1px solid rgba(42, 38, 34, 0.18);
   }
 
   .contact-card {
@@ -1548,12 +1551,12 @@ summary:focus-visible,
   .home-hero-art { min-height: auto; }
   .home-art-row { grid-template-columns: 1fr; gap: 40px; }
   .home-art-image { height: auto; max-height: 70vh; }
-  .home-books-feature,
   .home-three-columns { grid-template-columns: 1fr; }
+  .home-book-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
   .home-mini-card {
     border-right: none;
-    border-bottom: 1px solid rgba(43, 17, 51, 0.18);
+    border-bottom: 1px solid rgba(42, 38, 34, 0.18);
   }
 }
 
@@ -1619,6 +1622,8 @@ summary:focus-visible,
 
   .home-hero h1 { font-size: clamp(3.4rem, 18vw, 5rem); }
 
+  .home-books-feature { grid-template-columns: 1fr; }
+  .home-books-feature > .text-link { grid-row: 3; justify-self: start; }
   .home-book-row { grid-template-columns: 1fr 1fr; }
 
   .visor { padding: 64px 12px 24px; }
