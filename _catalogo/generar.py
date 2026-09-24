@@ -67,7 +67,7 @@ PASOS = [
 
 CONDICIONES = [
     "Las ediciones limitadas van firmadas, numeradas y con certificado de autenticidad.",
-    "Los originales se entregan con o sin marco; el envío sin marco es más económico y seguro.",
+    "Cada original indica si se entrega enmarcado. Las obras sin marco viajan de forma más económica y segura.",
     "Apartado con el 50 %; el resto contra entrega. Transferencia bancaria o efectivo.",
     "Los precios en dólares son de referencia y pueden ajustarse según el tipo de cambio.",
 ]
@@ -216,7 +216,7 @@ def paginas(fmt, config, ui, onirica, hadas):
     parrafos = "".join(f"<p>{t}</p>" for t in SOBRE)
     p.append(("marfil sobre", f"""
       <figure class="sobre-foto"><img src="../img/taller.jpg" alt="Libertad Pantoja dibujando en su taller"></figure>
-      <div class="sobre-texto"><h2>Sobre mi obra</h2>{parrafos}</div>"""))
+      <div class="sobre-texto"><h2>Sobre mi obra</h2>{parrafos}<p class="credito">Fotografía del taller: RV</p></div>"""))
 
     # Índice
     celdas = []

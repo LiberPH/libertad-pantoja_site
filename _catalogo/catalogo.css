@@ -92,6 +92,8 @@ img.obra { display: block; }
 .v .sobre p { font-size: 13.5px; line-height: 1.45; }
 .sobre p + p { margin-top: 10px; }
 .v .sobre p + p { margin-top: 7px; }
+.sobre .credito { margin-top: 14px; font-size: 10px; letter-spacing: 0.04em; color: var(--tinta-media); }
+.v .sobre .credito { margin-top: 9px; }
 
 /* ---------- Índice ---------- */
 
