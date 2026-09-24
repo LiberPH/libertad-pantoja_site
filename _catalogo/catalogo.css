@@ -130,14 +130,6 @@ ol.indice img { width: 100%; height: 118px; object-fit: cover; display: block; }
 .pieza-obra { display: flex; align-items: center; justify-content: center; }
 .h .pieza-obra { height: 516px; }
 
-.serie {
-  font-variant: small-caps;
-  letter-spacing: 0.14em;
-  font-size: 12px;
-  color: var(--tinta-media);
-  margin-bottom: 8px;
-}
-.v .serie { margin-bottom: 4px; }
 .subtitulo { margin-top: 4px; font-size: 12.5px; font-style: italic; color: var(--tinta-media); }
 .verso { font-style: italic; font-size: 16px; line-height: 1.4; margin: 14px 0 8px; }
 .v .verso { font-size: 15px; margin: 8px 0 5px; }

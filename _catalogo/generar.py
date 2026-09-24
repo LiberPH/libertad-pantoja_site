@@ -86,8 +86,7 @@ def cargar():
     ui = yaml.safe_load((RAIZ / "_data/ui.yml").read_text())["obra"]
     onirica = [o for o in obras if o.get("category") in ("original", "edicion-limitada")]
     hadas = [o for o in obras if o.get("category") == "fotografia"]
-    for n, o in enumerate(onirica + hadas, start=1):
-        o["numero"] = n
+    for o in onirica + hadas:
         ruta = RAIZ / o["image"].lstrip("/")
         o["ruta"] = ruta
         with Image.open(ruta) as im:
@@ -101,7 +100,7 @@ def e(texto):
 
 
 def partir_relato(texto):
-    """Primera oración como verso de la carta; el resto como relato."""
+    """Primera oración como verso destacado; el resto como relato."""
     texto = " ".join(str(texto or "").split())
     partes = re.split(r"(?<=[.!?])\s+", texto, maxsplit=1)
     return partes[0], (partes[1] if len(partes) > 1 else "")
