@@ -14,8 +14,8 @@ title: "Inicio"
     </p>
 
     <div class="hero-actions">
-      <a class="button secondary" href="{{ '/obra/' | relative_url }}">Ver obra</a>
-      <a class="button primary" href="{{ site.substack }}">Entrar a El umbral</a>
+      <a class="button primary" href="{{ '/obra/' | relative_url }}">Ver obra</a>
+      <a class="button secondary" href="{{ site.substack }}">Entrar a El umbral</a>
     </div>
   </div>
 
@@ -27,22 +27,28 @@ title: "Inicio"
 <section class="home-editorial">
 
   <section class="home-art-feature">
-    <div class="section-kicker">
-      <span>Obra</span>
-      <a href="{{ '/obra/' | relative_url }}">Ver toda la obra →</a>
+    <div class="home-section-head">
+      <h2>Obra</h2>
+      <p class="home-section-links">
+        <a href="{{ '/obra/' | relative_url }}">Ver toda la obra →</a>
+        <a href="{{ '/assets/docs/catalogo-libertad-pantoja.pdf' | relative_url }}" download>Descargar el catálogo (PDF)</a>
+      </p>
     </div>
 
-    <h2>Obra</h2>
-
     <div class="home-art-row">
-      {% assign featured_obras = site.data.obras | where: "featured", true | slice: 0, 4 %}
+      {% assign ui = site.data.ui.obra %}
+      {% assign featured_obras = site.data.obras | where: "featured", true | slice: 0, 3 %}
       {% for obra in featured_obras %}
+      {% assign st = ui.status[obra.status] %}
+      {% assign verso = obra.description | split: ". " | first %}
       <article class="home-art-item">
         <a class="home-art-link" href="{{ '/obra/' | relative_url }}#{{ obra.title | slugify }}">
-          <img src="{{ obra.image | relative_url }}" alt="{{ obra.title }}" loading="lazy" decoding="async">
+          <span class="home-art-image"><img src="{{ obra.image | relative_url }}" alt="{{ obra.alt | default: obra.title }}" loading="lazy" decoding="async"></span>
           <h3>{{ obra.title }}</h3>
-          <p>{{ obra.technique }}</p>
-          <p>{{ obra.dimensions }}</p>
+          {% if verso %}<p class="home-art-verso">{{ verso | strip }}{% unless verso contains "." %}.{% endunless %}</p>{% endif %}
+          <p class="home-art-price">
+            {{ st.label | default: obra.status }}{% if st.show_price != false and obra.price %} · {{ obra.price }}{% if obra.framing %} <span>{{ obra.framing | downcase }}</span>{% endif %}{% endif %}
+          </p>
         </a>
       </article>
       {% endfor %}
@@ -51,7 +57,6 @@ title: "Inicio"
 
   <section class="home-books-feature">
     <div>
-      <p class="eyebrow">Libros y publicaciones</p>
       <h2>Libros y<br>publicaciones</h2>
     </div>
 
@@ -72,21 +77,18 @@ title: "Inicio"
 
   <section class="home-three-columns">
     <article class="home-mini-card">
-      <p class="eyebrow">Club de lectura</p>
       <h2>Club de lectura</h2>
       <p>Un espacio íntimo para leer juntas, compartir y explorar los territorios del mito, el sueño y lo simbólico.</p>
       <a class="text-link" href="{{ '/club/' | relative_url }}">Saber más →</a>
     </article>
 
     <article class="home-mini-card">
-      <p class="eyebrow">Talleres</p>
       <h2>Talleres</h2>
       <p>Procesos creativos que integran escritura, pintura, imagen y símbolo.</p>
       <a class="text-link" href="{{ '/talleres/' | relative_url }}">Ver talleres →</a>
     </article>
 
     <article class="home-mini-card">
-      <p class="eyebrow">El umbral</p>
       <h2>El umbral</h2>
       <p>Mi espacio más íntimo: diarios, archivos, procesos y contenidos alrededor del sueño y el inframundo.</p>
       <a class="text-link" href="{{ site.substack }}">Entrar ahora →</a>
