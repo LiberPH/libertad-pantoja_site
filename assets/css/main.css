@@ -159,16 +159,6 @@ figcaption {
   font-size: 1.1rem;
 }
 
-.brand-mark {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--borde);
-  border-radius: 999px;
-  display: inline-grid;
-  place-items: center;
-  color: var(--horizonte);
-}
-
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -295,7 +285,7 @@ main {
 /* Marca: el fugu volador */
 .brand-fugu { display: block; width: 40px; height: 40px; }
 
-/* Propuesta: cabecera clara con una pintura (Obra) */
+/* Cabecera clara con una pintura: solo Obra (body_class «cabecera-clara») */
 body.cabecera-clara { background: var(--crema-fondo); }
 .cabecera-clara .site-header,
 .cabecera-clara .site-header a,
