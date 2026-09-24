@@ -64,6 +64,7 @@
   type: "Cuento"
   publisher: "Revista Literaria"
   year: "2021"
+  url: "https://www.literariacentro.org/revista-literaria/textos/sushi-y-esgrima/"
   description: "Cuento publicado en el primer número de la revista Literaria, dedicado al viaje literario y a Juan Manuel Torres."
 
 - title: "Porcelana"
@@ -71,6 +72,7 @@
   type: "Cuento"
   publisher: "Temporales / Universidad de Nueva York"
   year: "2022"
+  url: "https://wp.nyu.edu/gsas-revistatemporales/porcelana/"
   description: "Cuento publicado en la revista Temporales."
 
 - title: "¿Dónde está Cecilia?"
@@ -78,6 +80,7 @@
   type: "Cuento"
   publisher: "Malabar Editorial"
   year: ""
+  url: "https://malabar-ed.com/wp-content/uploads/2021/12/donde-esta-cecilia-tu-enfermo-no-estas-libertad-pantoja.pdf"
   description: "Cuento publicado por Malabar Editorial."
 
 - title: "Nautla"
@@ -85,7 +88,6 @@
   type: "Cuento"
   publisher: "Círculo Editorial Azteca"
   year: ""
-  url: "https://circuloeditorialazteca.com/"
   description: "Cuento publicado en Círculo Editorial Azteca."
 
 - title: "No todo es lo que parece. Agallas, manzanas de roble e insectos"
