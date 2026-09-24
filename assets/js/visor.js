@@ -35,7 +35,8 @@
     var a = enlaces[actual];
     var ficha = a.closest('.art-card');
     img.src = a.getAttribute('href');
-    img.alt = a.dataset.title;
+    var miniatura = a.querySelector('img');
+    img.alt = miniatura ? miniatura.alt : a.dataset.title;
     visor.querySelector('.visor-titulo').textContent = a.dataset.title;
     visor.querySelector('.visor-meta').textContent = a.dataset.meta;
 

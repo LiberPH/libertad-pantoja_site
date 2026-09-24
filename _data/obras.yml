@@ -4,6 +4,7 @@
 # Campos opcionales: framing (originales: «Enmarcada» o «Sin marco»), subtitle, story_label (texto de "Seguir leyendo"), alt, price_framed, price_varies.
 # Categorías sugeridas: original, edicion-limitada, fotografia, fotografia-intervenida, archivo-visual.
 - title: "Planta carnívora"
+  alt: "Dibujo en tinta china de una flor blanca de pétalos anchos que terminan en cabezas de serpiente con la boca abierta."
   category: "original"
   year: "2012"
   technique: "Tinta china sobre papel"
@@ -25,6 +26,7 @@
     obsesiones biológicas.
 
 - title: "Lo que dejé secar sobre la alfombra"
+  alt: "Óleo de fondo rojo oscuro: dos pies descalzos sobre una alfombra, una cucaracha trepando por el empeine y cuatro camarones alrededor."
   story_label: "Leer el sueño"
   category: "original"
   year: "2026"
@@ -53,6 +55,7 @@
     Darío Salzman.
 
 - title: "El rescate del gato blanco"
+  alt: "Pastel en tonos azules sobre papel negro: de noche, entre helechos y matorrales, una figura joven carga en brazos a un gato blanco de pelo largo."
   story_label: "Leer el sueño"
   category: "original"
   year: "2026"
@@ -80,6 +83,7 @@
     inframundo o la entrada a nosotros mismos.
 
 - title: "El fruto de la hojarasca"
+  alt: "Lápiz de color sobre papel café: una rama de cereza de Jerusalén con hojas verde azulado y un solo fruto rojo brillante, sobre hojarasca en tonos violáceos."
   category: "original"
   year: "2026"
   technique: "Lápiz de color sobre papel Strathmore Toned Tan"
@@ -105,6 +109,7 @@
     apacible o un escenario de pesadilla.
 
 - title: "La luz de los insectos"
+  alt: "Dibujo en grafito: una figura infantil de pie entre dos niñas sentadas, rodeadas de plantas y árboles luminosos, con el esqueleto de una tortuga a sus pies."
   category: "edicion-limitada"
   subtitle: "Original no disponible · edición limitada de impresiones"
   year: "2012–2026"
@@ -130,6 +135,7 @@
     firmadas y numeradas.
 
 - title: "El reino del sol"
+  alt: "Fotografía de cerca de una flor anaranjada de pétalos rizados con una larva clara en el centro, sobre un fondo verde oscuro desenfocado."
   category: "fotografia"
   subtitle: "Serie «Hadas urbanas»"
   year: "2026"
@@ -151,6 +157,7 @@
     centro de la flor me hizo sentir una cierta dulzura atalcada, principesca.
 
 - title: "La ciudad de los insectos"
+  alt: "Fotografía a ras de suelo de una avispa posada entre piedras grises y húmedas que parecen calles de una ciudad."
   category: "fotografia"
   subtitle: "Serie «Hadas urbanas»"
   year: "2024"
@@ -172,6 +179,7 @@
     lóbrego es el que les da el agua que requieren para la vida.
 
 - title: "El fuego"
+  alt: "Flores rojas y amarillas iluminadas por el sol frente a un muro de piedra volcánica en sombra."
   category: "fotografia"
   subtitle: "Serie «Hadas urbanas»"
   year: "2024"
@@ -193,6 +201,7 @@
     fueran la flor roja tan buscada en El libro de la selva.
 
 - title: "Hada 1"
+  alt: "Flores amarillo pálido de pétalos ondulados que brillan sobre un fondo negro."
   category: "fotografia"
   subtitle: "Serie «Hadas urbanas»"
   year: "2026"
