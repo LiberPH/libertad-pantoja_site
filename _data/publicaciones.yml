@@ -12,9 +12,9 @@
 
 - title: "Fosca, antología siniestra"
   category: "antologia"
-  type: "Cuento: Con papas y cebollitas"
-  publisher: "Malabar Editorial / +Cáspita"
-  year: "2026"
+  type: "Cuento: Papas y cebollitas"
+  publisher: "Malabar Editorial / Taller Cáspita"
+  year: "2024"
   url: "https://malabar-ed.com/fosca-antologia-siniestra/"
   image: "/assets/img/publicaciones/FOSCA.jpg"
   description: >-
@@ -36,10 +36,10 @@
 - title: "Lo fantástico no existe"
   category: "antologia"
   type: "Cuento: La carta de Snellen"
-  publisher: "Ediciones Periféricas / Literaria"
-  year: "2018"
+  publisher: "Ediciones Periféricas"
+  year: "2021"
   image: "/assets/img/publicaciones/Lo_fantastico.jpg"
-  description: "Colección de cuentos publicada por Ediciones Periféricas y Literaria Centro Mexicano de Escritores."
+  description: "Colección de cuentos publicada por Ediciones Periféricas."
   featured: true
 
 - title: "Penumbria pandémica"
@@ -63,14 +63,14 @@
   category: "revista"
   type: "Cuento"
   publisher: "Revista Literaria"
-  year: ""
-  description: "Cuento publicado en el primer número de la revista Literaria."
+  year: "2021"
+  description: "Cuento publicado en el primer número de la revista Literaria, dedicado al viaje literario y a Juan Manuel Torres."
 
 - title: "Porcelana"
   category: "revista"
   type: "Cuento"
   publisher: "Temporales / Universidad de Nueva York"
-  year: ""
+  year: "2022"
   description: "Cuento publicado en la revista Temporales."
 
 - title: "¿Dónde está Cecilia?"
@@ -92,14 +92,14 @@
   category: "divulgacion"
   type: "Artículo de divulgación"
   publisher: "Más Ciencia por México"
-  year: ""
+  year: "2014"
   description: "Texto de divulgación sobre insectos, observación y mundo natural."
 
 - title: "¿Cómo cambia de sexo un dinosaurio?"
   category: "divulgacion"
   type: "Artículo de divulgación"
   publisher: "Historias Cienciacionales"
-  year: ""
+  year: "2014"
   url: "https://historiascienciacionales.wordpress.com/"
   description: "Texto de divulgación científica."
 
