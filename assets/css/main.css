@@ -264,6 +264,33 @@ main {
   line-height: 1.42;
 }
 
+.hero-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin: 22px 0 0;
+  font-size: 0.95rem;
+}
+
+.hero-link a {
+  color: var(--horizonte);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(246, 161, 58, 0.5);
+}
+
+.hero-link span { color: var(--tinta-suave); font-size: 0.85rem; }
+
+/* Obra: la primera pintura sube a la primera pantalla */
+.pagina-obra .page-hero {
+  margin-bottom: 28px;
+  padding-top: clamp(40px, 5vw, 64px);
+  padding-bottom: clamp(32px, 4vw, 48px);
+}
+
+.pagina-obra .category-nav { margin-bottom: 8px; }
+.pagina-obra #original { padding-top: 24px; }
+
 /* ---------- Etiquetas y enlaces ---------- */
 
 .eyebrow,
@@ -475,9 +502,10 @@ main {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 18px;
-  margin: 48px 0;
+  max-width: 1040px;
+  margin: 48px auto;
 }
 
 .feature-card {
@@ -1170,12 +1198,9 @@ main {
 /* ---------- Contacto ---------- */
 
 .contact-card {
-  padding: 28px;
-  border: 1px solid rgba(43, 17, 51, 0.14);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.86);
+  padding-left: clamp(24px, 4vw, 48px);
+  border-left: 1px solid rgba(42, 38, 34, 0.14);
   color: var(--tinta-cafe);
-  box-shadow: 0 16px 38px var(--sombra-crema);
 }
 
 .contact-card h2 {
@@ -1499,7 +1524,12 @@ summary:focus-visible,
     border-top: 1px solid rgba(43, 17, 51, 0.18);
   }
 
-  .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-card {
+    padding: 24px 0 0;
+    border-left: none;
+    border-top: 1px solid rgba(42, 38, 34, 0.14);
+  }
+
 
   .home-hero { grid-template-columns: 1fr; }
   .home-hero-art { min-height: auto; }
@@ -1540,7 +1570,6 @@ summary:focus-visible,
   .contact-panel,
   .timeline-panel { padding: 22px; }
 
-  .card-grid { grid-template-columns: 1fr; }
 
   .collection-section.tinted { padding: 24px 18px; }
 

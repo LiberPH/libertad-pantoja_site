@@ -8,6 +8,9 @@ layout: default
   {% if page.intro %}
     <p class="hero-lede">{{ page.intro }}</p>
   {% endif %}
+  {% if page.hero_link %}
+    <p class="hero-link"><a href="{{ page.hero_link.url | relative_url }}"{% if page.hero_link.download %} download{% endif %}>{{ page.hero_link.label }}</a>{% if page.hero_link.note %} <span>{{ page.hero_link.note }}</span>{% endif %}</p>
+  {% endif %}
 </section>
 
 {{ content }}
