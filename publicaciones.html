@@ -16,7 +16,7 @@ permalink: /publicaciones/
 {% assign libros = site.data.publicaciones | where: "category", "libro" %}
 {% for libro in libros %}
 <section class="pub-libro">
-  {% if libro.image %}<img src="{{ libro.image | relative_url }}" alt="Portada de {{ libro.title }}">{% endif %}
+  {% if libro.image %}<img src="{{ libro.image | relative_url }}" alt="Portada de {{ libro.title }}"{% if libro.image_width %} width="{{ libro.image_width }}" height="{{ libro.image_height }}"{% endif %}>{% endif %}
   <div>
     <p class="pub-tipo">Libro de cuentos</p>
     <h2>{{ libro.title }}</h2>
@@ -32,12 +32,12 @@ permalink: /publicaciones/
     {% assign antologias = site.data.publicaciones | where: "category", "antologia" %}
     {% for item in antologias %}
     <article class="pub-tomo">
-      {% if item.image %}<img src="{{ item.image | relative_url }}" alt="Portada de {{ item.title }}">
+      {% if item.image %}<img src="{{ item.image | relative_url }}" alt="Portada de {{ item.title }}"{% if item.image_width %} width="{{ item.image_width }}" height="{{ item.image_height }}"{% endif %} loading="lazy" decoding="async">
       {% else %}<div class="pub-sin-portada"><span>{{ item.title }}</span></div>{% endif %}
       <h3>{{ item.title }}</h3>
       <p class="pub-cuento">{{ item.type }}</p>
       <p class="pub-datos">{{ item.publisher }}{% if item.year != "" %} · {{ item.year }}{% endif %}</p>
-      {% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Ver →</a>{% endif %}
+      {% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.link_label | default: "Ver →" }}</a>{% endif %}
     </article>
     {% endfor %}
   </div>
@@ -48,7 +48,7 @@ permalink: /publicaciones/
   <ul class="pub-lista">
     {% assign revistas = site.data.publicaciones | where: "category", "revista" %}
     {% for item in revistas %}
-    <li><span class="pub-titulo">{{ item.title }}</span><span class="pub-datos">{{ item.publisher }}{% if item.year != "" %} · {{ item.year }}{% endif %}</span>{% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Ver →</a>{% endif %}</li>
+    <li><span class="pub-titulo">{{ item.title }}</span><span class="pub-datos">{{ item.publisher }}{% if item.year != "" %} · {{ item.year }}{% endif %}</span>{% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.link_label | default: "Ver →" }}</a>{% endif %}</li>
     {% endfor %}
   </ul>
 </section>
@@ -59,7 +59,7 @@ permalink: /publicaciones/
   <ul class="pub-lista">
     {% assign divulgacion = site.data.publicaciones | where: "category", "divulgacion" %}
     {% for item in divulgacion %}
-    <li><span class="pub-titulo">{{ item.title }}</span><span class="pub-datos">{{ item.publisher }}</span>{% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Ver →</a>{% endif %}</li>
+    <li><span class="pub-titulo">{{ item.title }}</span><span class="pub-datos">{{ item.publisher }}</span>{% if item.url %}<a class="pub-enlace" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.link_label | default: "Ver →" }}</a>{% endif %}</li>
     {% endfor %}
   </ul>
 </section>

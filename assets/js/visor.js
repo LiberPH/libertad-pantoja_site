@@ -62,6 +62,9 @@
     if (boton) {
       cta.href = boton.getAttribute('href');
       cta.textContent = boton.textContent;
+    } else {
+      cta.removeAttribute('href');
+      cta.textContent = '';
     }
 
     visor.querySelector('.visor-posicion').textContent =

@@ -25,7 +25,7 @@ TARJETAS = {
     "inicio": ("assets/img/home/hero-obra.jpg", "cubrir", "Escritura · pintura · imagen", "Escribo y pinto el territorio interior"),
     "obra": ("assets/img/obra/lo-que-deje-secar.jpg", "completa", "Obra", "Pintura, dibujo y fotografía"),
     "publicaciones": ("assets/img/publicaciones/tu-enfermo-no-estas.jpg", "completa", "Libros y publicaciones", "Cuentos, antologías y revistas"),
-    "bio": ("assets/img/perfil/hero-obra.jpg", "cubrir", "Bio", "Narradora y artista visual"),
+    "bio": ("assets/img/home/hero-obra.jpg", "cubrir", "Bio", "Narradora y artista visual"),
     "club": ("assets/img/obra/el-rescate-del-gato-blanco.jpg", "completa", "Club de lectura", "Los sueños y el inframundo"),
     "talleres": ("assets/img/obra/el-rescate-del-gato-blanco.jpg", "completa", "Talleres", "Escritura, imagen y narración"),
 }

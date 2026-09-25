@@ -21,9 +21,9 @@
         .catch(function () {});
     } else if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(function () { copiado(boton); },
-        function () { window.prompt('', url); });
+        function () { window.prompt(t.share_prompt || 'Copia el enlace:', url); });
     } else {
-      window.prompt('', url);
+      window.prompt(t.share_prompt || 'Copia el enlace:', url);
     }
   }
 

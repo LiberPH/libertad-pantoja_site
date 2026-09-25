@@ -46,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/docs/catalogo-libertad-pantoja.pdf assets/docs/catalogo-libertad-pantoja-vertical.pdf _data/catalogo.yml
+          git add assets/docs/catalogo-libertad-pantoja.pdf assets/docs/catalogo-libertad-pantoja-vertical.pdf _data/catalogo.yml assets/img/obra/640
           if git diff --cached --quiet; then
             echo "El catálogo no cambió."
             echo "CAMBIO=no" >> "$GITHUB_ENV"

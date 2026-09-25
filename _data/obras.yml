@@ -94,8 +94,8 @@
   price: "$2,000 MXN · 100 USD"
   framing: "Sin marco"
   image: "/assets/img/obra/el-sueno-de-los-peces-globo.jpg"
-  image_width: 1122
-  image_height: 1283
+  image_width: 1049
+  image_height: 1200
   description: >-
     Caminamos hasta una gran fuente gris de agua clara, el día es grisáceo,
     nublado. En el agua hay unos peces amarillos, son peces globos, del tamaño
@@ -148,8 +148,8 @@
   price: "$4,000 MXN · 200 USD"
   framing: "Enmarcada"
   image: "/assets/img/obra/la-sonrisa-en-las-arrugas.jpg"
-  image_width: 1122
-  image_height: 1298
+  image_width: 1037
+  image_height: 1200
   description: >-
     Una de mis primeras piezas en tinta. Fue pensada como un ejercicio tanto de
     la técnica como de acercarse a la vejez y a la conciencia del paso del

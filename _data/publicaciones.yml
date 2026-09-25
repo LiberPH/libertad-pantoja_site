@@ -8,6 +8,8 @@
   year: "2021"
   url: "https://malabar-ed.com/tu-enfermo-no-estas-libertad-pantoja/"
   image: "/assets/img/publicaciones/tu-enfermo-no-estas.jpg"
+  image_width: 600
+  image_height: 1024
   featured: true
 
 - title: "Fosca, antología siniestra"
@@ -17,6 +19,8 @@
   year: "2024"
   url: "https://malabar-ed.com/fosca-antologia-siniestra/"
   image: "/assets/img/publicaciones/FOSCA.jpg"
+  image_width: 600
+  image_height: 969
   description: >-
     El terror expande el alma y alerta los sentidos; el horror, en cambio,
     paraliza, contrae el alma y congela el impulso vital. Lo siniestro, el tema
@@ -30,6 +34,8 @@
   publisher: "Ediciones del Ermitaño"
   year: "2011"
   image: "/assets/img/publicaciones/historias_de_las_historias.jpg"
+  image_width: 600
+  image_height: 950
   description: "Antología de minificción derivada del sitio Las Historias."
   featured: true
 
@@ -39,6 +45,8 @@
   publisher: "Ediciones Periféricas"
   year: "2021"
   image: "/assets/img/publicaciones/Lo_fantastico.jpg"
+  image_width: 600
+  image_height: 914
   description: "Colección de cuentos publicada por Ediciones Periféricas."
   featured: true
 
@@ -49,6 +57,8 @@
   year: "2020"
   url: "https://www.penumbria.mx/penumbria-pandemica/"
   image: "/assets/img/publicaciones/penumbria-pandemica.jpg"
+  image_width: 393
+  image_height: 508
   description: "Antología de historias para leer en el ocaso en torno a la pandemia."
 
 - title: "Antología Jóvenes Creadores 2018–2019"
@@ -57,6 +67,8 @@
   publisher: "FONCA / Jóvenes Creadores"
   year: "2019"
   image: "/assets/img/publicaciones/antologia-jovenes-creadores.jpg"
+  image_width: 392
+  image_height: 510
   description: "Antología del segundo periodo 2018/2019 del programa Jóvenes Creadores."
 
 - title: "Sushi y esgrima"
@@ -88,6 +100,8 @@
   type: "Cuento"
   publisher: "Círculo Editorial Azteca"
   year: ""
+  url: "https://www.penumbria.mx/el-caballo-que-vino-del-mar/"
+  link_label: "Ensayo sobre el cuento →"
   description: "Cuento publicado en Círculo Editorial Azteca."
 
 - title: "No todo es lo que parece. Agallas, manzanas de roble e insectos"

@@ -21,7 +21,11 @@ title: "Inicio"
   </div>
 
   <div class="home-hero-art">
-    <img src="{{ '/assets/img/home/hero-obra.jpg' | relative_url }}" alt="Retrato de Libertad Pantoja" width="1200" height="800" fetchpriority="high">
+    <picture>
+      <source media="(max-width: 700px)" srcset="{{ '/assets/img/prensa/libertad-pantoja-retrato-vista.jpg' | relative_url }}" width="600" height="900">
+      <img src="{{ '/assets/img/home/hero-obra.jpg' | relative_url }}" alt="Retrato de Libertad Pantoja" width="1200" height="800" fetchpriority="high">
+    </picture>
+    <p class="hero-credito">Foto: Horacio Flores</p>
   </div>
 </section>
 
@@ -44,7 +48,8 @@ title: "Inicio"
       {% assign verso = obra.description | split: ". " | first %}
       <article class="home-art-item">
         <a class="home-art-link" href="{{ '/obra/' | relative_url }}#{{ obra.title | slugify }}">
-          <span class="home-art-image"><img src="{{ obra.image | relative_url }}" alt="{{ obra.alt | default: obra.title }}"{% if obra.image_width %} width="{{ obra.image_width }}" height="{{ obra.image_height }}"{% endif %} loading="lazy" decoding="async"></span>
+          {% assign miniatura = obra.image | replace: '/assets/img/obra/', '/assets/img/obra/640/' %}
+          <span class="home-art-image"><img src="{{ obra.image | relative_url }}" srcset="{{ miniatura | relative_url }} 640w, {{ obra.image | relative_url }} 1200w" sizes="(min-width: 901px) 360px, 100vw" alt="{{ obra.alt | default: obra.title }}"{% if obra.image_width %} width="{{ obra.image_width }}" height="{{ obra.image_height }}"{% endif %} loading="lazy" decoding="async"></span>
           <h3>{{ obra.title }}</h3>
           {% if verso %}<p class="home-art-verso">{{ verso | strip }}{% unless verso contains "." %}.{% endunless %}</p>{% endif %}
           <p class="home-art-price">
@@ -66,7 +71,7 @@ title: "Inicio"
       {% for pub in featured_publications %}
       <article class="home-book-item">
         {% if pub.image %}
-        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+        <img src="{{ pub.image | relative_url }}" alt=""{% if pub.image_width %} width="{{ pub.image_width }}" height="{{ pub.image_height }}"{% endif %} loading="lazy" decoding="async">
         {% endif %}
         <h3>{{ pub.title }}</h3>
       </article>

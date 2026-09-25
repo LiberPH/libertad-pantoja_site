@@ -52,6 +52,7 @@ obra:
   share_label: "Compartir"
   share_copied: "Enlace copiado"
   share_text: "Obra de Libertad Pantoja"
+  share_prompt: "Copia el enlace:"
 
   story_more: "Seguir leyendo"
   story_less: "Cerrar"

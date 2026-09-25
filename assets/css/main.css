@@ -438,7 +438,7 @@ body.cabecera-clara { background: var(--crema-fondo); }
 }
 
 .text-block p { color: var(--tinta-media); }
-.text-block h2 { color: var(--verde); }
+.text-block h2 { color: var(--verde); margin-bottom: 12px; }
 
 .two-column-panel,
 .contact-panel,
@@ -638,7 +638,7 @@ body.cabecera-clara { background: var(--crema-fondo); }
 
 .feature-card.large { min-height: 320px; }
 .feature-card p { color: var(--tinta-media); }
-.feature-card h2 { color: var(--verde); }
+.feature-card h2 { color: var(--verde); margin-bottom: 12px; }
 .feature-card a { margin-top: auto; font-weight: 600; }
 
 /* ---------- Secciones con encabezado ---------- */
@@ -690,13 +690,13 @@ body.cabecera-clara { background: var(--crema-fondo); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
+  min-height: 40px;
   padding: 7px 12px;
   border: 1px solid rgba(42, 38, 34, 0.12);
   border-radius: 999px;
   color: var(--tinta-profunda);
   background: rgba(255, 255, 255, 0.28);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -918,6 +918,7 @@ body.cabecera-clara { background: var(--crema-fondo); }
 }
 
 .price-list dd { white-space: nowrap; }
+.visor-cta[hidden] { display: none; }
 
 .art-framing {
   font-family: 'Hanken Grotesk', sans-serif;
@@ -1019,7 +1020,7 @@ body.cabecera-clara { background: var(--crema-fondo); }
 }
 
 .acquire-email { margin-top: 14px; color: var(--tinta-media); }
-.acquire-email span { color: var(--tinta-cafe); user-select: all; }
+.acquire-email a { color: var(--verde); font-weight: 600; border-bottom: 1px solid rgba(44, 93, 79, 0.4); }
 
 /* Retícula: 4 obras en 2 columnas, una sola obra a lo ancho */
 
@@ -1339,6 +1340,7 @@ body.cabecera-clara { background: var(--crema-fondo); }
 }
 
 .contact-card h2 {
+  margin-bottom: 12px;
   color: var(--verde);
   font-size: clamp(1.1rem, 2.4vw, 1.65rem);
   word-break: break-word;
@@ -1437,6 +1439,17 @@ body.cabecera-clara { background: var(--crema-fondo); }
   border-radius: 50%;
   background: radial-gradient(circle, rgba(246, 161, 58, 0.72), rgba(198, 95, 39, 0.12) 64%, transparent 70%);
   filter: blur(0.2px);
+}
+
+.home-hero-art picture { display: contents; }
+
+.hero-credito {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  color: var(--tinta-suave);
+  font-size: 0.72rem;
+  text-align: right;
 }
 
 .home-hero-art img {
@@ -1567,8 +1580,14 @@ body.cabecera-clara { background: var(--crema-fondo); }
   box-shadow: 0 16px 30px rgba(42, 38, 34, 0.14);
 }
 
-.home-book-item h3 {
+.home-book-item h3,
+.pub-tomo h3,
+.pub-libro h3 {
   hyphens: manual;
+  text-wrap: balance;
+}
+
+.home-book-item h3 {
   margin-top: 10px;
   color: var(--tinta-profunda);
   font-size: 0.95rem;
@@ -1659,6 +1678,9 @@ summary:focus-visible,
 .page-hero a:focus-visible,
 .home-hero a:focus-visible,
 .cta-band a:focus-visible { outline-color: var(--horizonte); }
+
+.cabecera-clara .site-header a:focus-visible,
+.cabecera-clara .page-hero a:focus-visible { outline-color: var(--verde); }
 
 .art-zoom:focus-visible {
   outline-offset: -4px;
@@ -1787,10 +1809,15 @@ summary:focus-visible,
   .home-books-feature > .text-link { grid-row: 3; justify-self: start; }
   .home-book-row { grid-template-columns: 1fr 1fr; }
 
-  .visor { padding: 64px 12px 24px; }
-  .visor img { max-height: calc(100vh - 290px); max-height: calc(100dvh - 290px); }
+  .visor { padding: 64px 12px 84px; }
+  .visor img { max-height: calc(100vh - 340px); max-height: calc(100dvh - 340px); }
+  .price-list div { flex-wrap: wrap; column-gap: 12px; }
+  .price-list dd { white-space: normal; }
   .visor-anterior,
   .visor-siguiente { top: auto; bottom: 14px; }
   .visor-anterior { left: calc(50% - 60px); }
   .visor-siguiente { right: calc(50% - 60px); }
 }
+
+/* Obra: «Cómo adquirir» es el último bloque; su línea inferior se duplicaba con la del pie. */
+#adquirir { border-bottom: none; }

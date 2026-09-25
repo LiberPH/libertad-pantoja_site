@@ -5,6 +5,7 @@ Produce:
   assets/docs/catalogo-libertad-pantoja-vertical.pdf  vertical 4:5, para WhatsApp
   _privado/instagram/catalogo-NN.png                  1080 × 1350, para carrusel de Instagram
   _data/catalogo.yml                                  fecha y peso, para el enlace de descarga en Obra
+  assets/img/obra/640/                                miniaturas de 640 px para las fichas del sitio
 
 Requiere Python con pyyaml, pillow, pypdf y pymupdf, y Swift (Xcode Command Line Tools).
 Uso, desde la raíz del sitio:  python _catalogo/generar.py
@@ -409,7 +410,23 @@ def exportar(fmt, ancho, alto, destino_pdf, png_dir=None):
             shutil.copy(png, png_dir / f"catalogo-{png.stem[1:]}.png")
 
 
+def miniaturas():
+    """Copias de 640 px de cada obra para las fichas del sitio (el visor usa la de 1200 px)."""
+    destino = RAIZ / "assets/img/obra/640"
+    destino.mkdir(exist_ok=True)
+    for o in yaml.safe_load((RAIZ / "_data/obras.yml").read_text()):
+        origen = RAIZ / o["image"].lstrip("/")
+        chica = destino / origen.name
+        if chica.exists() and chica.stat().st_mtime >= origen.stat().st_mtime:
+            continue
+        with Image.open(origen) as im:
+            im = im.convert("RGB")
+            im.thumbnail((640, 640), Image.LANCZOS)
+            im.save(chica, "JPEG", quality=84, optimize=True, progressive=True)
+
+
 def main():
+    miniaturas()
     config, ui, onirica, hadas = cargar()
     BUILD.mkdir(exist_ok=True)
     for fmt in ("h", "v"):
