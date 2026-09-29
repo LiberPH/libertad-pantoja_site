@@ -1887,3 +1887,6 @@ summary:focus-visible,
 .taller-programa { margin: 0; padding-left: 0; list-style: none; counter-reset: sesion; }
 .taller-programa li { display: grid; grid-template-columns: 70px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(42, 38, 34, 0.12); }
 .taller-fecha { color: var(--verde); font-weight: 600; font-size: 0.9rem; }
+.taller-programa p { margin: 0; }
+.taller-sesion { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--tinta-cafe); }
+.taller-lecturas { margin-top: 4px !important; color: var(--tinta-media); font-size: 0.9rem; line-height: 1.55; }
