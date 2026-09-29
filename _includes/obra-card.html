@@ -18,7 +18,7 @@
     {% if obra.description %}
     <div class="art-story">
       {% if story_words > 45 %}
-        <p class="art-story-teaser">{{ obra.description | truncatewords: 32, "…" | replace: ",…", "…" | replace: ";…", "…" | replace: ":…", "…" }}</p>
+        <p class="art-story-teaser">{% if obra.teaser %}{{ obra.teaser }}{% else %}{{ obra.description | truncatewords: 32, "…" | replace: ",…", "…" | replace: ";…", "…" | replace: ":…", "…" }}{% endif %}</p>
         <details class="art-story-more">
           <summary>
             <span class="when-closed">{{ obra.story_label | default: ui.story_more }}</span>

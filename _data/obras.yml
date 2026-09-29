@@ -1,7 +1,7 @@
 # Edita este archivo para agregar o quitar obra.
 # Estados sugeridos: disponible, reservada, vendida, agotada, archivo, proximamente.
 # image_width / image_height: tamaño real de la imagen en px (evita saltos al cargar).
-# Campos opcionales: framing (originales: «Enmarcada» o «Sin marco»), subtitle, story_label (texto de "Seguir leyendo"), alt, price_framed, price_varies.
+# Campos opcionales: framing (originales: «Enmarcada» o «Sin marco»), subtitle, story_label (texto de "Seguir leyendo"), alt, price_framed, price_varies, teaser (avance a mano, cuando el corte automático cae mal), price_note.
 # Categorías sugeridas: original, edicion-limitada, fotografia, fotografia-intervenida, archivo-visual.
 - title: "Planta carnívora"
   alt: "Dibujo en tinta china de una flor blanca de pétalos anchos que terminan en cabezas de serpiente con la boca abierta."
@@ -286,8 +286,10 @@
   image_width: 1200
   image_height: 805
   featured: false
+  teaser: "Tomada en el parque Tezozómoc, en la Ciudad de México. Las moscas que semejan otros insectos me dan un dejo de ternura, conservan los ojos grandes, un poco tiernos, un poco flojos, que las hacen parecer espías de otros mundos…"
   description: >-
-    Las moscas que semejan otros insectos me dan un dejo de ternura, conservan
+    Tomada en el parque Tezozómoc, en la Ciudad de México. Las moscas que
+    semejan otros insectos me dan un dejo de ternura, conservan
     los ojos grandes, un poco tiernos, un poco flojos, que las hacen parecer
     espías de otros mundos (los ojos del diablo diría uno de mis maestros).
     También hay en ellas algo de inocente, de humilde, que nos lleva a pensar
