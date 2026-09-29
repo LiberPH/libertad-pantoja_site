@@ -1871,3 +1871,19 @@ summary:focus-visible,
   .proc-media { max-width: 100%; }
   .proc-tira { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- Taller (página de curso) ---------- */
+.taller-datos {
+  max-width: 680px;
+  margin: 0 auto 8px;
+  padding: clamp(22px, 4vw, 32px);
+  border: 1px solid rgba(42, 38, 34, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.9);
+}
+.taller-datos .metadata-list div { grid-template-columns: 110px 1fr; }
+.taller-estado { color: var(--verde); border-color: rgba(44, 93, 79, 0.4); background: rgba(44, 93, 79, 0.06); }
+.taller-datos .art-terms { margin-top: 12px; }
+.taller-programa { margin: 0; padding-left: 0; list-style: none; counter-reset: sesion; }
+.taller-programa li { display: grid; grid-template-columns: 70px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(42, 38, 34, 0.12); }
+.taller-fecha { color: var(--verde); font-weight: 600; font-size: 0.9rem; }
