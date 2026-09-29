@@ -270,6 +270,29 @@
     inmediato me parecieron pertenecer a «Hadas urbanas». En esta amarilla me
     gusta el brillo ligero que remite a los polvos de hadas.
 
+- title: "Terciopelo"
+  alt: "Fotografía de una mosca velluda que semeja una polilla, de alas oscuras, posada sobre una flor amarilla entre hojas de pasto."
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2023"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
+  price_framed: "Desde $4,500 MXN · 225 USD"
+  image: "/assets/img/obra/terciopelo.jpg"
+  image_width: 1200
+  image_height: 805
+  featured: false
+  description: >-
+    Las moscas que semejan otros insectos me dan un dejo de ternura, conservan
+    los ojos grandes, un poco tiernos, un poco flojos, que las hacen parecer
+    espías de otros mundos (los ojos del diablo diría uno de mis maestros).
+    También hay en ellas algo de inocente, de humilde, que nos lleva a pensar
+    que son muy distintas de sus estigmatizadas primas que asolan nuestras casas.
+
 # - title: "Fotografía intervenida 1"
 #   category: "fotografia-intervenida"
 #   subtitle: "Impresión intervenida a mano"
