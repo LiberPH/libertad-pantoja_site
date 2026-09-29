@@ -1,7 +1,7 @@
 {% assign obra = include.obra %}
 {% assign ui = site.data.ui.obra %}
 {% assign st = ui.status[obra.status] %}
-{% assign story_words = obra.description | number_of_words %}
+{% assign story_words = obra.description | default: "" | number_of_words %}
 
 <article class="art-card {{ obra.category }} status-{{ obra.status }}" id="{{ obra.title | slugify }}">
   {% if obra.image %}
