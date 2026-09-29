@@ -57,6 +57,7 @@
         {% if obra.price_varies or obra.price contains "Desde" %}
           <p class="price-note">{{ ui.price_varies_note }}</p>
         {% endif %}
+        {% if obra.price_note %}<p class="price-note">{{ obra.price_note }}</p>{% endif %}
       {% endif %}
 
       {% assign cta = ui.status.disponible.cta %}
@@ -65,7 +66,7 @@
         {% capture mail_subject %}{{ ui.mail_subject }} {{ obra.title }}{% endcapture %}
         {% capture mail_line %}{{ ui.mail_interest }} «{{ obra.title }}»{% if obra.edition %} ({{ obra.edition }}){% endif %}.{% endcapture %}
         <a class="art-cta" href="mailto:{{ site.email }}?subject={{ mail_subject | uri_escape }}&amp;body={{ ui.mail_greeting | uri_escape }}%0D%0A%0D%0A{{ mail_line | uri_escape }}{% if obra.price_framed %}%0D%0A{{ ui.mail_framed_question | uri_escape }} {% endif %}">{{ cta }}</a>
-        {% if show_price %}<p class="art-terms">{{ ui.terms_line }} · <a href="#adquirir">{{ ui.terms_link }}</a></p>{% endif %}
+        {% if show_price %}<p class="art-terms">{% if obra.category == "archivo-visual" %}{{ ui.archivo_terms_line }}{% else %}{{ ui.terms_line }}{% endif %} · <a href="#adquirir">{{ ui.terms_link }}</a></p>{% endif %}
       {% endif %}
       <button type="button" class="art-compartir" data-obra="{{ obra.title | slugify }}" data-title="{{ obra.title | escape }}" hidden>{{ ui.share_label }}</button>
     </div>

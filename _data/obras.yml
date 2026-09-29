@@ -282,3 +282,154 @@
 #   image: "/assets/img/obra/<imagen>.jpg"
 #   featured: false
 #   description: "Impresión fotográfica más intervención manual."
+
+# Archivo visual · Mundos pequeños: fotografías de archivo, impresión en formato postal.
+
+- title: "Nono"
+  alt: "Fotografía de un insecto de antenas largas posado en la punta de una hoja, con el fondo verde desenfocado."
+  category: "archivo-visual"
+  subtitle: "Cuernavaca"
+  dimensions: "Postal, 10 × 15 cm · también 13 × 18 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  price_note: "En 13 × 18 cm: $450 MXN · 23 USD."
+  image: "/assets/img/obra/archivo-nono.jpg"
+  image_width: 1200
+  image_height: 900
+
+- title: "Botas y miel"
+  alt: "Fotografía de un insecto posado sobre el centro amarillo de una flor blanca, entre pasto verde."
+  category: "archivo-visual"
+  subtitle: "Cuernavaca"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-botas-y-miel.jpg"
+  image_width: 900
+  image_height: 675
+
+- title: "Fungus eater"
+  alt: "Fotografía de un pequeño insecto rojizo caminando sobre el sombrero claro de un hongo, junto a un tronco oscuro."
+  category: "archivo-visual"
+  subtitle: "Cuernavaca"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-fungus-eater.jpg"
+  image_width: 900
+  image_height: 675
+
+- title: "Iris"
+  alt: "Fotografía de una flor azul de la que cuelga una gota de agua transparente, sobre hojas verdes desenfocadas."
+  category: "archivo-visual"
+  subtitle: "Cuetzalan"
+  dimensions: "Postal, 10 × 15 cm · también 13 × 18 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  price_note: "En 13 × 18 cm: $450 MXN · 23 USD."
+  image: "/assets/img/obra/archivo-iris.jpg"
+  image_width: 1200
+  image_height: 900
+
+- title: "Cenizas"
+  alt: "Fotografía de una mariposa pequeña de alas grises moteadas sobre tierra oscura y porosa."
+  category: "archivo-visual"
+  subtitle: "Xometla"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-cenizas.jpg"
+  image_width: 960
+  image_height: 720
+
+- title: "Rojo"
+  alt: "Fotografía de un pequeño insecto rojo sobre una tela blanca tejida."
+  category: "archivo-visual"
+  subtitle: "Ciudad Universitaria, UNAM"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-rojo.jpg"
+  image_width: 960
+  image_height: 720
+
+- title: "Soldado del atardecer"
+  alt: "Fotografía de una avispa amarilla y negra sobre una superficie arenosa, con luz cálida."
+  category: "archivo-visual"
+  subtitle: "Nuevo México"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-soldado-del-atardecer.jpg"
+  image_width: 960
+  image_height: 540
+
+- title: "El fruto del aire"
+  alt: "Fotografía de vainas redondas y translúcidas colgando de ramas delgadas, a contraluz."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-el-fruto-del-aire.jpg"
+  image_width: 960
+  image_height: 720
+
+- title: "Fuego azul"
+  alt: "Fotografía de una flor azul de pétalos en punta sobre pasto seco."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-fuego-azul.jpg"
+  image_width: 960
+  image_height: 720
+
+- title: "Lengua de fuego"
+  alt: "Fotografía de un insecto pequeño sobre una flor tubular anaranjada, junto a un botón verde espinoso."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-lengua-de-fuego.jpg"
+  image_width: 960
+  image_height: 720
+
+- title: "Llegada"
+  alt: "Fotografía de un saltamontes verde entre flores blancas diminutas."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-llegada.jpg"
+  image_width: 960
+  image_height: 720
+
+- title: "Los colores del día"
+  alt: "Fotografía de una flor roja y hojas dentadas contra un cielo azul intenso."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-los-colores-del-dia.jpg"
+  image_width: 960
+  image_height: 720
+
+- title: "Nieve"
+  alt: "Fotografía panorámica de cabezuelas secas de flores contra un cielo con nubes blancas."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-nieve.jpg"
+  image_width: 960
+  image_height: 540
+
+- title: "Tundra"
+  alt: "Fotografía de un insecto posado sobre musgo y líquenes blancos y verdes."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  image: "/assets/img/obra/archivo-tundra.jpg"
+  image_width: 960
+  image_height: 720

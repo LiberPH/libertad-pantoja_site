@@ -1819,5 +1819,10 @@ summary:focus-visible,
   .visor-siguiente { right: calc(50% - 60px); }
 }
 
+/* Archivo visual: piezas pequeñas, fichas más compactas. */
+#archivo-visual .art-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 18px; }
+#archivo-visual .art-card-body { padding: 16px; }
+#archivo-visual .art-zoom img { height: auto; max-height: 220px; }
+
 /* Obra: «Cómo adquirir» es el último bloque; su línea inferior se duplicaba con la del pie. */
 #adquirir { border-bottom: none; }
