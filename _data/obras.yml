@@ -433,3 +433,25 @@
   image: "/assets/img/obra/archivo-tundra.jpg"
   image_width: 960
   image_height: 720
+
+- title: "Cuerno"
+  alt: "Fotografía de un escarabajo con un gran cuerno y caparazón verde pálido con manchas negras, sobre una piedra rojiza."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm · también 13 × 18 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  price_note: "En 13 × 18 cm: $450 MXN · 23 USD."
+  image: "/assets/img/obra/archivo-cuerno.jpg"
+  image_width: 1200
+  image_height: 900
+
+- title: "Terciopelo"
+  alt: "Fotografía de un insecto velludo de alas oscuras posado sobre una flor amarilla, entre hojas de pasto."
+  category: "archivo-visual"
+  dimensions: "Postal, 10 × 15 cm · también 13 × 18 cm"
+  status: "disponible"
+  price: "$250 MXN · 13 USD"
+  price_note: "En 13 × 18 cm: $450 MXN · 23 USD."
+  image: "/assets/img/obra/archivo-terciopelo.jpg"
+  image_width: 1200
+  image_height: 805
