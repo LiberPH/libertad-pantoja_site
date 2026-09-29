@@ -1830,46 +1830,36 @@ summary:focus-visible,
 /* ---------- Proceso ---------- */
 .proc { max-width: 1040px; margin: 0 auto; }
 .proc section { padding: clamp(28px, 5vw, 48px) 0; border-top: 1px solid rgba(42, 38, 34, 0.14); }
-.proc section:first-child { border-top: none; }
-.proc h2 { margin-bottom: 14px; color: var(--verde); font-size: clamp(1.5rem, 3vw, 2.2rem); }
-.proc p { max-width: 66ch; margin-top: 12px; line-height: 1.7; }
+.proc h2 { color: var(--verde); font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.proc p { margin-top: 12px; line-height: 1.7; }
+.proc-fila { display: grid; grid-template-columns: 200px minmax(0, 680px); gap: clamp(20px, 4vw, 48px); }
+.proc-fila h2 { position: sticky; top: 24px; align-self: start; }
+.proc-fila > div > p:first-child { margin-top: 0; }
+.proc-banda-fotos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 8px; }
+.proc-banda-fotos .proc-fig { margin: 0; }
+.proc-banda-fotos img { aspect-ratio: 4 / 5; object-fit: cover; }
+.proc-taller img { object-position: 30% 0; }
 .proc-fig { margin: 22px 0 0; }
 .proc-fig img { display: block; width: 100%; height: auto; }
-.proc-fig figcaption { margin-top: 8px; color: var(--tinta-media); font-size: 0.82rem; }
+.proc-fila .proc-fig > img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; }
+.proc-fig figcaption { margin-top: 8px; color: var(--tinta-media); font-size: 0.82rem; line-height: 1.45; }
 .proc-par { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-.proc-par .proc-fig img { aspect-ratio: 1; object-fit: cover; }
+.proc-par .proc-fig > img,
+.proc-fila .proc-obra > img { aspect-ratio: auto; object-fit: contain; }
+.solo-movil { display: none; }
 .proc-tira { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 20px; }
 .proc-tira img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
-.proc-cruces { margin: 16px 0 0; padding-left: 1.1em; max-width: 66ch; }
+.proc-cruces { margin: 16px 0 0; padding-left: 1.1em; }
 .proc-cruces li { margin-top: 10px; line-height: 1.6; }
 .proc-cruces a { color: var(--verde); border-bottom: 1px solid rgba(44, 93, 79, 0.4); }
 .proc-mas { margin-top: 20px; }
-
-/* A · ensayo: una columna, imágenes a lo ancho de la lectura */
-.proc-a { max-width: 720px; }
-.proc-a > section > .proc-fig img { max-height: 620px; object-fit: cover; }
-
-/* B · dos caminos */
-.proc-lede { font-family: 'Fraunces', serif; font-size: clamp(1.3rem, 2.6vw, 1.8rem); color: var(--tinta-cafe); }
-.proc-caminos { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px); border-top: 1px solid rgba(42, 38, 34, 0.14); }
-.proc-caminos section { border-top: none; }
-.proc-num { font-family: 'Cormorant', serif; font-size: 3rem; line-height: 1; color: var(--verde); margin: 0; }
-.proc-caminos .proc-fig img { aspect-ratio: 4 / 5; object-fit: cover; }
-.proc-banda, .proc-dos { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
-.proc-dos .proc-fig img, .proc-banda .proc-fig img { max-height: 560px; object-fit: cover; }
-
-/* C · mesa de trabajo */
-.proc-mosaico { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
-.proc-mosaico .proc-fig { margin: 0; }
-.proc-mosaico .proc-fig img { aspect-ratio: 1; object-fit: cover; }
-.proc-mosaico figcaption { font-size: 0.75rem; }
-.proc-fila { display: grid; grid-template-columns: 220px 1fr; gap: clamp(20px, 4vw, 48px); }
-.proc-fila h2 { position: sticky; top: 24px; align-self: start; }
-.proc-fila p:first-child { margin-top: 0; }
+.bio-enlaces .text-link { align-self: center; }
 
 @media (max-width: 760px) {
-  .proc-caminos, .proc-banda, .proc-dos, .proc-fila { grid-template-columns: 1fr; }
-  .proc-mosaico { grid-template-columns: 1fr 1fr; }
-  .proc-tira { grid-template-columns: 1fr 1fr; }
+  .proc-fila { grid-template-columns: 1fr; }
   .proc-fila h2 { position: static; }
+  .proc-banda-fotos { grid-template-columns: 1fr; }
+  .proc-banda-fotos .proc-fig:nth-child(n+2) { display: none; }
+  .solo-movil { display: block; }
+  .proc-tira { grid-template-columns: 1fr 1fr; }
 }
