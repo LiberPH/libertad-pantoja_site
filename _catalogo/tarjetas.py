@@ -28,6 +28,7 @@ TARJETAS = {
     "bio": ("assets/img/home/hero-obra.jpg", "cubrir", "Bio", "Narradora y artista visual"),
     "club": ("assets/img/obra/el-rescate-del-gato-blanco.jpg", "completa", "Club de lectura", "Los sueños y el inframundo"),
     "proceso": ("assets/img/proceso/taller.jpg", "cubrir", "Proceso", "Cómo nacen mis dibujos y fotografías"),
+    "taller-imagen-narrador": ("assets/img/proceso/referencia-alfombra.jpg", "cubrir", "Taller: La imagen y el narrador", "En línea · martes desde el 20 de octubre"),
     "talleres": ("assets/img/obra/el-rescate-del-gato-blanco.jpg", "completa", "Talleres", "Escritura, imagen y narración"),
 }
 
