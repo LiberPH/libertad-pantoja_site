@@ -1846,6 +1846,13 @@ summary:focus-visible,
 .proc-par { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
 .proc-par .proc-fig > img,
 .proc-fila .proc-obra > img { aspect-ratio: auto; object-fit: contain; }
+.proc-fila .proc-cuadrada > img { aspect-ratio: 1 / 1; }
+.proc-diario > img { object-position: 50% 60%; }
+.proc-firma > img { object-position: 50% 85%; }
+.proc-par .proc-fig:first-child > img { aspect-ratio: 944 / 1200; object-fit: cover; }
+.proc-media { max-width: 50%; }
+.cta-band.small .button.primary { background: var(--verde); border-color: var(--verde); color: #FBF8F2; }
+.cta-band.small .button.primary:hover { background: var(--tinta-profunda); border-color: var(--tinta-profunda); color: #FBF8F2; }
 .solo-movil { display: none; }
 .proc-tira { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 20px; }
 .proc-tira img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
@@ -1861,5 +1868,6 @@ summary:focus-visible,
   .proc-banda-fotos { grid-template-columns: 1fr; }
   .proc-banda-fotos .proc-fig:nth-child(n+2) { display: none; }
   .solo-movil { display: block; }
+  .proc-media { max-width: 100%; }
   .proc-tira { grid-template-columns: 1fr 1fr; }
 }

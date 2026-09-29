@@ -27,6 +27,7 @@ TARJETAS = {
     "publicaciones": ("assets/img/publicaciones/tu-enfermo-no-estas.jpg", "completa", "Libros y publicaciones", "Cuentos, antologías y revistas"),
     "bio": ("assets/img/home/hero-obra.jpg", "cubrir", "Bio", "Narradora y artista visual"),
     "club": ("assets/img/obra/el-rescate-del-gato-blanco.jpg", "completa", "Club de lectura", "Los sueños y el inframundo"),
+    "proceso": ("assets/img/proceso/taller.jpg", "cubrir", "Proceso", "Cómo nacen mis dibujos y fotografías"),
     "talleres": ("assets/img/obra/el-rescate-del-gato-blanco.jpg", "completa", "Talleres", "Escritura, imagen y narración"),
 }
 
