@@ -1,7 +1,7 @@
 """Separadores del taller «La imagen y el narrador» para la FIL del Zócalo.
 
 Separadores de 5 × 15 cm, diez por hoja tabloide (11 × 17 in): cinco por fila, dos filas.
-Las columnas comparten línea de corte (los lados son marfil, no necesitan sangrado entre sí);
+Las columnas comparten línea de corte, marcada con una línea fina gris para cortar a mano;
 las filas van separadas 6 mm con 3 mm de sangrado, por la franja guinda de abajo. Página 1: frente con los datos
 del taller y un QR a su página. Página 2: reverso con la marca, en espejo por columnas para
 imprimir a doble cara volteando por el lado largo.
@@ -114,6 +114,14 @@ def main():
                 t.append(f'<i class="marca" style="left:{x_cortes[-1] + s + sep:.1f}px;top:{y - g / 2:.1f}px;width:{largo}px;height:{g}px"></i>')
         return "".join(t)
 
+    def guias():
+        """Líneas finas sobre cada corte entre columnas, para guiar el corte a mano."""
+        g = 0.3
+        return "".join(
+            f'<i class="marca" style="background:#B8B0A6;left:{ox + s + c * paso - g / 2:.2f}px;width:{g}px;'
+            f'top:{oy + f * (PIEZA_H + SEP):.1f}px;height:{PIEZA_H:.1f}px"></i>'
+            for f in range(FILAS) for c in range(1, COLUMNAS))
+
     def bandas():
         """Una franja guinda continua por fila: evita rayas finas donde se juntan las columnas."""
         alto = (SANGRADO + 5) * MM
@@ -138,8 +146,8 @@ def main():
   <p class="red">@libertadpantoja</p>
 </div><div class="banda"></div>"""
 
-    frentes = "".join(f'<div class="pieza" style="left:{pos(c, f)[0]:.1f}px;top:{pos(c, f)[1]:.1f}px">{frente}</div>' for c, f in celdas) + bandas() + marcas_bloque()
-    reversos = "".join(f'<div class="pieza reverso" style="left:{pos(COLUMNAS - 1 - c, f)[0]:.1f}px;top:{pos(COLUMNAS - 1 - c, f)[1]:.1f}px">{reverso}</div>' for c, f in celdas) + bandas() + marcas_bloque()
+    frentes = "".join(f'<div class="pieza" style="left:{pos(c, f)[0]:.1f}px;top:{pos(c, f)[1]:.1f}px">{frente}</div>' for c, f in celdas) + bandas() + guias() + marcas_bloque()
+    reversos = "".join(f'<div class="pieza reverso" style="left:{pos(COLUMNAS - 1 - c, f)[0]:.1f}px;top:{pos(COLUMNAS - 1 - c, f)[1]:.1f}px">{reverso}</div>' for c, f in celdas) + bandas() + guias() + marcas_bloque()
 
     doc = f"""<!doctype html><html lang="es-MX"><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Hanken+Grotesk:wght@400;500&display=block">
