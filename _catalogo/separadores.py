@@ -1,7 +1,8 @@
 """Separadores del taller «La imagen y el narrador» para la FIL del Zócalo.
 
-Separadores de 5 × 15 cm (56 × 156 mm con 3 mm de sangrado), ocho por hoja tabloide
-(11 × 17 in): cuatro por fila, dos filas, separados 6 mm. Página 1: frente con los datos
+Separadores de 5 × 15 cm, diez por hoja tabloide (11 × 17 in): cinco por fila, dos filas.
+Las columnas comparten línea de corte (los lados son marfil, no necesitan sangrado entre sí);
+las filas van separadas 6 mm con 3 mm de sangrado, por la franja guinda de abajo. Página 1: frente con los datos
 del taller y un QR a su página. Página 2: reverso con la marca, en espejo por columnas para
 imprimir a doble cara volteando por el lado largo.
 
@@ -29,7 +30,7 @@ MM = 72 / 25.4
 HOJA_W, HOJA_H = 792, 1224
 CORTE_W, CORTE_H, SANGRADO = 50, 150, 3
 PIEZA_W, PIEZA_H = (CORTE_W + 2 * SANGRADO) * MM, (CORTE_H + 2 * SANGRADO) * MM
-COLUMNAS, FILAS, SEP = 4, 2, 6 * MM
+COLUMNAS, FILAS, SEP = 5, 2, 6 * MM  # SEP: solo entre filas
 URL_TALLER = "https://liberph.github.io/libertad-pantoja_site/talleres/la-imagen-y-el-narrador/"
 
 VERDE, TINTA, TINTA_MEDIA, MARFIL, GUINDA = "#2C5D4F", "#2A2622", "#635A51", "#FBF8F2", "#5A1F3A"
@@ -90,10 +91,36 @@ def main():
     SALIDA.mkdir(parents=True, exist_ok=True)
     shutil.copy(RAIZ / "assets/img/marca/fugu.png", BUILD / "fugu.png")
 
-    ox = (HOJA_W - COLUMNAS * PIEZA_W - (COLUMNAS - 1) * SEP) / 2
+    paso = CORTE_W * MM
+    s = SANGRADO * MM
+    ox = (HOJA_W - COLUMNAS * paso - 2 * s) / 2
     oy = (HOJA_H - FILAS * PIEZA_H - (FILAS - 1) * SEP) / 2
     celdas = [(c, f) for f in range(FILAS) for c in range(COLUMNAS)]
-    pos = lambda c, f: (ox + c * (PIEZA_W + SEP), oy + f * (PIEZA_H + SEP))
+    pos = lambda c, f: (ox + c * paso, oy + f * (PIEZA_H + SEP))
+
+    def marcas_bloque():
+        """Marcas solo por fuera del bloque: una vertical por cada línea de corte entre columnas."""
+        largo, sep, g = 9, 2, 0.4
+        x_cortes = [ox + s + c * paso for c in range(COLUMNAS + 1)]
+        t = []
+        for f in range(FILAS):
+            y0 = oy + f * (PIEZA_H + SEP) + s
+            y1 = y0 + CORTE_H * MM
+            for x in x_cortes:
+                t.append(f'<i class="marca" style="left:{x - g / 2:.1f}px;top:{y0 - s - sep - largo:.1f}px;width:{g}px;height:{largo}px"></i>')
+                t.append(f'<i class="marca" style="left:{x - g / 2:.1f}px;top:{y1 + s + sep:.1f}px;width:{g}px;height:{largo}px"></i>')
+            for y in (y0, y1):
+                t.append(f'<i class="marca" style="left:{x_cortes[0] - s - sep - largo:.1f}px;top:{y - g / 2:.1f}px;width:{largo}px;height:{g}px"></i>')
+                t.append(f'<i class="marca" style="left:{x_cortes[-1] + s + sep:.1f}px;top:{y - g / 2:.1f}px;width:{largo}px;height:{g}px"></i>')
+        return "".join(t)
+
+    def bandas():
+        """Una franja guinda continua por fila: evita rayas finas donde se juntan las columnas."""
+        alto = (SANGRADO + 5) * MM
+        return "".join(
+            f'<i class="marca" style="background:{GUINDA};left:{ox:.1f}px;width:{COLUMNAS * paso + 2 * s:.1f}px;'
+            f'top:{oy + f * (PIEZA_H + SEP) + PIEZA_H - alto:.1f}px;height:{alto:.1f}px"></i>'
+            for f in range(FILAS))
 
     frente = f"""<div class="caja">
   <p class="etiqueta">Taller en línea</p>
@@ -111,8 +138,8 @@ def main():
   <p class="red">@libertadpantoja</p>
 </div><div class="banda"></div>"""
 
-    frentes = "".join(f'<div class="pieza" style="left:{pos(c, f)[0]:.1f}px;top:{pos(c, f)[1]:.1f}px">{frente}</div>' + marcas(*pos(c, f)) for c, f in celdas)
-    reversos = "".join(f'<div class="pieza reverso" style="left:{pos(COLUMNAS - 1 - c, f)[0]:.1f}px;top:{pos(COLUMNAS - 1 - c, f)[1]:.1f}px">{reverso}</div>' + marcas(*pos(COLUMNAS - 1 - c, f)) for c, f in celdas)
+    frentes = "".join(f'<div class="pieza" style="left:{pos(c, f)[0]:.1f}px;top:{pos(c, f)[1]:.1f}px">{frente}</div>' for c, f in celdas) + bandas() + marcas_bloque()
+    reversos = "".join(f'<div class="pieza reverso" style="left:{pos(COLUMNAS - 1 - c, f)[0]:.1f}px;top:{pos(COLUMNAS - 1 - c, f)[1]:.1f}px">{reverso}</div>' for c, f in celdas) + bandas() + marcas_bloque()
 
     doc = f"""<!doctype html><html lang="es-MX"><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Hanken+Grotesk:wght@400;500&display=block">
