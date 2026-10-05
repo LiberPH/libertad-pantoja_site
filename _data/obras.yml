@@ -209,12 +209,11 @@
   subtitle: "Serie «Hadas urbanas»"
   year: "2024"
   technique: "Fotografía digital"
-  dimensions: "Variable según formato de impresión"
+  dimensions: "30 × 45 cm · impresión de pigmento sobre papel de algodón"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $7,500 MXN · 375 USD"
-  price_framed: "Desde $9,000 MXN · 450 USD"
-  price_varies: true
+  price: "$7,500 MXN · 375 USD"
+  price_framed: "$9,000 MXN · 450 USD"
   image: "/assets/img/obra/ciudad-de-los-insectos.jpg"
   image_width: 1200
   image_height: 800
@@ -253,12 +252,11 @@
   subtitle: "Serie «Hadas urbanas»"
   year: "2024"
   technique: "Fotografía digital"
-  dimensions: "Variable según formato de impresión"
+  dimensions: "20 × 30 cm · impresión de pigmento sobre papel de algodón"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $7,500 MXN · 375 USD"
-  price_framed: "Desde $9,000 MXN · 450 USD"
-  price_varies: true
+  price: "$7,500 MXN · 375 USD"
+  price_framed: "$9,000 MXN · 450 USD"
   image: "/assets/img/obra/la-conquista-del-fuego.jpg"
   image_width: 1200
   image_height: 801
@@ -300,12 +298,11 @@
   subtitle: "Serie «Hadas urbanas»"
   year: "2023"
   technique: "Fotografía digital"
-  dimensions: "Variable según formato de impresión"
+  dimensions: "30 × 45 cm · impresión de pigmento sobre papel de algodón"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $7,500 MXN · 375 USD"
-  price_framed: "Desde $9,000 MXN · 450 USD"
-  price_varies: true
+  price: "$7,500 MXN · 375 USD"
+  price_framed: "$9,000 MXN · 450 USD"
   image: "/assets/img/obra/hada-2.jpg"
   image_width: 1200
   image_height: 801
@@ -325,12 +322,11 @@
   subtitle: "Serie «Hadas urbanas»"
   year: "2023"
   technique: "Fotografía digital"
-  dimensions: "Variable según formato de impresión"
+  dimensions: "30 × 45 cm · impresión de pigmento sobre papel de algodón"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $7,500 MXN · 375 USD"
-  price_framed: "Desde $9,000 MXN · 450 USD"
-  price_varies: true
+  price: "$7,500 MXN · 375 USD"
+  price_framed: "$9,000 MXN · 450 USD"
   image: "/assets/img/obra/el-angel.jpg"
   image_width: 1200
   image_height: 801
@@ -353,12 +349,11 @@
   subtitle: "Serie «Hadas urbanas»"
   year: "2023"
   technique: "Fotografía digital"
-  dimensions: "Variable según formato de impresión"
+  dimensions: "20 × 30 cm · impresión de pigmento sobre papel de algodón"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $7,500 MXN · 375 USD"
-  price_framed: "Desde $9,000 MXN · 450 USD"
-  price_varies: true
+  price: "$7,500 MXN · 375 USD"
+  price_framed: "$9,000 MXN · 450 USD"
   image: "/assets/img/obra/terciopelo.jpg"
   image_width: 1200
   image_height: 805
