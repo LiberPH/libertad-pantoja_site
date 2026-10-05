@@ -238,10 +238,17 @@ def paginas(fmt, config, ui, onirica, hadas):
           <li><img src="{e(src(o))}" alt="">
             <span class="indice-titulo">{e(o['title'])}</span>
             <span class="indice-precio">{e(cifra)}</span></li>""")
-    p.append(("marfil indice", f"""
-      <div class="indice-cabeza"><h2>Obras</h2>
-        <p>Precios en pesos mexicanos; cada original indica si va enmarcado. Los detalles, en la página de cada obra.</p></div>
-      <ol class="indice{' cols-4' if len(celdas) > 9 else ''}">{''.join(celdas)}</ol>"""))
+    # Hasta 12 obras por página (3 filas de 4); si hay más, se reparten parejo en varias páginas.
+    paginas_indice = -(-len(celdas) // 12)
+    por_pagina = -(-len(celdas) // paginas_indice)
+    for n in range(paginas_indice):
+        grupo = celdas[n * por_pagina:(n + 1) * por_pagina]
+        titulo = "Obras" if n == 0 else "Obras <span class=\"continua\">(continuación)</span>"
+        nota = ("<p>Precios en pesos mexicanos; cada original indica si va enmarcado. "
+                "Los detalles, en la página de cada obra.</p>") if n == 0 else ""
+        p.append(("marfil indice", f"""
+      <div class="indice-cabeza"><h2>{titulo}</h2>{nota}</div>
+      <ol class="indice{' cols-4' if len(grupo) > 9 or paginas_indice > 1 else ''}">{''.join(grupo)}</ol>"""))
 
     # Series
     for nombre, intro, lista, fondo in (("Obra onírica", ONIRICA, onirica, "gris"),
