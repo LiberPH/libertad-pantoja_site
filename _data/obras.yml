@@ -230,12 +230,11 @@
   subtitle: "Serie «Hadas urbanas»"
   year: "2024"
   technique: "Fotografía digital"
-  dimensions: "Variable según formato de impresión"
+  dimensions: "30 × 45 cm · impresión de pigmento sobre papel de algodón"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $7,500 MXN · 375 USD"
-  price_framed: "Desde $9,000 MXN · 450 USD"
-  price_varies: true
+  price: "$7,500 MXN · 375 USD"
+  price_framed: "$9,000 MXN · 450 USD"
   image: "/assets/img/obra/el-fuego.jpg"
   image_width: 1200
   image_height: 801
