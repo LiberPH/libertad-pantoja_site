@@ -247,6 +247,30 @@
     que la rodean: parecen tener brillo propio, casi ultraterreno, como si
     fueran la flor roja tan buscada en El libro de la selva.
 
+- title: "La conquista del fuego"
+  alt: "Fotografía de una abeja posada sobre una flor roja y amarilla de pétalos en punta, entre tallos y cabezuelas secas sobre un fondo oscuro."
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2024"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
+  price_framed: "Desde $4,500 MXN · 225 USD"
+  image: "/assets/img/obra/la-conquista-del-fuego.jpg"
+  image_width: 1200
+  image_height: 801
+  featured: false
+  teaser: "Entre la piedra volcánica, sobre la flor roja, se posa una abeja. Ha logrado conquistar esta representación del fuego…"
+  description: >-
+    Entre la piedra volcánica, sobre la flor roja, se posa una abeja. Ha
+    logrado conquistar esta representación del fuego, domesticarla para que
+    le dé de comer: ha descubierto su secreto con una magia de la que no
+    siempre somos capaces. ¿Qué se necesita para lograr esta conquista del
+    fuego?
+
 - title: "Hada 1"
   alt: "Flores amarillo pálido de pétalos ondulados que brillan sobre un fondo negro."
   category: "fotografia"
@@ -269,6 +293,59 @@
     tarde en el parque cuando me encontré con unas flores diminutas que de
     inmediato me parecieron pertenecer a «Hadas urbanas». En esta amarilla me
     gusta el brillo ligero que remite a los polvos de hadas.
+
+- title: "Hada 2"
+  alt: "Fotografía de una pequeña flor azul de pétalos redondos con centro amarillo, sobre un fondo verde oscuro desenfocado."
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2023"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
+  price_framed: "Desde $4,500 MXN · 225 USD"
+  image: "/assets/img/obra/hada-2.jpg"
+  image_width: 1200
+  image_height: 801
+  featured: false
+  teaser: "También es una flor que encontré en Piedmont Park, en Atlanta. Por su pequeñez me llamó la atención…"
+  description: >-
+    También es una flor que encontré en Piedmont Park, en Atlanta. Por su
+    pequeñez me llamó la atención: parecía embebida, escondida en medio de
+    ese parque enorme, oculta entre las estructuras de concreto de la
+    ciudad. Esta flor azul recuerda la flor azul de los románticos, que nos
+    invita a tomar en cuenta nuestros sueños, aquello que está más allá de
+    lo que vemos a primera vista.
+
+- title: "El ángel"
+  alt: "Fotografía de un racimo de flores blancas con pequeñas manchas color frambuesa, sobre un fondo negro."
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2023"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
+  price_framed: "Desde $4,500 MXN · 225 USD"
+  image: "/assets/img/obra/el-angel.jpg"
+  image_width: 1200
+  image_height: 801
+  featured: false
+  teaser: "Una flor blanca, serena, que encontré también en Piedmont Park. Sus manchas rojizas, color frambuesa, recuerdan la sangre…"
+  description: >-
+    Una flor blanca, serena, que encontré también en Piedmont Park. Sus
+    manchas rojizas, color frambuesa, recuerdan la sangre, ese anhelo de la
+    carne que existe también en las criaturas celestiales. Lo blanco, en
+    contraste con el fondo oscuro en medio del bosque, nos recuerda que en
+    nuestros momentos más oscuros, en nuestras instancias más carnales, ahí
+    está el espíritu que nos anima. La invitación es a considerar que en
+    cada flor se encarna por un instante un ángel que vemos, o no, al pasar
+    por un parque. Como dato curioso, usé esta imagen como portada de mi
+    primer fanzine, El ángel Hertebiuse.
 
 - title: "Terciopelo"
   alt: "Fotografía de una mosca velluda que semeja una polilla, de alas oscuras, posada sobre una flor amarilla entre hojas de pasto."
@@ -294,6 +371,33 @@
     espías de otros mundos (los ojos del diablo diría uno de mis maestros).
     También hay en ellas algo de inocente, de humilde, que nos lleva a pensar
     que son muy distintas de sus estigmatizadas primas que asolan nuestras casas.
+
+
+- title: "Murmullos del anuncio del Juicio Final"
+  alt: "Fotografía de flores tubulares amarillas y naranjas entre hojas verdes sobre un fondo negro, con un pequeño insecto posado junto a una de ellas."
+  category: "fotografia"
+  subtitle: "Serie «Hadas urbanas»"
+  year: "2023"
+  technique: "Fotografía digital"
+  dimensions: "Variable según formato de impresión"
+  edition: "Edición limitada de 10 ejemplares, firmada y numerada"
+  status: "disponible"
+  price: "Desde $3,000 MXN · 150 USD"
+  price_varies: true
+  price_framed: "Desde $4,500 MXN · 225 USD"
+  image: "/assets/img/obra/murmullos-del-juicio-final.jpg"
+  image_width: 1200
+  image_height: 901
+  featured: false
+  teaser: "Un pequeño insecto, una de esas moscas que parecen abejas, se posó cerca de una flor que simula una trompeta…"
+  description: >-
+    Un pequeño insecto, una de esas moscas que parecen abejas, se posó cerca
+    de una flor que simula una trompeta. En ella guarda el secreto del fin
+    del mundo y otros secretos de la naturaleza, impensables para nosotros.
+    Quiero representar aquí esos secretos que no nos alcanzan: están ahí y
+    son un misterio para nosotros, ya sea porque no sabemos que existen o
+    porque no sabemos dónde buscarlos. Esta foto la tomé en el Jardín
+    Botánico de la UNAM, cuando aún se permitía entrar con cámara.
 
 # - title: "Fotografía intervenida 1"
 #   category: "fotografia-intervenida"
