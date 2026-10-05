@@ -212,9 +212,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/ciudad-de-los-insectos.jpg"
   image_width: 1200
   image_height: 800
@@ -234,9 +234,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/el-fuego.jpg"
   image_width: 1200
   image_height: 801
@@ -256,9 +256,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/la-conquista-del-fuego.jpg"
   image_width: 1200
   image_height: 801
@@ -280,9 +280,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/flor-amarilla-atlanta.jpg"
   image_width: 1200
   image_height: 800
@@ -303,9 +303,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/hada-2.jpg"
   image_width: 1200
   image_height: 801
@@ -328,9 +328,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/el-angel.jpg"
   image_width: 1200
   image_height: 801
@@ -356,9 +356,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/terciopelo.jpg"
   image_width: 1200
   image_height: 805
@@ -382,9 +382,9 @@
   dimensions: "Variable según formato de impresión"
   edition: "Edición limitada de 10 ejemplares, firmada y numerada"
   status: "disponible"
-  price: "Desde $3,000 MXN · 150 USD"
+  price: "Desde $7,500 MXN · 375 USD"
+  framing: "Sin marco"
   price_varies: true
-  price_framed: "Desde $4,500 MXN · 225 USD"
   image: "/assets/img/obra/murmullos-del-juicio-final.jpg"
   image_width: 1200
   image_height: 901
@@ -407,7 +407,7 @@
 #   dimensions: "XX × XX cm"
 #   edition: "Pieza única o variación irrepetible"
 #   status: "proximamente"
-#   price: "Consultar"
+#   price: "Desde $7,500 MXN · 375 USD"
 #   image: "/assets/img/obra/<imagen>.jpg"
 #   featured: false
 #   description: "Impresión fotográfica más intervención manual."
